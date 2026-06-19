@@ -1,0 +1,34 @@
+- title: "A Framework for Making Successful Technology Decisions"
+  description: "A practical guide to structured, capacity-building-first technology decision-making for transit agencies. Covers systems thinking, design thinking, and a repeatable process for evaluating and selecting technology. Co-authored with Lara Bjork."
+  url: "https://n-catt.org/guidebooks/a-framework-for-making-successful-technology-decisions/"
+  year: "2025"
+  type: whitepaper
+  publisher: "National Center for Applied Transit Technology (N-CATT)"
+
+- title: "Technology Readiness and Resilience Assessment Tool"
+  description: "An online self-assessment for transit agencies rating readiness across five dimensions: Contract Management & Organization, Systems & Culture, Performance Measurement, Organizational Resilience, and Cybersecurity. Uses a CMMI-based maturity model."
+  url: "https://n-catt.org/resources/technology-readiness-assessment/"
+  year: "2024"
+  type: tool
+  publisher: "National Center for Applied Transit Technology (N-CATT)"
+
+- title: "RideSheet: Rural Transportation Benefits from New Coordination Technology"
+  description: "Research report documenting RideSheet's development and its impact on rural demand-responsive transportation providers in Lake County, Oregon, funded by the AARP Public Policy Institute."
+  url: "https://www.aarp.org/content/dam/aarp/ppi/2021/03/ridesheet-rural-transportation-benefits-new-coordination-technology.doi.10.26419-2Fppi.00131.001.pdf"
+  year: "2021"
+  type: article
+  publisher: "AARP Public Policy Institute"
+
+- title: "One-Call/One-Click Business Plan"
+  description: "Business plan for a regional mobility management center serving King County, Washington, coordinating transportation for seniors and people with disabilities across human services providers."
+  url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
+  year: "2020"
+  type: article
+  publisher: "King County Mobility Coalition / Hopelink"
+
+- title: "Technology Support for the Rural Transportation Incubator"
+  description: "Assessment and recommendations for technology infrastructure supporting a rural transportation incubator in Arizona, focusing on mobility management and coordination tools for rural and tribal communities."
+  url: "https://www.agefriendlyaz.org/Portals/4/Technology-Support-for-the-Rural-Transportation-Incubator.pdf"
+  year: "2020"
+  type: article
+  publisher: "Age Friendly Arizona / Maricopa Association of Governments"

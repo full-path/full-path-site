@@ -1,0 +1,6 @@
+# YouTube videos for the RideSheet page.
+# Add entries as videos are published.
+# Each entry:
+# - id: "YOUTUBE_VIDEO_ID"
+#   title: "Video title"
+#   date: "YYYY-MM-DD"

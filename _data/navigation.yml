@@ -1,4 +1,8 @@
 main:
+  - title: RideSheet
+    url: /ridesheet/
+  - title: Projects
+    url: /projects/
   - title: Services
     url: /services/
   - title: Blog

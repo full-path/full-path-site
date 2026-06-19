@@ -1,0 +1,21 @@
+{% assign fr_id = include.id %}
+{% assign f_row = page[fr_id] %}
+{% assign fr_type = include.type | default: "default" %}
+<div class="feature-row feature-row--{{ fr_type }}">
+  {% for f in f_row %}
+    <div class="feature-row__item">
+      {% if f.image_path %}
+      <div class="feature-row__image">
+        <img src="{{ f.image_path | relative_url }}" alt="{{ f.alt | default: '' }}">
+      </div>
+      {% endif %}
+      <div class="feature-row__body">
+        {% if f.title %}<h2>{{ f.title }}</h2>{% endif %}
+        {% if f.excerpt %}<p>{{ f.excerpt }}</p>{% endif %}
+        {% if f.url %}
+          <a href="{{ f.url | relative_url }}" class="btn {% if f.btn_class %}{{ f.btn_class }}{% else %}btn--primary{% endif %}">{{ f.btn_label | default: 'Read More' }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

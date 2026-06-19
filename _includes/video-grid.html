@@ -1,0 +1,20 @@
+{% assign videos = site.data.ridesheet_videos %}
+{% if videos and videos.size > 0 %}
+<div class="video-grid">
+  {% for video in videos %}
+  <div>
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/{{ video.id }}"
+        title="{{ video.title }}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p class="video-embed__title">{{ video.title }}</p>
+    {% if video.date %}<p class="video-embed__date">{{ video.date | date: "%B %Y" }}</p>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p><em>Videos coming soon. Check back for demonstrations and tutorials.</em></p>
+{% endif %}

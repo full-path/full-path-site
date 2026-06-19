@@ -1,0 +1,10 @@
+<article class="archive-item">
+  <h2 class="archive-item__title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h2>
+  <p class="archive-item__meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+  {% if post.excerpt %}
+  <p class="archive-item__excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+  {% endif %}
+  <a href="{{ post.url | relative_url }}" class="btn btn--primary btn--small">Read More</a>
+</article>

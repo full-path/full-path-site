@@ -1,0 +1,10 @@
+{% assign project = include.project %}
+<div class="project-card">
+  <div class="project-card__meta">
+    <span class="project-card__year">{{ project.year }}</span>
+    <span class="project-card__type project-card__type--{{ project.type }}">{{ project.type }}</span>
+  </div>
+  <h3>{{ project.title }}</h3>
+  <p>{{ project.description }}</p>
+  <a href="{{ project.url }}" class="btn btn--primary btn--small" target="_blank" rel="noopener">View publication</a>
+</div>

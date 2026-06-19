@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% if page.header.image %}
+<div class="page-hero" style="background-image: url('{{ page.header.image | relative_url }}');">
+  <div class="page-hero__overlay">
+    <div class="page-hero__content">
+      <div class="page-content-inner">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<div class="page-content">
+  <article{% if page.date %} class="is-post"{% endif %}>
+    {% unless page.header.image %}
+    <h1>{{ page.title }}</h1>
+    {% endunless %}
+    {% if page.date %}
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}</p>
+    {% endif %}
+    {{ content }}
+  </article>
+</div>

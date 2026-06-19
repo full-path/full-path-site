@@ -1,0 +1,28 @@
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a class="site-nav__logo" href="{{ '/' | relative_url }}">
+      {% if site.logo_path %}
+        <img src="{{ site.logo_path | relative_url }}" alt="{{ site.logo_alt | default: site.title }}" width="40" height="40">
+      {% endif %}
+      <span>{{ site.title }}</span>
+    </a>
+    <button class="site-nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="site-nav__links">
+      {% for link in site.data.navigation.main %}
+        <li>
+          {% if forloop.last %}
+            <a href="{{ link.url | relative_url }}" class="btn btn--primary btn--small">{{ link.title }}</a>
+          {% else %}
+            {% assign is_active = false %}
+            {% if page.url == link.url or page.url contains link.url %}
+              {% assign is_active = true %}
+            {% endif %}
+            <a href="{{ link.url | relative_url }}"{% if is_active %} class="is-active" aria-current="page"{% endif %}>{{ link.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
