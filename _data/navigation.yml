@@ -1,10 +1,10 @@
 main:
-  - title: RideSheet
-    url: /ridesheet/
-  - title: Projects
-    url: /projects/
   - title: Services
     url: /services/
+  - title: Projects
+    url: /projects/
+  - title: RideSheet
+    url: /ridesheet/
   - title: Blog
     url: /blog/
   - title: About
