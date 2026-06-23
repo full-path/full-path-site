@@ -1,3 +1,22 @@
+// ── Project metadata block ───────────────────────────────────────────────────
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) 0;
+  margin: var(--space-3) 0 var(--space-4);
+  list-style: none;
+}
+.project-meta__item { display: flex; flex-direction: column; gap: 0.2rem; }
+.project-meta__item dt {
+  font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+.project-meta__item dd { font-size: 0.95rem; color: var(--color-text-primary); font-weight: 600; }
+
 // ── Feature row ──────────────────────────────────────────────────────────────
 .feature-row { margin: 1.5rem 0 2rem; }
 .feature-row--left .feature-row__item {

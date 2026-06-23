@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Full Path
-name: Full Path LLC
+name: Full Path Transit Technology
 logo_path: /assets/images/full_path_logo.svg
 logo_alt: "Full Path Logo Image"
 email: info@fullpath.io
@@ -28,8 +28,6 @@ permalink: /blog/:year/:month/:title
 
 og_image: /android-chrome-256x256.png
 author: Kevin Chambers
-twitter:
-  username: fullpathtransit
 
 analytics:
   provider: google-gtag
@@ -37,7 +35,6 @@ analytics:
     tracking_id: UA-112157492-1
 
 defaults:
-  # _posts
   -
     scope:
       path: ""
@@ -52,13 +49,8 @@ defaults:
 
 # Build settings
 markdown: kramdown
-# theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
-  # - jekyll-mermaid
-
-# mermaid:
-  # src: 'https://unpkg.com/mermaid@7.1.0/dist/mermaid.js'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

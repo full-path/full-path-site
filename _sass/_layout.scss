@@ -18,11 +18,11 @@ $nav-height: 64px;
 .site-nav__logo img { width: 40px; height: 40px; object-fit: contain; }
 .site-nav__logo:hover { text-decoration: none; color: var(--color-brand); }
 .site-nav__links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
-.site-nav__links a {
+.site-nav__links a:not(.btn) {
   text-decoration: none; font-weight: 700; font-size: 0.85rem;
   text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-primary);
 }
-.site-nav__links a:hover { color: var(--color-brand); }
+.site-nav__links a:not(.btn):hover { color: var(--color-brand); }
 .site-nav__links a.is-active {
   color: var(--color-brand);
   border-bottom: 2px solid var(--color-brand);
