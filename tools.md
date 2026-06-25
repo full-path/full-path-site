@@ -7,17 +7,18 @@ description: "Free tools for community transit agencies — no license cost, no 
 
 The tools listed here are free to use — no software license, no subscription, no vendor relationship required. Each was developed with and for small and rural transit agencies, and is designed to be adopted and maintained without dedicated IT staff.
 
-{% assign categories = site.data.tools | map: "category" | uniq | sort %}
+{% assign sorted_tools = site.tools | where_exp: "t", "t.order" | sort: "order" %}
+{% assign categories = sorted_tools | map: "category" | uniq | sort %}
 <div class="tool-filters" role="group" aria-label="Filter by category">
   <button class="tool-filter is-active" data-filter="all">All</button>
   {% for cat in categories %}
-    <button class="tool-filter" data-filter="{{ cat | downcase }}">{{ cat }}</button>
+    <button class="tool-filter" data-filter="{{ cat | downcase }}">{% include category-icon.html category=cat %}{{ cat }}</button>
   {% endfor %}
 </div>
 
 <div class="project-grid" id="tools-grid">
-{% for tool in site.data.tools %}
-  {% include tool-card.html tool=tool %}
+{% for tool in sorted_tools %}
+  {% include ticket-card.html item=tool %}
 {% endfor %}
 </div>
 

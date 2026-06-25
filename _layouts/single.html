@@ -15,6 +15,11 @@ layout: default
 <div class="page-content">
   <article{% if page.date %} class="is-post"{% endif %}>
     {% unless page.header.image %}
+    {% if page.icon %}
+    <div class="item-icon item-icon--large">
+      <img src="{{ page.icon | relative_url }}" alt="">
+    </div>
+    {% endif %}
     <h1>{{ page.title }}</h1>
     {% endunless %}
     {% if page.date %}

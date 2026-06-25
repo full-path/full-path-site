@@ -1,0 +1,1 @@
+{% assign _cat_slug = include.category | downcase %}{% assign _cat_icon = site.static_files | where: "basename", _cat_slug | where: "extname", ".svg" | first %}{% if _cat_icon %}<img src="{{ _cat_icon.path | relative_url }}" width="25" height="25" alt="" aria-hidden="true" class="category-icon">{% endif %}

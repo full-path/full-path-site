@@ -16,6 +16,9 @@
   --max-width-prose:  68ch;
   --max-width-page:   min(90vw, 1100px);
 
+  // Ticket card
+  --ticket-perf-opacity: 0.90;  /* perforation line opacity — raise toward 1.0 to make it more visible */
+
   // Spacing (multiples of 8px)
   --space-1:  8px;
   --space-2:  16px;

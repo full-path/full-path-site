@@ -1,0 +1,20 @@
+<div class="service-card">
+  <div class="service-card__header">
+    <h3 class="service-card__title">{{ include.service.title }}</h3>
+    <div class="service-card__icon-slot">
+      {% if include.service.icon %}
+      <img src="{{ include.service.icon | relative_url }}" alt="">
+      {% endif %}
+    </div>
+  </div>
+  {% if include.service.description %}
+  <div class="service-card__desc">{{ include.service.description | markdownify }}</div>
+  {% endif %}
+  {% if include.service.bullets %}
+  <ul class="service-card__list">
+    {% for bullet in include.service.bullets %}
+    <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

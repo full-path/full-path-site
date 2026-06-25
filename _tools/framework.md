@@ -1,9 +1,14 @@
 ---
 title: "A Framework for Making Successful Technology Decisions"
 layout: project
-description: "A practical guide to structured, capacity-building-first technology decision-making for transit agencies, co-authored with Lara Bjork and published by N-CATT."
+description: "A practical, capacity-building-first guide to technology decision-making for transit agencies. Covers how to define the problem, assess readiness, evaluate vendors, and build internal ownership."
 permalink: /tools/framework/
 category: "Guidance"
+order: 1
+icon: /assets/images/framework.svg
+color_theme: "t-red"
+category_icon: "ti-book"
+type_label: "Guidebook"
 client: "National Center for Applied Transit Technology (N-CATT)"
 client_url: "https://n-catt.org/"
 published: "February 2022"
@@ -30,4 +35,3 @@ Small and rural transit agencies, state DOTs with transit oversight responsibili
 <div class="btn-group">
   <a href="https://n-catt.org/guidebooks/a-framework-for-making-successful-technology-decisions/" class="btn btn--primary" target="_blank" rel="noopener">Read the framework</a>
 </div>
-

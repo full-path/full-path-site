@@ -47,6 +47,12 @@ defaults:
       share: false
       related: false
 
+collections:
+  tools:
+    output: true
+  projects:
+    output: true
+
 # Build settings
 markdown: kramdown
 plugins:

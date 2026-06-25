@@ -1,0 +1,72 @@
+- title: "Technology Strategy and Assessment"
+  description: >
+    Before an agency can choose the right tool, it needs to know what it's actually
+    trying to solve — and whether it has the capacity to implement and sustain something
+    new. This work happens before any software is selected.
+  bullets:
+    - "Technology needs assessment and gap analysis"
+    - "Data architecture review — understanding what data exists, where it lives, how it moves between systems, and what's missing"
+    - "Data quality and reporting assessment, including NTD and grant compliance data"
+    - "Vendor and product landscape research"
+    - "RFP development and procurement support"
+    - "Technology readiness evaluation"
+    - "Strategic planning for technology modernization"
+
+- title: "Implementation Support"
+  description: >
+    Selecting a system is the beginning, not the end. Implementation is where most
+    technology initiatives succeed or fail, and where agencies with small staffs and no
+    dedicated IT support are most exposed. This includes the data side of implementation
+    — migrating, transforming, and connecting data between systems — alongside the
+    organizational side.
+  bullets:
+    - "Implementation planning and project management"
+    - "Database design, migration, and configuration"
+    - "Report development and automation, including operational and compliance reporting"
+    - "Staff training and change management support"
+    - "Multi-agency coordination and integration planning"
+    - "Business continuity and maintenance planning"
+
+- title: "Data Standards and Interoperability"
+  description: |
+    Emerging data standards for demand-responsive and coordinated transportation —
+    GTFS-Flex, the Transactional Data Specification, GTFS-Capabilities,
+    GTFS-Eligibilities — hold real promise for small and rural agencies. They also carry
+    real risk of being designed primarily around the needs of large operators, leaving
+    smaller providers behind.
+
+    Much of the work here is advocacy as much as consulting: making sure small transit
+    has a voice in standards processes. It has also been the basis for specific
+    engagements — supporting an early implementation of the Transactional Data
+    Specification in Colorado, and leading the development of the GTFS-Capabilities and
+    GTFS-Eligibilities extensions for Oregon DOT.
+  bullets:
+    - "Technical assistance for standards-compliant procurement and implementation"
+    - "Evaluation of emerging standards for fit and readiness at small agencies"
+    - "Support for agencies engaging with GTFS-Flex, TDS, or other interoperability initiatives"
+    - "Representing small and rural provider requirements in standards development contexts"
+
+- title: "Open-Source Tools Development and Support"
+  description: >
+    Full Path develops and supports open-source tools designed specifically for small and
+    rural providers — organizations that don't have the budget for enterprise software or
+    the staff to maintain it. The flagship tool is [RideSheet](/tools/ridesheet/), a free
+    scheduling, dispatching, and trip coordination system currently in active use at seven
+    agencies in four states.
+  bullets:
+    - "Tool customization and configuration for individual agencies"
+    - "Staff onboarding and training"
+    - "Ongoing technical support and troubleshooting"
+    - "Inter-agency coordination setup using RideSheet's data-sharing API"
+    - "Guidance on fit — RideSheet isn't right for every agency, and this work includes helping organizations assess whether it's the right choice before committing"
+
+- title: "Facilitation and Stakeholder Engagement"
+  description: >
+    Technology decisions rarely succeed when they're made by a small group in isolation.
+    This work supports the process of getting the right people involved at the right
+    stages — and making sure the outcome reflects what the organization actually needs.
+  bullets:
+    - "Stakeholder engagement planning and facilitation"
+    - "Inclusive planning processes with riders, staff, and community members"
+    - "Problem definition workshops"
+    - "Consensus-building across multi-agency or multi-funder initiatives"

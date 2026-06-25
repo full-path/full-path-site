@@ -1,0 +1,26 @@
+{% assign item = include.item %}
+{% assign _label = item.category | default: item.type_label | default: item.type %}
+{% assign _cat = site.data.categories | where: "name", _label | first %}
+<article class="ticket"{% if item.category %} data-category="{{ item.category | downcase }}"{% endif %}{% if _cat %} style="--stub-color: {{ _cat.colors.main }};"{% endif %}>
+  <div class="ticket__stub">
+    {% if item.icon %}
+    <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
+    {% endif %}
+    <div class="stub-bottom">
+      {% include category-icon.html category=_label %}
+      <span class="stub-category-label">{{ _label }}</span>
+    </div>
+  </div>
+  <div class="ticket__body">
+    <h2 class="ticket__title">
+      {% if item.download_url %}
+      <a href="{{ item.download_url }}"{% if item.newtab %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+      {% elsif item.publication_url %}
+      <a href="{{ item.publication_url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      {% else %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endif %}
+    </h2>
+    <p class="ticket__desc">{{ item.description }}</p>
+  </div>
+</article>

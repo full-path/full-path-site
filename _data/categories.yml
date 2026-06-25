@@ -1,0 +1,11 @@
+- name: Guidance
+  colors:
+    main: "#b12d00"
+
+- name: Software
+  colors:
+    main: "#185fa5"
+
+- name: Assessment
+  colors:
+    main: "#0f6e56"

@@ -1,9 +1,13 @@
 ---
 title: "Technology Readiness and Resilience Assessment Tool"
 layout: project
-description: "An online self-assessment tool that helps transit agencies rate their technology readiness across five dimensions, published by N-CATT."
+description: "A free online self-assessment that rates your agency's technology readiness across five dimensions using a CMMI-based maturity model. Takes about 30 minutes and produces a profile you can use to prioritize capacity-building work."
 permalink: /tools/readiness-assessment/
 category: "Assessment"
+order: 4
+color_theme: "t-teal"
+category_icon: "ti-clipboard-check"
+type_label: "Self-Assessment"
 client: "National Center for Applied Transit Technology (N-CATT)"
 client_url: "https://n-catt.org/"
 published: "June 2022"
@@ -34,4 +38,3 @@ Most transit technology failures are predictable. Agencies that rush to procurem
 <div class="btn-group">
   <a href="https://n-catt.org/resources/technology-readiness-assessment/" class="btn btn--primary" target="_blank" rel="noopener">Take the assessment</a>
 </div>
-
