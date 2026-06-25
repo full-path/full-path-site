@@ -5,6 +5,12 @@ layout: default
   <article>
     <h1>{{ page.title }}</h1>
     <dl class="project-meta">
+      {% if page.category %}
+      <div class="project-meta__item">
+        <dt>Category</dt>
+        <dd><span class="tool-category tool-category--{{ page.category | downcase }}">{{ page.category }}</span></dd>
+      </div>
+      {% endif %}
       {% if page.client %}
       <div class="project-meta__item">
         <dt>Client</dt>

@@ -16,6 +16,6 @@ RideSheet was initially funded by the AARP Public Policy Institute specifically 
 
 <div class="btn-group">
   <a href="https://www.aarp.org/content/dam/aarp/ppi/2021/03/ridesheet-rural-transportation-benefits-new-coordination-technology.doi.10.26419-2Fppi.00131.001.pdf" class="btn btn--primary" target="_blank" rel="noopener">Read the report</a>
-  <a href="/ridesheet/" class="btn btn--outline">About RideSheet</a>
+  <a href="/tools/ridesheet/" class="btn btn--outline">About RideSheet</a>
 </div>
 

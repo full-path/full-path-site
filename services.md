@@ -18,7 +18,7 @@ Services in this area include:
 - Technology needs assessment and gap analysis
 - Vendor and product landscape research
 - RFP development and procurement support
-- Technology readiness evaluation (see the [Readiness and Resilience Assessment Tool](/projects/readiness-assessment/))
+- Technology readiness evaluation (see the [Readiness and Resilience Assessment Tool](/tools/readiness-assessment/))
 - Strategic planning for technology modernization
 
 ## Implementation Support
@@ -39,6 +39,6 @@ Full Path develops and supports open-source tools designed specifically for smal
 
 ### RideSheet
 
-[RideSheet](/ridesheet/) is a free, open-source scheduling, dispatching, and trip coordination system built on Google Sheets and Google Apps Script. It handles the full data lifecycle from scheduling through completed-trip reporting, supports inter-agency coordination via a standardized API, and is designed to be maintained by the organizations using it — no software license, no dedicated IT staff required.
+[RideSheet](/tools/ridesheet/) is a free, open-source scheduling, dispatching, and trip coordination system built on Google Sheets and Google Apps Script. It handles the full data lifecycle from scheduling through completed-trip reporting, supports inter-agency coordination via a standardized API, and is designed to be maintained by the organizations using it — no software license, no dedicated IT staff required.
 
 As of early 2026, RideSheet is in active use at seven agencies in four states.

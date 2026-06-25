@@ -2,7 +2,8 @@
 title: "Technology Readiness and Resilience Assessment Tool"
 layout: project
 description: "An online self-assessment tool that helps transit agencies rate their technology readiness across five dimensions, published by N-CATT."
-permalink: /projects/readiness-assessment/
+permalink: /tools/readiness-assessment/
+category: "Assessment"
 client: "National Center for Applied Transit Technology (N-CATT)"
 client_url: "https://n-catt.org/"
 published: "June 2022"

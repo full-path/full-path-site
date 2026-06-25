@@ -1,0 +1,21 @@
+- title: "A Framework for Making Successful Technology Decisions"
+  description: "A practical, capacity-building-first guide to technology decision-making for transit agencies. Covers how to define the problem, assess organizational readiness, evaluate vendors, and build internal ownership — before you sign anything."
+  permalink: "/tools/framework/"
+  category: "Guidance"
+
+- title: "RideSheet"
+  description: "Free, open-source scheduling, dispatching, and trip coordination for small and rural demand-responsive transportation providers. Built on Google Sheets — no software license, no server, no dedicated IT required."
+  permalink: "/tools/ridesheet/"
+  category: "Software"
+
+- title: "RFIs as Tools in Transit Technology Procurements"
+  description: "Requests for Information are underrated tools. This two-page guide explains how to use them as a deliberate tool for gathering market intelligence, building vendor relationships, and reducing risk before you issue an RFP."
+  permalink: "/assets/downloads/RFIs-as-Tools.pdf"
+  category: "Guidance"
+  cta: "Download"
+  newtab: true
+
+- title: "Technology Readiness and Resilience Assessment Tool"
+  description: "A free online self-assessment that rates your agency's technology readiness across five dimensions using a CMMI-based maturity model. Takes about 30 minutes and produces a profile you can use to prioritize capacity-building work."
+  permalink: "/tools/readiness-assessment/"
+  category: "Assessment"

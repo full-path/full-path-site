@@ -17,6 +17,48 @@
 }
 .project-meta__item dd { font-size: 0.95rem; color: var(--color-text-primary); font-weight: 600; }
 
+// ── Tool category badge ──────────────────────────────────────────────────────
+.tool-category {
+  display: inline-block;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 0.15em 0.6em; border-radius: 999px;
+  background: var(--color-bg-secondary); color: var(--color-text-secondary); border: 1px solid var(--color-border);
+}
+.tool-category--software   { background: rgba(26,82,118,0.08);  color: var(--color-accent);        border-color: rgba(26,82,118,0.2); }
+.tool-category--guidance   { background: rgba(177,45,0,0.08);   color: var(--color-brand);         border-color: rgba(177,45,0,0.2); }
+.tool-category--assessment { background: rgba(92,79,61,0.08);   color: var(--color-text-secondary); border-color: rgba(92,79,61,0.2); }
+
+// ── Tool category filter buttons ─────────────────────────────────────────────
+.tool-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+.tool-filter {
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.tool-filter:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+.tool-filter.is-active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: #fff;
+}
+
 // ── Feature row ──────────────────────────────────────────────────────────────
 .feature-row { margin: 1.5rem 0 2rem; }
 .feature-row--left .feature-row__item {

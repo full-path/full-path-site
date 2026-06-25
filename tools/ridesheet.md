@@ -2,7 +2,8 @@
 title: "RideSheet"
 layout: single
 description: "RideSheet is an open-source scheduling, dispatching, and trip coordination tool built for small and rural demand-responsive transportation providers."
-permalink: /ridesheet/
+permalink: /tools/ridesheet/
+category: "Software"
 ---
 
 RideSheet is a free, open-source scheduling and trip coordination system for small and rural demand-responsive transportation providers — the agencies that typically have no dedicated IT staff, limited broadband, and no budget for expensive proprietary software.
