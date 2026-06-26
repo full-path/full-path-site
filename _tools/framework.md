@@ -3,6 +3,7 @@ title: "A Framework for Making Successful Technology Decisions"
 layout: project
 description: "A practical, capacity-building-first guide to technology decision-making for transit agencies. Covers how to define the problem, assess readiness, evaluate vendors, and build internal ownership."
 permalink: /tools/framework/
+year: "2025"
 category: "Guidance"
 order: 1
 icon: /assets/images/framework.svg

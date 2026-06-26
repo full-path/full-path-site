@@ -4,6 +4,7 @@ layout: project
 description: "Business plan for a regional mobility management center serving King County, Washington, coordinating transportation for seniors and people with disabilities across human services providers."
 permalink: /projects/hopelink-one-call/
 year: "2020"
+category: "Assessment and Strategy"
 type: article
 publisher: "King County Mobility Coalition / Hopelink"
 color_theme: "t-teal"

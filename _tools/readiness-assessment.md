@@ -3,7 +3,7 @@ title: "Technology Readiness and Resilience Assessment Tool"
 layout: project
 description: "A free online self-assessment that rates your agency's technology readiness across five dimensions using a CMMI-based maturity model. Takes about 30 minutes and produces a profile you can use to prioritize capacity-building work."
 permalink: /tools/readiness-assessment/
-category: "Assessment"
+category: "Assessment and Strategy"
 order: 4
 color_theme: "t-teal"
 category_icon: "ti-clipboard-check"
