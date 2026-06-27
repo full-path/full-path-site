@@ -4,6 +4,7 @@ layout: project
 description: "Research report documenting RideSheet's development and its impact on rural demand-responsive transportation providers in Lake County, Oregon, funded by the AARP Public Policy Institute."
 permalink: /projects/ridesheet-aarp-report/
 year: "2021"
+categories: [Software]
 type: article
 publisher: "AARP Public Policy Institute"
 color_theme: "t-red"

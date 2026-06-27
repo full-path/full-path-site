@@ -1,16 +1,13 @@
-<div class="service-card">
+<div class="service-card" style="--service-color: {{ include.service.colors.main }};">
   <div class="service-card__header">
     {% if include.service.icon %}
     <div class="service-card__icon-slot">
       <img src="{{ include.service.icon | relative_url }}" alt="">
     </div>
     {% endif %}
-    <h3 class="service-card__title">{{ include.service.title }}</h3>
+    <h3 class="service-card__title">{{ include.service.long_name }}</h3>
   </div>
   <div class="service-card__body">
-    {% if include.service.description %}
-    <div class="service-card__desc">{{ include.service.description | markdownify }}</div>
-    {% endif %}
     {% if include.service.bullets %}
     <ul class="service-card__list">
       {% for bullet in include.service.bullets %}

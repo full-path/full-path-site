@@ -10,7 +10,7 @@ header:
 Full Path works with transit agencies of all sizes and the organizations that support them — state DOTs, regional governments, technical assistance centers — on technology strategy, assessment, and implementation.
 
 <div class="service-grid">
-{% for service in site.data.services %}
+{% for service in site.data.categories %}
   {% include service-card.html service=service %}
 {% endfor %}
 </div>

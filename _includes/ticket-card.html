@@ -1,15 +1,22 @@
 {% assign item = include.item %}
-{% assign _label = item.category | default: item.type_label | default: item.type %}
-{% assign _cat = site.data.categories | where: "name", _label | first %}
-<article class="ticket"{% if item.category %} data-category="{{ item.category | downcase }}"{% endif %}{% if _cat %} style="--stub-color: {{ _cat.colors.main }};"{% endif %}>
+{% assign _primary_name = item.categories | first %}
+{% assign _primary = site.data.categories | where: "short_name", _primary_name | first %}
+<article class="ticket"
+  data-categories="{{ item.categories | join: ' ' | downcase }}"
+  {% if _primary %}style="--stub-color: {{ _primary.colors.main }};"{% endif %}>
   <div class="ticket__stub">
     {% if item.icon %}
     <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
     {% endif %}
-    <div class="stub-bottom">
-      {% include category-icon.html category=_label %}
-      <span class="stub-category-label">{{ _label }}</span>
-    </div>
+    {% for cat_name in item.categories %}
+      {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
+      {% if _cat %}
+      <div class="stub-category" style="--cat-color: {{ _cat.colors.main }};">
+        <img src="{{ _cat.icon | relative_url }}" width="16" height="16" alt="" aria-hidden="true" class="category-icon">
+        <span class="stub-category-label">{{ cat_name }}</span>
+      </div>
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="ticket__body">
     <h2 class="ticket__title">

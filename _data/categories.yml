@@ -1,11 +1,78 @@
-- name: Guidance
+- short_name: "Strategy"
+  long_name: "Technology Strategy and Assessment"
+  icon: /assets/images/strategy.svg
   colors:
-    main: "#b12d00"
+    main: "#D86F3E"
+  description: >
+    Full Path conducts technology needs assessments, data architecture reviews, and
+    procurement support to help agencies understand what they actually need before
+    selecting or replacing software.
+  bullets:
+    - "Technology needs assessment and gap analysis"
+    - "Data architecture review — understanding what data exists, where it lives, how it moves between systems, and what's missing"
+    - "Data quality and reporting assessment, including NTD and grant compliance data"
+    - "Vendor and product landscape research"
+    - "RFP development and procurement support"
+    - "Technology readiness evaluation"
+    - "Strategic planning for technology modernization"
 
-- name: Software
+- short_name: "Implementation"
+  long_name: "Implementation Support"
+  icon: /assets/images/implementation.svg
   colors:
-    main: "#185fa5"
+    main: "#8b5e00"
+  description: >
+    Full Path handles the data and organizational work of getting new systems running —
+    database design and migration, report development, staff training, and
+    multi-agency coordination.
+  bullets:
+    - "Implementation planning and project management"
+    - "Database design, migration, and configuration"
+    - "Report development and automation, including operational and compliance reporting"
+    - "Staff training and change management support"
+    - "Multi-agency coordination and integration planning"
+    - "Business continuity and maintenance planning"
 
-- name: "Assessment and Strategy"
+- short_name: "Interoperability"
+  long_name: "Data Standards and Interoperability"
+  icon: /assets/images/interoperability.svg
   colors:
     main: "#0f6e56"
+  description: >
+    Full Path has led standards implementation work for Oregon DOT and others —
+    including the GTFS-Capabilities and GTFS-Eligibilities extensions — and actively
+    represents small and rural provider requirements in standards development processes.
+  bullets:
+    - "Technical assistance for standards-compliant procurement and implementation"
+    - "Evaluation of emerging standards for fit and readiness at small agencies"
+    - "Support for agencies engaging with GTFS-Flex, TDS, or other interoperability initiatives"
+    - "Representing small, rural, and specialized provider requirements in standards development contexts"
+
+- short_name: "Software"
+  long_name: "Software Development and Support"
+  icon: /assets/images/software-dev.svg
+  colors:
+    main: "#185fa5"
+  description: >
+    Full Path develops, deploys, and supports RideSheet and other open-source tools
+    built specifically for small and rural demand-responsive transportation providers.
+  bullets:
+    - "Tool customization and configuration for individual agencies"
+    - "Staff onboarding and training"
+    - "Ongoing technical support and troubleshooting"
+    - "Inter-agency coordination setup using RideSheet's data sharing capabilities"
+
+- short_name: "Engagement"
+  long_name: "Facilitation and Stakeholder Engagement"
+  icon: /assets/images/engagement.svg
+  colors:
+    main: "#6b3fa0"
+  description: >
+    Full Path designs and leads facilitation processes that bring the right voices into
+    technology decisions — from agency staff and riders to multi-agency and multi-funder
+    coalitions.
+  bullets:
+    - "Stakeholder engagement planning and facilitation"
+    - "Inclusive planning processes with riders, staff, and community members"
+    - "Problem definition workshops"
+    - "Consensus-building across multi-agency or multi-funder initiatives"

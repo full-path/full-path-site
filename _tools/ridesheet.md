@@ -3,7 +3,7 @@ title: "RideSheet"
 layout: single
 description: "Free, open-source scheduling, dispatching, and trip coordination for small and rural demand-responsive transportation providers. Built on Google Sheets."
 permalink: /tools/ridesheet/
-category: "Software"
+categories: [Software]
 order: 2
 color_theme: "t-blue"
 category_icon: "ti-table"
