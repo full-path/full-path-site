@@ -1,6 +1,6 @@
 ---
 title: "Technology Support for the Rural Transportation Incubator"
-layout: project
+layout: tool
 description: "Assessment and recommendations for technology infrastructure supporting a rural transportation incubator in Arizona, focusing on mobility management and coordination tools for rural and tribal communities."
 permalink: /projects/rural-incubator/
 year: "2020"
@@ -10,7 +10,7 @@ publisher: "Age Friendly Arizona / Maricopa Association of Governments"
 color_theme: "t-blue"
 category_icon: "ti-device-laptop"
 type_label: "Assessment Report"
-publication_url: "https://www.agefriendlyaz.org/Portals/4/Technology-Support-for-the-Rural-Transportation-Incubator.pdf"
+report_url: "https://www.agefriendlyaz.org/Portals/4/Technology-Support-for-the-Rural-Transportation-Incubator.pdf"
 client: "Age Friendly Arizona / Maricopa Association of Governments"
 client_url: "https://www.agefriendlyaz.org/"
 published: "March 2020"
@@ -23,5 +23,5 @@ Rural transportation incubators are programs designed to help small, emerging tr
 The assessment covered scheduling and dispatch tools, data collection and reporting requirements, coordination platforms, and the technology literacy and support needs of participating organizations. Recommendations were deliberately conservative: tools that could be adopted incrementally and maintained without dedicated IT staff.
 
 <div class="btn-group">
-  <a href="{{ page.publication_url }}" class="btn btn--primary" target="_blank" rel="noopener">Read the report</a>
+  <a href="{{ page.report_url }}" class="btn btn--primary" target="_blank" rel="noopener">Read the report</a>
 </div>

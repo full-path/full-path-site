@@ -1,3 +1,7 @@
+{% assign cat_name = include.service.short_name %}
+{% assign drawer_tools    = site.tools    | where_exp: "t", "t.categories contains cat_name" %}
+{% assign drawer_projects = site.projects | where_exp: "p", "p.categories contains cat_name" %}
+{% assign drawer_count    = drawer_tools.size | plus: drawer_projects.size %}
 <div class="service-card" style="--service-color: {{ include.service.colors.main }};">
   <div class="service-card__header">
     {% if include.service.icon %}
@@ -16,4 +20,22 @@
     </ul>
     {% endif %}
   </div>
+  {% if drawer_count > 0 %}
+  <button class="service-card__handle" aria-expanded="false">
+    <span>Related work ({{ drawer_count }})</span>
+    <span class="service-card__chevron" aria-hidden="true"></span>
+  </button>
+  <div class="service-card__drawer">
+    <div class="service-card__drawer-inner">
+      <ul class="service-card__drawer-list">
+        {% for tool in drawer_tools %}
+        <li><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></li>
+        {% endfor %}
+        {% for project in drawer_projects %}
+        <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
 </div>

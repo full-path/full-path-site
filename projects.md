@@ -1,5 +1,5 @@
 ---
-title: "Projects & Publications"
+title: "Projects"
 layout: single
 description: "Selected publications, tools, and research on transit technology decision-making, coordination, and open-source software."
 permalink: /projects/

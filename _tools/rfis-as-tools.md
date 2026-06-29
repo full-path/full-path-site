@@ -1,7 +1,7 @@
 ---
 title: "RFIs as Tools in Transit Technology Procurements"
-layout: project
-description: "Requests for Information are underrated tools. This two-page guide explains how to use them as a deliberate tool for gathering market intelligence, building vendor relationships, and reducing risk before you issue an RFP."
+layout: tool
+description: "Requests for Information are underrated tools. This two-page guide explains how to use them for gathering market intelligence, building vendor relationships, and reducing risk before you issue an RFP."
 permalink: /tools/rfis-as-tools/
 categories: [Strategy]
 order: 3

@@ -19,14 +19,18 @@
 
 // ── Tool category badge ──────────────────────────────────────────────────────
 .tool-category {
-  display: inline-flex; align-items: center; gap: 0.3em;
-  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
-  padding: 0.15em 0.6em; border-radius: 999px;
-  background: var(--color-bg-secondary); color: var(--color-text-secondary); border: 1px solid var(--color-border);
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 0 0.625rem; height: 2rem; border-radius: 8px;
+  background: var(--cat-color, var(--color-brand)); color: #fff;
 }
-.tool-category--software   { background: rgba(26,82,118,0.08);  color: var(--color-accent);        border-color: rgba(26,82,118,0.2); }
-.tool-category--guidance   { background: rgba(177,45,0,0.08);   color: var(--color-brand);         border-color: rgba(177,45,0,0.2); }
-.tool-category--assessment { background: rgba(92,79,61,0.08);   color: var(--color-text-secondary); border-color: rgba(92,79,61,0.2); }
+.tool-category .category-icon {
+  width: 24px; height: 24px;
+  max-height: 100%;
+  display: inline-block; vertical-align: middle;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
 
 .category-icon {
   width: 25px; height: 25px;
@@ -34,7 +38,8 @@
   max-width: none;
 }
 .tool-filter .category-icon {
-  width: 16px; height: 16px;
+  width: 24px; height: 24px;
+  max-height: 100%;
   display: inline-block; vertical-align: middle;
   filter: brightness(0) invert(1);
   opacity: 0.85;
@@ -48,9 +53,10 @@
   margin-bottom: var(--space-3);
 }
 .tool-filter {
-  padding: 0 0.875rem;
-  line-height: 1.75rem;
-  border-radius: 999px;
+  padding: 0 0.625rem;
+  height: 2rem;
+  line-height: 1;
+  border-radius: 8px;
   border: none;
   background: var(--filter-color, var(--color-brand));
   color: #fff;
@@ -138,6 +144,32 @@ form input:focus, form textarea:focus {
 form br { display: none; }
 form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-serif; }
 
+// ── Tool page header band ────────────────────────────────────────────────────
+.tool-page-header {
+  background: var(--color-brand);
+  padding: 1.75rem 0;
+}
+.tool-page-header__inner {
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.tool-page-header__icon {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+.tool-page-header__title {
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
 // ── Item icon (cards + pages) ────────────────────────────────────────────────
 .item-icon {
   width: 48px;
@@ -169,12 +201,13 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 }
 
 // ── Project / tool grid ───────────────────────────────────────────────────────
-.project-grid { column-count: 2; column-gap: 1.5rem; margin-top: 1.5rem; }
+.project-grid { column-count: 2; column-gap: 1.5rem; margin: 1.5rem auto 0; width: calc(1100px - 3rem); }
 
 // ── Ticket card ───────────────────────────────────────────────────────────────
 .ticket {
   display: flex;
   flex-direction: row;
+  aspect-ratio: 1.618 / 1;
   break-inside: avoid;
   margin-bottom: 1.5rem;
   border-radius: 8px;
@@ -182,23 +215,26 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   border: 0.5px solid rgba(0,0,0,0.10);
   position: relative;
   -webkit-mask-image:
-    radial-gradient(circle 9px at 38.197% 0%,   transparent 9px, #000 9px),
-    radial-gradient(circle 9px at 38.197% 100%, transparent 9px, #000 9px);
+    radial-gradient(circle 9px at 33.33% 0%,   transparent 9px, #000 9px),
+    radial-gradient(circle 9px at 33.33% 100%, transparent 9px, #000 9px);
   -webkit-mask-composite: destination-in;
   mask-image:
-    radial-gradient(circle 9px at 38.197% 0%,   transparent 9px, #000 9px),
-    radial-gradient(circle 9px at 38.197% 100%, transparent 9px, #000 9px);
+    radial-gradient(circle 9px at 33.33% 0%,   transparent 9px, #000 9px),
+    radial-gradient(circle 9px at 33.33% 100%, transparent 9px, #000 9px);
   mask-composite: intersect;
+  transition: filter 0.2s;
+}
+.ticket:hover {
+  filter: drop-shadow(0 16px 20px rgba(0,0,0,0.52));
 }
 
 .ticket__stub {
-  width: 38.197%;
+  width: 33.33%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 8% 0 0;       /* top padding for icon area; bands handle sides */
   position: relative;
   background: var(--color-brand);
 }
@@ -211,12 +247,19 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   z-index: 2;
 }
 
+.stub-icon-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .stub-icon-project {
-  width: 65%; height: auto;
+  width: 65%;
+  height: auto;
   object-fit: contain;
   opacity: 0.92;
   max-width: none;
-  margin: 0 0 auto 9%;  /* top:0 right:0 bottom:auto left:9% — floats icon up, pins bands down */
+  margin: 0;
 }
 .stub-category {
   align-self: stretch;   /* override align-items: flex-start so band fills full width */
@@ -238,9 +281,16 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   font-size: 10.5px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.70);
+  color: rgba(255,255,255,1);
   font-weight: 500;
   white-space: nowrap;
+}
+.ticket__year {
+  font-size: 25px;
+  font-stretch: 150%;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  align-self: stretch;
 }
 
 .ticket__body {
@@ -252,28 +302,24 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   background: #fff;
   position: relative;
 }
-.ticket__type {
-  font-size: 11px;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 5%;
-  flex-shrink: 0;
-}
 .ticket__title {
   font-family: Raleway, system-ui, sans-serif;
-  font-size: clamp(14px, 2.4vw, 20px);
+  font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 4%;
   flex-shrink: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .ticket__title a {
   text-decoration: none;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.2s;
-  color: var(--stub-color, var(--color-text-primary));
+  color: var(--color-text-primary);
 }
 .ticket__title a:hover {
   text-decoration: underline;
@@ -281,24 +327,14 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   text-underline-offset: 3px;
 }
 .ticket__desc {
-  font-size: clamp(12px, 1.6vw, 14px);
+  font-size: 14px;
   line-height: 1.65;
   color: var(--color-text-secondary);
   flex: 1;
   overflow: hidden;
-}
-.ticket__footer {
-  display: flex;
-  align-items: center;
-  border-top: 0.5px solid #e8e2d8;
-  padding-top: 4%;
-  margin-top: 4%;
-  flex-shrink: 0;
-}
-.ticket__meta {
-  font-size: 11px;
-  color: #999;
-  letter-spacing: 0.03em;
+  margin-block-end: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 
 
@@ -359,13 +395,17 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   margin-top: var(--space-4);
 }
 .service-card {
-  flex: 0 1 calc(50% - 0.75rem);
+  flex: 0 0 calc((1100px - 4.5rem) / 2);
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
 }
 .service-card__header {
   display: flex;
@@ -395,14 +435,6 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   flex-direction: column;
   flex: 1;
 }
-.service-card__desc {
-  font-size: 0.925rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.service-card__desc p { margin: 0 0 0.6rem; }
-.service-card__desc p:last-child { margin-bottom: 0; }
 .service-card__list {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
@@ -414,9 +446,68 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 .service-card__list li { margin-bottom: 0.35rem; }
 .service-card__list li:last-child { margin-bottom: 0; }
 
+.service-card__handle {
+  width: 100%;
+  padding: 0.45rem 1.75rem;
+  background: var(--color-bg-secondary);
+  border: none;
+  border-top: 1px solid var(--color-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--service-color, var(--color-brand));
+  font-family: system-ui, sans-serif;
+  transition: background 0.15s;
+}
+.service-card__handle:hover { background: var(--color-border); }
+
+.service-card__chevron {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: transform 0.25s ease;
+}
+.service-card__handle[aria-expanded="true"] .service-card__chevron {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+.service-card__drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+.service-card__drawer.is-open { grid-template-rows: 1fr; }
+.service-card__drawer-inner { overflow: hidden; }
+
+.service-card__drawer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1.75rem 1rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+.service-card__drawer-list a {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+.service-card__drawer-list a:hover { text-decoration: underline; }
+
 // ── Responsive ───────────────────────────────────────────────────────────────
-@media (max-width: 760px) {
-  .project-grid { column-count: 1; }
+@media (max-width: 1220px) {
+  .project-grid { column-count: 1; width: calc((1100px - 4.5rem) / 2); max-width: 100%; }
 }
 @media (max-width: 680px) {
   .feature-row--left .feature-row__item { grid-template-columns: 1fr; }

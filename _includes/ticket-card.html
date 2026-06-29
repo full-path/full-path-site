@@ -5,9 +5,11 @@
   data-categories="{{ item.categories | join: ' ' | downcase }}"
   {% if _primary %}style="--stub-color: {{ _primary.colors.main }};"{% endif %}>
   <div class="ticket__stub">
-    {% if item.icon %}
-    <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
-    {% endif %}
+    <div class="stub-icon-wrap">
+      {% if item.icon %}
+      <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
+      {% endif %}
+    </div>
     {% for cat_name in item.categories %}
       {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
       {% if _cat %}
@@ -17,6 +19,9 @@
       </div>
       {% endif %}
     {% endfor %}
+    <div class="ticket__year">
+      {{ item.year }}
+    </div>
   </div>
   <div class="ticket__body">
     <h2 class="ticket__title">

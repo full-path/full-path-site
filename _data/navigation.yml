@@ -5,10 +5,11 @@ main:
     url: /tools/
   - title: Projects
     url: /projects/
-  - title: Blog
-    url: /blog/
   - title: About
     url: /about/
+  - title: Blog
+    url: /blog/
+    footer_only: true
   - title: Contact
     url: /contact/
     footer_only: true

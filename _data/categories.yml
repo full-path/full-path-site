@@ -26,7 +26,8 @@
     database design and migration, report development, staff training, and
     multi-agency coordination.
   bullets:
-    - "Implementation planning and project management"
+    - "Implementation planning"
+    - "Project management"
     - "Database design, migration, and configuration"
     - "Report development and automation, including operational and compliance reporting"
     - "Staff training and change management support"
@@ -63,7 +64,7 @@
     - "Inter-agency coordination setup using RideSheet's data sharing capabilities"
 
 - short_name: "Engagement"
-  long_name: "Facilitation and Stakeholder Engagement"
+  long_name: "Stakeholder Engagement and Facilitation"
   icon: /assets/images/engagement.svg
   colors:
     main: "#6b3fa0"
