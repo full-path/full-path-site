@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
-{% if page.header.overlay_image %}
-<div class="splash-hero" style="background-image: url('{{ page.header.overlay_image | relative_url }}');">
+{% if page.header.overlay_image or page.header.compact %}
+<div class="splash-hero{% if page.header.compact %} splash-hero--compact{% endif %}"{% if page.header.overlay_image %} style="background-image: url('{{ page.header.overlay_image | relative_url }}'); background-position: {{ page.header.overlay_position | default: 'top left' }};"{% endif %}>
   <div class="splash-hero__overlay" style="background: {{ page.header.overlay_filter | default: 'rgba(112, 66, 20, 0.5)' }};">
     <div class="splash-hero__content">
+      {% if page.header.hide_title %}
+      {% if page.excerpt %}<h1>{{ page.excerpt }}</h1>{% endif %}
+      {% else %}
       {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
       {% if page.excerpt %}<p class="splash-hero__excerpt">{{ page.excerpt }}</p>{% endif %}
+      {% endif %}
       {% if page.header.cta_url %}
       <div class="splash-hero__cta">
         <a href="{{ page.header.cta_url | relative_url }}" class="btn btn--white">{{ page.header.cta_label | default: 'Learn more' }}</a>
@@ -14,6 +18,11 @@ layout: default
       {% endif %}
     </div>
   </div>
+</div>
+{% endif %}
+{% if page.description %}
+<div class="page-description">
+  <div class="page-description__inner">{{ page.description }}</div>
 </div>
 {% endif %}
 <div class="page-content">

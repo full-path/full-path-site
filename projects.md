@@ -1,11 +1,13 @@
 ---
 title: "Projects"
-layout: single
-description: "Selected publications, tools, and research on transit technology decision-making, coordination, and open-source software."
+layout: splash
+header:
+  compact: true
+  overlay_image: /assets/images/services_hero.jpg
+  overlay_filter: "rgba(112, 66, 20, 0.5)"
+description: "Full Path's published work focuses on practical tools and frameworks for community transportation agencies — organizations that need thoughtful guidance, not vendor pitches. Most are openly available."
 permalink: /projects/
 ---
-
-Full Path's published work focuses on practical tools and frameworks for community transportation agencies — organizations that need thoughtful guidance, not vendor pitches. Most are openly available.
 
 <div class="tool-filters" id="projects-filters" role="group" aria-label="Filter by category">
   <button class="tool-filter is-active" data-filter="all">All</button>

@@ -5,6 +5,7 @@ description: "Free, open-source scheduling, dispatching, and trip coordination f
 permalink: /tools/ridesheet/
 categories: [Software]
 order: 2
+featured: true
 color_theme: "t-blue"
 category_icon: "ti-table"
 type_label: "Open Source Software"

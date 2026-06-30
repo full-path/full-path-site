@@ -1,3 +1,111 @@
+// ── Contact modal ─────────────────────────────────────────────────────────────
+.contact-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+}
+.contact-modal:target {
+  display: flex;
+}
+.contact-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+.contact-modal__panel {
+  position: relative;
+  z-index: 1;
+  background: var(--color-bg);
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  max-width: 560px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+.contact-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.contact-modal__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.contact-modal__close {
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+.contact-modal__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+  text-decoration: none;
+}
+.contact-modal__panel label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+  color: var(--color-text-secondary);
+}
+.contact-modal__panel input,
+.contact-modal__panel textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: var(--color-text-primary);
+  transition: border-color 0.15s;
+}
+.contact-modal__panel input:focus,
+.contact-modal__panel textarea:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 2px rgba(177, 45, 0, 0.15);
+}
+.contact-modal__panel .btn {
+  margin-top: 1.5rem;
+}
+.contact-modal__success-state {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.contact-modal__success-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin: 0 auto 1.25rem;
+}
+.contact-modal__success-heading {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.contact-modal__success-state p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
 // ── Project metadata block ───────────────────────────────────────────────────
 .project-meta {
   display: flex;
@@ -76,6 +184,136 @@
 }
 .tool-filter.is-active {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--filter-color, var(--color-brand));
+}
+
+// ── Home page sections ───────────────────────────────────────────────────────
+.home-intro {
+  font-size: 1.7rem;
+  line-height: 1.3;
+  max-width: var(--max-width-prose);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.home-section {
+  margin-top: var(--space-8);
+}
+.home-section__title {
+  font-size: 2.3rem;
+  color: var(--color-text-primary);
+  text-align: center;
+  border-bottom: 2px solid var(--color-brand);
+  padding-bottom: 0.4rem;
+  margin-bottom: var(--space-3);
+}
+.home-section__more {
+  margin-top: var(--space-3);
+  text-align: right;
+}
+.home-section__more a {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.home-section__more a:hover {
+  background: var(--color-brand);
+  color: #fff;
+  text-decoration: none;
+}
+.who-we-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+.who-we-help__group {
+  width: 100%;
+  max-width: 36rem;
+  text-align: left;
+}
+.who-we-help__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.5rem;
+}
+.who-we-help__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+.who-we-help__list {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+.who-we-help__list li {
+  margin-bottom: 0.2rem;
+}
+
+.home-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.home-service-link {
+  flex: 0 0 calc(50% - 0.375rem);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: filter 0.15s;
+}
+.home-service-link:hover {
+  filter: brightness(1.1);
+  text-decoration: none;
+}
+.client-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+.client-list__item {
+  display: flex;
+  align-items: center;
+}
+.client-list__link {
+  text-decoration: none;
+}
+.client-logo {
+  height: 36px;
+  width: auto;
+  max-width: 160px;
+  display: block;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: opacity 0.2s, filter 0.2s;
+}
+.client-list__link:hover .client-logo {
+  opacity: 1;
+  filter: none;
+}
+.client-name {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+.client-list__link:hover .client-name {
+  color: var(--color-brand);
+  text-decoration: underline;
 }
 
 // ── Feature row ──────────────────────────────────────────────────────────────
@@ -257,7 +495,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   width: 65%;
   height: auto;
   object-fit: contain;
-  opacity: 0.92;
+  opacity: 1;
   max-width: none;
   margin: 0;
 }
@@ -274,7 +512,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   width: 16px; height: 16px;
   flex-shrink: 0;
   filter: brightness(0) invert(1);
-  opacity: 0.85;
+  opacity: 1;
   margin: 0;
 }
 .stub-category-label {
@@ -403,6 +641,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.2s;
+  scroll-margin-top: 72px;
 }
 .service-card:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.10);
@@ -514,4 +753,5 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   .feature-row--grid { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: 1fr; }
   .service-card { flex: 1 1 100%; }
+  .home-service-link { flex: 0 0 calc((1100px - 4.5rem) / 2); max-width: 100%; }
 }

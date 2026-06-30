@@ -4,6 +4,7 @@ layout: tool
 description: "Assessment and recommendations for technology infrastructure supporting a rural transportation incubator in Arizona, focusing on mobility management and coordination tools for rural and tribal communities."
 permalink: /projects/rural-incubator/
 year: "2020"
+featured: true
 categories: [Strategy, Implementation]
 type: article
 publisher: "Age Friendly Arizona / Maricopa Association of Governments"

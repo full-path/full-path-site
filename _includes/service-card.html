@@ -2,8 +2,8 @@
 {% assign drawer_tools    = site.tools    | where_exp: "t", "t.categories contains cat_name" %}
 {% assign drawer_projects = site.projects | where_exp: "p", "p.categories contains cat_name" %}
 {% assign drawer_count    = drawer_tools.size | plus: drawer_projects.size %}
-<div class="service-card" style="--service-color: {{ include.service.colors.main }};">
-  <div class="service-card__header">
+<div class="service-card" id="{{ include.service.short_name | downcase }}" style="--service-color: {{ include.service.colors.main }};">
+  <div class="service-card__header" style="view-transition-name: service-{{ include.service.short_name | downcase }};">
     {% if include.service.icon %}
     <div class="service-card__icon-slot">
       <img src="{{ include.service.icon | relative_url }}" alt="">

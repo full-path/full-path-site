@@ -1,11 +1,13 @@
 ---
 title: "Tools"
-layout: single
+layout: splash
 permalink: /tools/
-description: "Free tools for community transit agencies — no license cost, no vendor lock-in."
+header:
+  compact: true
+  overlay_image: /assets/images/services_hero.jpg
+  overlay_filter: "rgba(112, 66, 20, 0.5)"
+description: "The tools listed here are free to use — no software license, no subscription, no vendor relationship required. Each was developed with and for small and rural transit agencies, and is designed to be adopted and maintained without dedicated IT staff."
 ---
-
-The tools listed here are free to use — no software license, no subscription, no vendor relationship required. Each was developed with and for small and rural transit agencies, and is designed to be adopted and maintained without dedicated IT staff.
 
 {% assign sorted_tools = site.tools | where_exp: "t", "t.order" | sort: "order" %}
 <div class="tool-filters" id="tools-filters" role="group" aria-label="Filter by category">

@@ -8,7 +8,11 @@
     <div class="site-footer__links">
       <nav class="site-footer__nav" aria-label="Footer navigation">
         {% for link in site.data.navigation.main %}
+          {% if link.url contains '#' %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+          {% else %}
           <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+          {% endif %}
         {% endfor %}
       </nav>
     </div>

@@ -1,5 +1,9 @@
 ---
-layout: single
+layout: splash
+header:
+  compact: true
+  overlay_image: /assets/images/services_hero.jpg
+  overlay_filter: "rgba(112, 66, 20, 0.5)"
 title: About Full Path
 permalink: /about/
 ---

@@ -4,35 +4,77 @@ layout: splash
 header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
   overlay_image: /assets/images/hero.jpg
-  cta_url: /services/
-  cta_label: "See what we do"
-excerpt: "Technology strategy and tools for community transportation"
-feature_row:
-  - image_path: /assets/images/christopher-robin-ebbinghaus-681475-unsplash.jpg
-    alt: "RideSheet scheduling tool"
-    title: "RideSheet"
-    excerpt: "Free, open-source scheduling and trip coordination for small and rural demand-responsive transportation providers — no software license, no dedicated IT required."
-    url: "/tools/ridesheet/"
-    btn_label: "Learn about RideSheet"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/aaron-burden-151465-unsplash.jpg
-    alt: "A Framework for Making Successful Technology Decisions"
-    title: "A Framework for Making Successful Technology Decisions"
-    excerpt: "A practical, capacity-building-first guide to technology decision-making for transit agencies, published by N-CATT. Co-authored with Lara Bjork."
-    url: "/tools/framework/"
-    btn_label: "Read the framework"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/tim-graf-229428-unsplash.jpg
-    alt: "One-Call/One-Click Business Plan"
-    title: "One-Call/One-Click Business Plan"
-    excerpt: "Business plan for a regional mobility management center coordinating transportation for older adults and people with disabilities across King County, Washington."
-    url: "/projects/hopelink-one-call/"
-    btn_label: "Read the plan"
-    btn_class: "btn--primary"
+  hide_title: true
+excerpt: "Technology strategy and tools for community transit — without the hype"
 ---
 
-Full Path Transit Technology provides technology strategy, assessment, and implementation support to community transit agencies — primarily small and rural providers, state DOTs, and grant-funded mobility programs. [See what we do →](/services/)
+<section class="home-section home-intro">
+Full Path helps community transportation services be successful with technology.
+</section>
 
-{% include feature_row id="feature_row" type="grid" %}
+<section class="home-section">
+<h2 class="home-section__title">Who We Help</h2>
+<div class="who-we-help">
+{% for item in site.data.who_we_help %}
+<div class="who-we-help__group">
+  <h3 class="who-we-help__heading">
+    {% if item.icon %}<img src="{{ item.icon | relative_url }}" alt="" class="who-we-help__icon">{% endif %}
+    {{ item.label }}
+  </h3>
+  {% if item.children %}
+  <ul class="who-we-help__list">
+    {% for child in item.children %}<li>{{ child }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endfor %}
+</div>
+</section>
 
-[View all projects and publications →](/projects/)
+<section class="home-section">
+<h2 class="home-section__title">Overview of Services</h2>
+<div class="home-services">
+{% for service in site.data.categories %}
+<a href="/services/#{{ service.short_name | downcase }}" class="service-card__header home-service-link" style="--service-color: {{ service.colors.main }}; view-transition-name: service-{{ service.short_name | downcase }};">
+<div class="service-card__icon-slot"><img src="{{ service.icon | relative_url }}" alt=""></div>
+<h3 class="service-card__title">{{ service.long_name }}</h3>
+</a>
+{% endfor %}
+</div>
+</section>
+
+<section class="home-section">
+<h2 class="home-section__title">Featured Tools</h2>
+<div class="project-grid">
+{% assign featured_tools = site.tools | where: "featured", true | limit: 2 %}
+{% for tool in featured_tools %}{% include ticket-card.html item=tool %}{% endfor %}
+</div>
+<p class="home-section__more"><a href="/tools/">All Tools →</a></p>
+</section>
+
+<section class="home-section">
+<h2 class="home-section__title">Featured Projects</h2>
+<div class="project-grid">
+{% assign featured_projects = site.projects | where: "featured", true | limit: 2 %}
+{% for project in featured_projects %}{% include ticket-card.html item=project %}{% endfor %}
+</div>
+<p class="home-section__more"><a href="/projects/">All Projects →</a></p>
+</section>
+
+<section class="home-section">
+<h2 class="home-section__title">Organizations We've Helped</h2>
+<ul class="client-list">
+{% for client in site.data.clients %}
+<li class="client-list__item">
+  {% if client.url %}<a href="{{ client.url }}" class="client-list__link">{% endif %}
+  {% if client.logo %}
+  <img src="{{ client.logo | relative_url }}" alt="{{ client.name }}" class="client-logo">
+  {% else %}
+  <span class="client-name">{{ client.name }}</span>
+  {% endif %}
+  {% if client.url %}</a>{% endif %}
+</li>
+{% endfor %}
+</ul>
+</section>
+

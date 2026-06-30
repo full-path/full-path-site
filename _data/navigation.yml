@@ -11,5 +11,5 @@ main:
     url: /blog/
     footer_only: true
   - title: Contact
-    url: /contact/
+    url: "#contact-modal"
     footer_only: true

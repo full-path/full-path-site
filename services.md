@@ -5,6 +5,7 @@ permalink: /services/
 header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
   overlay_image: /assets/images/services_hero.jpg
+  compact: true
 ---
 
 Full Path works with transit agencies of all sizes and the organizations that support them — state DOTs, regional governments, coordinating bodies, and technical assistance centers. Because we often work with organizations that have little or no IT resources, we can cover the full spectrum of service required to make a technology-involved project successful, either directly or through Full Path's trusted partners.

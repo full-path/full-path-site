@@ -10,6 +10,9 @@
       <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
       {% endif %}
     </div>
+    <div class="ticket__year">
+      {{ item.year }}
+    </div>
     {% for cat_name in item.categories %}
       {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
       {% if _cat %}
@@ -19,9 +22,6 @@
       </div>
       {% endif %}
     {% endfor %}
-    <div class="ticket__year">
-      {{ item.year }}
-    </div>
   </div>
   <div class="ticket__body">
     <h2 class="ticket__title">

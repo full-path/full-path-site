@@ -6,6 +6,7 @@ permalink: /tools/framework/
 year: "2025"
 categories: [Strategy,Engagement,Interoperability]
 order: 1
+featured: true
 icon: /assets/images/framework.svg
 color_theme: "t-red"
 category_icon: "ti-book"

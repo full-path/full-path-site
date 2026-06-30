@@ -1,0 +1,64 @@
+<div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-label="Contact Full Path">
+  <a href="#" class="contact-modal__backdrop" aria-label="Close dialog"></a>
+  <div class="contact-modal__panel">
+    <div class="contact-modal__header">
+      <h2 class="contact-modal__title">Contact Full Path</h2>
+      <a href="#" class="contact-modal__close" aria-label="Close">&times;</a>
+    </div>
+
+    <div class="contact-modal__form-state">
+      <p>We'd love to hear from you.</p>
+      <form name="contact" method="POST" accept-charset="utf-8" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="_utf8" value="✓">
+        <label for="modal-name">Name</label>
+        <input type="text" id="modal-name" name="name" required>
+        <label for="modal-email">Email</label>
+        <input type="email" id="modal-email" name="email" required>
+        <label for="modal-subject">Subject</label>
+        <input type="text" id="modal-subject" name="subject" required>
+        <label for="modal-message">Message</label>
+        <textarea id="modal-message" name="message" required style="height:160px"></textarea>
+        <button type="submit" class="btn btn--primary">Send message</button>
+      </form>
+    </div>
+
+    <div class="contact-modal__success-state" hidden>
+      <div class="contact-modal__success-icon" aria-hidden="true">&#10003;</div>
+      <h3 class="contact-modal__success-heading">Message sent</h3>
+      <p>Thank you — we'll be in touch soon.</p>
+      <a href="#" class="btn btn--primary">Close</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var modal      = document.getElementById('contact-modal');
+  var form       = modal.querySelector('form');
+  var formState  = modal.querySelector('.contact-modal__form-state');
+  var successState = modal.querySelector('.contact-modal__success-state');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function () {
+      formState.hidden = true;
+      successState.hidden = false;
+    }).catch(function () {
+      form.submit();
+    });
+  });
+
+  window.addEventListener('hashchange', function () {
+    if (location.hash !== '#contact-modal') {
+      formState.hidden = false;
+      successState.hidden = true;
+      form.reset();
+    }
+  });
+}());
+</script>
