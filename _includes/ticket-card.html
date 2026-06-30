@@ -11,9 +11,6 @@
       <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
       {% endif %}
     </div>
-    <div class="ticket__year">
-      {{ item.year }}
-    </div>
     {% for cat_name in item.categories %}
       {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
       {% if _cat %}
@@ -23,6 +20,9 @@
       </div>
       {% endif %}
     {% endfor %}
+    <div class="ticket__year">
+      {{ item.year }}
+    </div>
   </div>
   <div class="ticket__body">
     <h2 class="ticket__title">
@@ -35,6 +35,13 @@
       {% endif %}
     </h2>
     <p class="ticket__desc">{{ item.description }}</p>
+    {% if item.download_url %}
+    <a href="{{ item.download_url }}"{% if item.newtab %} target="_blank" rel="noopener"{% endif %} class="ticket__arrow" aria-label="View {{ item.title }}">→</a>
+    {% elsif item.publication_url %}
+    <a href="{{ item.publication_url }}" target="_blank" rel="noopener" class="ticket__arrow" aria-label="View {{ item.title }}">→</a>
+    {% else %}
+    <a href="{{ item.url | relative_url }}" class="ticket__arrow" aria-label="View {{ item.title }}">→</a>
+    {% endif %}
   </div>
 </article>
 </div>

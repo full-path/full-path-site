@@ -4,19 +4,15 @@ layout: tool
 description: "A practical, capacity-building-first guide to technology decision-making for transit agencies. Covers how to define the problem, assess readiness, evaluate vendors, and build internal ownership. "
 permalink: /tools/framework/
 year: "2025"
-categories: [Strategy,Engagement,Interoperability]
+categories: [Strategy,Engagement]
 order: 2
 featured_order: 2
 icon: /assets/images/framework.svg
 color_theme: "t-red"
 category_icon: "ti-book"
 type_label: "Guidebook"
-client: "National Center for Applied Transit Technology (N-CATT)"
-client_url: "https://n-catt.org/"
-published: "February 2022"
-revised: "April 2025"
-collaborators:
-  - name: "Lara Bjork"
+client: ncatt
+partners: [lara-bjork]
 ---
 
 Published by the National Center for Applied Transit Technology (N-CATT), this whitepaper offers a structured, capacity-building-first approach to technology decision-making for transit agencies. Co-authored with Lara Bjork, it was originally published in February 2022 and substantially revised in April 2025.

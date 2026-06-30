@@ -12,8 +12,7 @@ color_theme: "t-blue"
 category_icon: "ti-device-laptop"
 type_label: "Assessment Report"
 report_url: "https://www.agefriendlyaz.org/Portals/4/Technology-Support-for-the-Rural-Transportation-Incubator.pdf"
-client: "Age Friendly Arizona / Maricopa Association of Governments"
-client_url: "https://www.agefriendlyaz.org/"
+client: age-friendly-az
 published: "March 2020"
 ---
 

@@ -2,16 +2,16 @@
   icon: /assets/images/small_bus.svg
   children:
     - "Rural and small urban transit (FTA 5311)"
-    - "Specialized services (FTA 5310)"
-    - "ADA Paratransit (FTA 5307)"
+    - "Specialized services, such as those aimed at older adults and people with disabilities (FTA 5310)"
     - "Non-emergency medical transportation (Medicaid)"
+    - "ADA Paratransit"
 - label: "Organizations that fund, coordinate, and support community transportation"
   icon: /assets/images/support_bus.svg
   children:
     - "State departments of transportation"
     - "Regional governments"
     - "FTA-funded technical assistance centers"
-- label: "Organizations in adjacent fields that integrate with community transportation"
+- label: "Organizations in adjacent fields that work with community transportation"
   icon: /assets/images/adjacent_bus.svg
   children:
     - "Healthcare"

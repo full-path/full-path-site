@@ -12,8 +12,7 @@ color_theme: "t-red"
 category_icon: "ti-report"
 type_label: "Research Report"
 report_url: "https://www.aarp.org/content/dam/aarp/ppi/2021/03/ridesheet-rural-transportation-benefits-new-coordination-technology.doi.10.26419-2Fppi.00131.001.pdf"
-client: "AARP Public Policy Institute"
-client_url: "https://www.aarp.org/pri/departments/ppi/"
+client: aarp
 published: "March 2021"
 ---
 

@@ -5,7 +5,7 @@ header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
   overlay_image: /assets/images/hero.jpg
   hide_title: true
-excerpt: "Technology strategy and tools for community transit without the hype"
+excerpt: "Technology strategy and tools for community transit — without the hype"
 ---
 
 <section class="home-section home-intro">
@@ -41,6 +41,7 @@ Full Path helps community transportation services be successful with technology.
 </a>
 {% endfor %}
 </div>
+<p class="home-section__more"><a href="/services/">More Details →</a></p>
 </section>
 
 <section class="home-section">
@@ -64,7 +65,8 @@ Full Path helps community transportation services be successful with technology.
 <section class="home-section">
 <h2 class="home-section__title">Organizations We've Helped</h2>
 <ul class="client-list">
-{% for client in site.data.clients %}
+{% assign _clients = site.data.partners | where: "client", true %}
+{% for client in _clients %}
 <li class="client-list__item">
   {% if client.url %}<a href="{{ client.url }}" class="client-list__link">{% endif %}
   {% if client.logo %}

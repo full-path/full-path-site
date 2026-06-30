@@ -23,9 +23,3 @@ I've been supporting nonprofits and grassroots organizations around data and tec
 I founded Full Path in 2018 to bring that field experience to a broader set of agencies. Since then, the work has included published frameworks for technology decision-making, assessment tools for technology readiness, and the continued development of [RideSheet](/tools/ridesheet/) — a free, open-source scheduling and coordination system used by seven agencies across four states.
 
 I hold a BA in Spanish and Latin American Studies from Oregon State University, magna cum laude.
-
-## What I believe
-
-Most technology failures in community transportation aren't technology failures. They're organizational failures: agencies that adopted tools before they were ready, vendors who oversold and underdelivered, implementations that never accounted for who would actually maintain the system after go-live.
-
-Good technology strategy starts with honest assessment of what an organization can realistically adopt and sustain — not with a product catalog. That's the work.

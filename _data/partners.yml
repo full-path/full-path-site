@@ -1,0 +1,68 @@
+# client: true identifies organizations that appear in the client list on the home page.
+# Add logo: /assets/images/partners/filename.svg (or .png) to show a logo.
+
+- key: garnet
+  name: "Garnet Consulting"
+  url: "https://www.garnetconsultingpdx.com/"
+  logo:
+  description: ""
+
+- key: apgar
+  name: "Apgar & Associates"
+  url: "https://apgarandassoc.com/"
+  logo:
+  description: ""
+
+- key: access-tech
+  name: "Access Tech"
+  url: "https://www.accesstech.net/"
+  logo:
+  description: ""
+
+- key: lara-bjork
+  name: "Lara Bjork"
+  url:
+  logo:
+  description: ""
+
+- key: ncatt
+  name: "National Center for Applied Transit Technology (N-CATT)"
+  url: "https://n-catt.org/"
+  logo:
+  client: true
+  description: ""
+
+- key: odot
+  name: "Oregon Department of Transportation"
+  url:
+  logo:
+  client: true
+  description: ""
+
+- key: rtap
+  name: "National RTAP"
+  url: "https://www.nationalrtap.org/"
+  logo:
+  client: true
+  description: ""
+
+- key: aarp
+  name: "AARP Public Policy Institute"
+  url: "https://www.aarp.org/pri/departments/ppi/"
+  logo:
+  client: true
+  description: ""
+
+- key: age-friendly-az
+  name: "Age Friendly Arizona / Maricopa Association of Governments"
+  url: "https://www.agefriendlyaz.org/"
+  logo:
+  client: true
+  description: ""
+
+- key: hopelink
+  name: "King County Mobility Coalition / Hopelink"
+  url: "https://www.hopelink.org/"
+  logo:
+  client: true
+  description: ""

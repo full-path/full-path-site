@@ -8,9 +8,7 @@ permalink: /tools/ridesheet/
 categories: [Software,Strategy,Engagement,Interoperability,Implementation]
 order: 1
 featured_order: 1
-color_theme: "t-blue"
-category_icon: "ti-table"
-type_label: "Open Source Software"
+partners: [rtap,garnet]
 ---
 
 RideSheet is a free, open-source scheduling and trip coordination system for small and rural demand-responsive transportation providers — the agencies that typically have no dedicated IT staff, limited broadband, and no budget for expensive proprietary software.
@@ -28,11 +26,9 @@ As of early 2026, RideSheet is in active use at 7 agencies in 4 states. It was i
 ## Get Started
 
 <div class="btn-group">
-  <a href="#" class="btn btn--primary">Documentation</a>
-  <a href="#" class="btn btn--outline">GitHub Repository</a>
+  <a href="https://docs.ridesheet.org" class="btn btn--primary">Documentation</a>
+  <a href="https://github.com/full-path/ridesheet" class="btn btn--outline">GitHub Repository</a>
 </div>
-
-*Documentation and repository links will be updated as they are finalized.*
 
 ## Videos
 

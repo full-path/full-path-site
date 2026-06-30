@@ -196,7 +196,7 @@
   text-align: center;
 }
 .home-section {
-  margin-top: var(--space-8);
+  margin-top: var(--space-12);
 }
 .home-section__title {
   font-size: 2.3rem;
@@ -456,7 +456,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
     drop-shadow(-1px 0 0 var(--color-text-primary))
     drop-shadow(0 1px 0 var(--color-text-primary))
     drop-shadow(0 -1px 0 var(--color-text-primary))
-    drop-shadow(0 16px 20px rgba(0,0,0,0.52));
+    drop-shadow(0 16px 20px rgba(0,0,0,0.1));
 }
 .ticket {
   display: flex;
@@ -496,17 +496,19 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 
 .stub-icon-wrap {
   flex: 1;
+  align-self: stretch;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 .stub-icon-project {
-  width: 65%;
+  width: 80%;
   height: auto;
   object-fit: contain;
   opacity: 1;
   max-width: none;
   margin: 0;
+  padding-top: .7rem;
 }
 .stub-category {
   align-self: stretch;   /* override align-items: flex-start so band fills full width */
@@ -583,29 +585,51 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
+.ticket__arrow {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.ticket__arrow:hover {
+  background: var(--color-brand-dark);
+  text-decoration: none;
+}
 
 
 /* Mobile: portrait φ rectangle, stub on top */
-@media (max-width: 540px) {
+@media (max-width: 650px) {
   .ticket {
     flex-direction: column;
-    aspect-ratio: 1 / 1.618; /* keep golden ratio on mobile so mask notches stay aligned */
+    aspect-ratio: 1 / 1.3;
     -webkit-mask-image:
-      radial-gradient(circle 9px at 0%   38.197%, transparent 9px, #000 9px),
-      radial-gradient(circle 9px at 100% 38.197%, transparent 9px, #000 9px);
+      radial-gradient(circle 9px at 0%   33.33%, transparent 9px, #000 9px),
+      radial-gradient(circle 9px at 100% 33.33%, transparent 9px, #000 9px);
     -webkit-mask-composite: destination-in;
     mask-image:
-      radial-gradient(circle 9px at 0%   38.197%, transparent 9px, #000 9px),
-      radial-gradient(circle 9px at 100% 38.197%, transparent 9px, #000 9px);
+      radial-gradient(circle 9px at 0%   33.33%, transparent 9px, #000 9px),
+      radial-gradient(circle 9px at 100% 33.33%, transparent 9px, #000 9px);
     mask-composite: intersect;
   }
 
   .ticket__stub {
     width: 100%;
-    aspect-ratio: 1.618 / 1;
-    flex-direction: column;
+    aspect-ratio: 2.3 / 1; /* = 3/1.618, matches desktop 1/3 proportion */
+    flex-direction: row;
     align-items: stretch;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0;
   }
   .ticket__stub::after {
@@ -619,32 +643,60 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
     padding: 6% 7%;
   }
   .stub-icon-wrap {
-    position: absolute;
-    top: 0.4rem;
-    right: 0.4rem;
-    flex: unset;
-    width: 2.5rem;
-    height: 2.5rem;
+    position: static;
+    order: 1;
+    flex: 1;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .stub-icon-project {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    height: auto;
     object-fit: contain;
+    padding-top: 0;
   }
   .ticket__year {
-    position: absolute;
-    top: 0.35rem;
-    left: 0.35rem;
-    align-self: unset;
+    order: -2;
+    position: static;
+    align-self: stretch;
     writing-mode: vertical-lr;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.25rem, 0.038rem + 6.06vw, 2.5rem);
   }
-  .stub-category                   { padding: 3px 5% 3px 7%; }
-  .stub-category .category-icon    { width: 16px; height: 16px; margin: 0; }
-  .stub-category-label             { font-size: 9.5px; }
-  .ticket__title { font-size: clamp(14px, 5.2vw, 20px); }
-  .ticket__desc  { font-size: clamp(12px, 3.2vw, 14px); }
+  .stub-category {
+    order: -1;
+    writing-mode: vertical-lr;
+    align-self: stretch;
+    flex-direction: row;        /* in vertical-lr, row = top-to-bottom */
+    align-items: center;
+    justify-content: flex-start; /* icon at top, label below */
+    gap: 4px;
+    padding-top: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+    padding-bottom: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+    padding-left: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+    padding-right: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+  }
+  .stub-category .category-icon {
+    width: clamp(10px, 3.7vw, 22px);
+    height: clamp(10px, 3.7vw, 22px);
+    margin-top: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+    margin-bottom: clamp(0.063rem, -0.325rem + 1.72vw, 0.375rem);
+  }
+  .stub-category .stub-category-label {
+    font-size: clamp(0.4rem, -0.345rem + 3.31vw, 1rem);
+  }
+  .ticket__title {
+    font-size: clamp(1rem, -0.552rem + 6.9vw, 2.25rem);
+  }
+  .ticket__desc  {
+    font-size: clamp(0.563rem, -0.291rem + 3.79vw, 1.25rem);
+  }
 }
 
 // ── Video grid ───────────────────────────────────────────────────────────────
@@ -754,13 +806,21 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   transition: grid-template-rows 0.25s ease;
 }
 .service-card__drawer.is-open { grid-template-rows: 1fr; }
-.service-card__drawer-inner { overflow: hidden; }
+.service-card__drawer-inner { overflow: hidden; border-top: 1px solid var(--color-border); }
 
+.service-card__drawer-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--service-color, var(--color-brand));
+  padding: 0.6rem 1.75rem 0.2rem;
+  margin: 0;
+}
 .service-card__drawer-list {
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1.75rem 1rem;
-  border-top: 1px solid var(--color-border);
+  padding: 0 1.75rem 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;

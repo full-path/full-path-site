@@ -5,20 +5,10 @@ description: "A free online self-assessment that rates your agency's technology 
 permalink: /tools/readiness-assessment/
 categories: [Strategy]
 order: 3
-color_theme: "t-teal"
-category_icon: "ti-clipboard-check"
-type_label: "Self-Assessment"
-client: "National Center for Applied Transit Technology (N-CATT)"
-client_url: "https://n-catt.org/"
-published: "June 2022"
-revised: "September 2024"
-collaborators:
-  - name: "Apgar & Associates"
-    url: "https://apgarandassoc.com/"
-  - name: "Access Tech"
-    url: "https://www.accesstech.net/"
-  - name: "Garnet Consulting"
-    url: "https://www.garnetconsultingpdx.com/"
+client: ncatt
+partners: [garnet, apgar, access-tech]
+icon: /assets/images/readiness.svg
+year: 2024
 ---
 
 Published by the National Center for Applied Transit Technology (N-CATT), this free online self-assessment tool helps transit agencies understand where they stand on technology readiness — before they commit to a new system or start a procurement. Co-developed with Apgar & Associates, and Access Tech. Updated with Garnet Consulting.

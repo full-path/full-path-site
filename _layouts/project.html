@@ -17,9 +17,10 @@ layout: default
       </div>
       {% endif %}
       {% if page.client %}
+      {% assign _client = site.data.partners | where: "key", page.client | first %}
       <div class="project-meta__item">
         <dt>Client</dt>
-        <dd>{% if page.client_url %}<a href="{{ page.client_url }}">{{ page.client }}</a>{% else %}{{ page.client }}{% endif %}</dd>
+        <dd>{% if _client %}{% if _client.url %}<a href="{{ _client.url }}">{{ _client.name }}</a>{% else %}{{ _client.name }}{% endif %}{% else %}{{ page.client }}{% endif %}</dd>
       </div>
       {% endif %}
       {% if page.published %}
@@ -28,10 +29,10 @@ layout: default
         <dd>{{ page.published }}{% if page.revised %} · Revised {{ page.revised }}{% endif %}</dd>
       </div>
       {% endif %}
-      {% if page.collaborators %}
+      {% if page.partners %}
       <div class="project-meta__item">
         <dt>With</dt>
-        <dd>{% for collab in page.collaborators %}{% if forloop.first == false %}, {% endif %}{% if collab.url %}<a href="{{ collab.url }}">{{ collab.name }}</a>{% else %}{{ collab.name }}{% endif %}{% endfor %}</dd>
+        <dd>{% for partner_key in page.partners %}{% assign _partner = site.data.partners | where: "key", partner_key | first %}{% if forloop.first == false %}, {% endif %}{% if _partner %}{% if _partner.url %}<a href="{{ _partner.url }}">{{ _partner.name }}</a>{% else %}{{ _partner.name }}{% endif %}{% else %}{{ partner_key }}{% endif %}{% endfor %}</dd>
       </div>
       {% endif %}
     </dl>

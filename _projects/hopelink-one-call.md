@@ -3,16 +3,12 @@ title: "One-Call/One-Click Business Plan"
 layout: tool
 description: "Business plan for a regional mobility management center serving King County, Washington, coordinating transportation for seniors and people with disabilities across human services providers."
 permalink: /projects/hopelink-one-call/
-year: "2020"
 categories: [Strategy, Engagement]
 type: article
-publisher: "King County Mobility Coalition / Hopelink"
-color_theme: "t-teal"
-category_icon: "ti-route"
-type_label: "Business Plan"
 report_url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
-client: "King County Mobility Coalition / Hopelink"
+client: hopelink
 published: "January 2020"
+year: "2020"
 ---
 
 Developed for the King County Mobility Coalition through Hopelink in January 2020, this business plan laid out the operational and financial model for a regional one-call/one-click mobility management center serving King County, Washington.
