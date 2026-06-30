@@ -5,8 +5,8 @@ description: "A practical, capacity-building-first guide to technology decision-
 permalink: /tools/framework/
 year: "2025"
 categories: [Strategy,Engagement,Interoperability]
-order: 1
-featured: true
+order: 2
+featured_order: 2
 icon: /assets/images/framework.svg
 color_theme: "t-red"
 category_icon: "ti-book"

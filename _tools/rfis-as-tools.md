@@ -4,7 +4,7 @@ layout: tool
 description: "Requests for Information are underrated tools. This two-page guide explains how to use them for gathering market intelligence, building vendor relationships, and reducing risk before you issue an RFP."
 permalink: /tools/rfis-as-tools/
 categories: [Strategy]
-order: 3
+order: 4
 color_theme: "t-amber"
 category_icon: "ti-file-description"
 type_label: "Procurement Guide"

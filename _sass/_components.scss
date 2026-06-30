@@ -439,18 +439,31 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 }
 
 // ── Project / tool grid ───────────────────────────────────────────────────────
-.project-grid { column-count: 2; column-gap: 1.5rem; margin: 1.5rem auto 0; width: calc(1100px - 3rem); }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 1.5rem auto 0; width: calc(1100px - 3rem); max-width: 100%; }
 
 // ── Ticket card ───────────────────────────────────────────────────────────────
+.ticket-wrap {
+  filter:
+    drop-shadow(1px 0 0 var(--color-text-primary))
+    drop-shadow(-1px 0 0 var(--color-text-primary))
+    drop-shadow(0 1px 0 var(--color-text-primary))
+    drop-shadow(0 -1px 0 var(--color-text-primary));
+  transition: filter 0.2s;
+}
+.ticket-wrap:hover {
+  filter:
+    drop-shadow(1px 0 0 var(--color-text-primary))
+    drop-shadow(-1px 0 0 var(--color-text-primary))
+    drop-shadow(0 1px 0 var(--color-text-primary))
+    drop-shadow(0 -1px 0 var(--color-text-primary))
+    drop-shadow(0 16px 20px rgba(0,0,0,0.52));
+}
 .ticket {
   display: flex;
   flex-direction: row;
   aspect-ratio: 1.618 / 1;
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
   border-radius: 8px;
   overflow: hidden;
-  border: 0.5px solid rgba(0,0,0,0.10);
   position: relative;
   -webkit-mask-image:
     radial-gradient(circle 9px at 33.33% 0%,   transparent 9px, #000 9px),
@@ -460,10 +473,6 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
     radial-gradient(circle 9px at 33.33% 0%,   transparent 9px, #000 9px),
     radial-gradient(circle 9px at 33.33% 100%, transparent 9px, #000 9px);
   mask-composite: intersect;
-  transition: filter 0.2s;
-}
-.ticket:hover {
-  filter: drop-shadow(0 16px 20px rgba(0,0,0,0.52));
 }
 
 .ticket__stub {
@@ -609,7 +618,28 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
     flex: 1;
     padding: 6% 7%;
   }
-  .stub-icon-project               { display: none; }
+  .stub-icon-wrap {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    flex: unset;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .stub-icon-project {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .ticket__year {
+    position: absolute;
+    top: 0.35rem;
+    left: 0.35rem;
+    align-self: unset;
+    writing-mode: vertical-lr;
+    font-size: 20px;
+  }
   .stub-category                   { padding: 3px 5% 3px 7%; }
   .stub-category .category-icon    { width: 16px; height: 16px; margin: 0; }
   .stub-category-label             { font-size: 9.5px; }
@@ -746,7 +776,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 
 // ── Responsive ───────────────────────────────────────────────────────────────
 @media (max-width: 1220px) {
-  .project-grid { column-count: 1; width: calc((1100px - 4.5rem) / 2); max-width: 100%; }
+  .project-grid { grid-template-columns: 1fr; width: calc((1100px - 3rem) / 2); max-width: 100%; }
 }
 @media (max-width: 680px) {
   .feature-row--left .feature-row__item { grid-template-columns: 1fr; }

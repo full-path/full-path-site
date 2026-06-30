@@ -5,7 +5,7 @@ header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
   overlay_image: /assets/images/hero.jpg
   hide_title: true
-excerpt: "Technology strategy and tools for community transit — without the hype"
+excerpt: "Technology strategy and tools for community transit without the hype"
 ---
 
 <section class="home-section home-intro">
@@ -46,7 +46,7 @@ Full Path helps community transportation services be successful with technology.
 <section class="home-section">
 <h2 class="home-section__title">Featured Tools</h2>
 <div class="project-grid">
-{% assign featured_tools = site.tools | where: "featured", true | limit: 2 %}
+{% assign featured_tools = site.tools | where_exp: "t", "t.featured_order" | sort: "featured_order" %}
 {% for tool in featured_tools %}{% include ticket-card.html item=tool %}{% endfor %}
 </div>
 <p class="home-section__more"><a href="/tools/">All Tools →</a></p>
@@ -55,7 +55,7 @@ Full Path helps community transportation services be successful with technology.
 <section class="home-section">
 <h2 class="home-section__title">Featured Projects</h2>
 <div class="project-grid">
-{% assign featured_projects = site.projects | where: "featured", true | limit: 2 %}
+{% assign featured_projects = site.projects | where_exp: "p", "p.featured_order" | sort: "featured_order" %}
 {% for project in featured_projects %}{% include ticket-card.html item=project %}{% endfor %}
 </div>
 <p class="home-section__more"><a href="/projects/">All Projects →</a></p>

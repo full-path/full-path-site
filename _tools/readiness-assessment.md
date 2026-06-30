@@ -4,7 +4,7 @@ layout: tool
 description: "A free online self-assessment that rates your agency's technology readiness across five dimensions using a CMMI-based maturity model. Takes about 30 minutes and produces a profile you can use to prioritize capacity-building work."
 permalink: /tools/readiness-assessment/
 categories: [Strategy]
-order: 4
+order: 3
 color_theme: "t-teal"
 category_icon: "ti-clipboard-check"
 type_label: "Self-Assessment"

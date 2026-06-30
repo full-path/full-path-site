@@ -1,6 +1,7 @@
 {% assign item = include.item %}
 {% assign _primary_name = item.categories | first %}
 {% assign _primary = site.data.categories | where: "short_name", _primary_name | first %}
+<div class="ticket-wrap">
 <article class="ticket"
   data-categories="{{ item.categories | join: ' ' | downcase }}"
   {% if _primary %}style="--stub-color: {{ _primary.colors.main }};"{% endif %}>
@@ -36,3 +37,4 @@
     <p class="ticket__desc">{{ item.description }}</p>
   </div>
 </article>
+</div>

@@ -9,7 +9,7 @@ description: "Full Path's published work focuses on practical tools and framewor
 permalink: /projects/
 ---
 
-<div class="tool-filters" id="projects-filters" role="group" aria-label="Filter by category">
+<div class="tool-filters" id="projects-filters" data-grid="projects-grid" role="group" aria-label="Filter by category">
   <button class="tool-filter is-active" data-filter="all">All</button>
   {% for cat in site.data.categories %}
     <button class="tool-filter" data-filter="{{ cat.short_name | downcase }}" style="--filter-color: {{ cat.colors.main }};">{% include category-icon.html category=cat.short_name %}{{ cat.short_name }}</button>
@@ -22,21 +22,4 @@ permalink: /projects/
 {% endfor %}
 </div>
 
-<script>
-(function () {
-  var container = document.getElementById('projects-filters');
-  var btns  = container.querySelectorAll('.tool-filter');
-  var cards = document.querySelectorAll('#projects-grid .ticket');
-  btns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = this.dataset.filter;
-      btns.forEach(function (b) { b.classList.remove('is-active'); });
-      this.classList.add('is-active');
-      cards.forEach(function (card) {
-        var cats = (card.dataset.categories || '').split(' ');
-        card.hidden = filter !== 'all' && !cats.includes(filter);
-      });
-    });
-  });
-}());
-</script>
+<script src="{{ '/assets/js/filter.js' | relative_url }}"></script>
