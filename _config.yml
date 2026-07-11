@@ -29,11 +29,6 @@ permalink: /blog/:year/:month/:title
 og_image: /android-chrome-256x256.png
 author: Kevin Chambers
 
-analytics:
-  provider: google-gtag
-  google:
-    tracking_id: UA-112157492-1
-
 defaults:
   -
     scope:
