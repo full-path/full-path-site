@@ -3,9 +3,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 [hidden] { display: none !important; }
 
-html { font-size: var(--font-size-base); }
-
 body {
+  font-size: 1.2rem;
   font-family: system-ui, sans-serif;
   color: var(--color-text-primary);
   line-height: var(--line-height-base);
@@ -17,4 +16,4 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--color-brand); }
 a:hover { text-decoration: underline; }
 
-h1, h2, h3, h4 { font-family: Raleway, system-ui, sans-serif; font-weight: 500; line-height: 1.25; }
+h1, h2, h3, h4 { font-family: Raleway, system-ui, sans-serif; font-weight: 800; line-height: 1.25; }

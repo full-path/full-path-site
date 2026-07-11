@@ -5,26 +5,10 @@
 <article class="ticket"
   data-categories="{{ item.categories | join: ' ' | downcase }}"
   {% if _primary %}style="--stub-color: {{ _primary.colors.main }};"{% endif %}>
-  <div class="ticket__stub">
-    <div class="stub-icon-wrap">
-      {% if item.icon %}
-      <img class="stub-icon-project" src="{{ item.icon | relative_url }}" alt="">
-      {% endif %}
-    </div>
-    {% for cat_name in item.categories %}
-      {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
-      {% if _cat %}
-      <div class="stub-category" style="--cat-color: {{ _cat.colors.main }};">
-        <img src="{{ _cat.icon | relative_url }}" width="16" height="16" alt="" aria-hidden="true" class="category-icon">
-        <span class="stub-category-label">{{ cat_name }}</span>
-      </div>
-      {% endif %}
-    {% endfor %}
-    <div class="ticket__year">
-      {{ item.year }}
-    </div>
-  </div>
-  <div class="ticket__body">
+  <div class="ticket__header">
+    {% if item.icon %}
+    <img class="ticket__icon" src="{{ item.icon | relative_url }}" alt="">
+    {% endif %}
     <h2 class="ticket__title">
       {% if item.download_url %}
       <a href="{{ item.download_url }}"{% if item.newtab %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
@@ -34,7 +18,22 @@
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       {% endif %}
     </h2>
-    <p class="ticket__desc">{{ item.description }}</p>
+  </div>
+  <div class="ticket__desc">
+    <p>{{ item.description }}</p>
+    <span class="ticket__year">{{ item.year }}</span>
+  </div>
+  <div class="ticket__footer">
+    <div class="ticket__cats">
+      {% for cat_name in item.categories %}
+        {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
+        {% if _cat %}
+        <div class="ticket__cat-badge" style="background: {{ _cat.colors.main }};" title="{{ cat_name }}" aria-label="{{ cat_name }}" tabindex="0">
+          <img src="{{ _cat.icon | relative_url }}" alt="" class="category-icon">
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
     {% if item.download_url %}
     <a href="{{ item.download_url }}"{% if item.newtab %} target="_blank" rel="noopener"{% endif %} class="ticket__arrow" aria-label="View {{ item.title }}">→</a>
     {% elsif item.publication_url %}

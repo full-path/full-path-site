@@ -14,25 +14,31 @@ Full Path helps community transportation services be successful with technology.
 
 <section class="home-section">
 <h2 class="home-section__title">Who We Help</h2>
-<div class="who-we-help">
+<div class="service-grid">
 {% for item in site.data.who_we_help %}
-<div class="who-we-help__group">
-  <h3 class="who-we-help__heading">
-    {% if item.icon %}<img src="{{ item.icon | relative_url }}" alt="" class="who-we-help__icon">{% endif %}
-    {{ item.label }}
-  </h3>
-  {% if item.children %}
-  <ul class="who-we-help__list">
-    {% for child in item.children %}<li>{{ child }}</li>{% endfor %}
-  </ul>
-  {% endif %}
+<div class="service-card" style="--service-color: {{ item.color }};">
+  <div class="service-card__header">
+    {% if item.icon %}
+    <div class="service-card__icon-slot">
+      <img src="{{ item.icon | relative_url }}" alt="">
+    </div>
+    {% endif %}
+    <h3 class="service-card__title">{{ item.label }}</h3>
+  </div>
+  <div class="service-card__body">
+    {% if item.children %}
+    <ul class="service-card__list">
+      {% for child in item.children %}<li>{{ child }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
 </div>
 {% endfor %}
 </div>
 </section>
 
 <section class="home-section">
-<h2 class="home-section__title">Overview of Services</h2>
+<h2 class="home-section__title">Our Services</h2>
 <div class="home-services">
 {% for service in site.data.categories %}
 <a href="/services/#{{ service.short_name | downcase }}" class="service-card__header home-service-link" style="--service-color: {{ service.colors.main }}; view-transition-name: service-{{ service.short_name | downcase }};">
@@ -50,7 +56,7 @@ Full Path helps community transportation services be successful with technology.
 {% assign featured_tools = site.tools | where_exp: "t", "t.featured_order" | sort: "featured_order" %}
 {% for tool in featured_tools %}{% include ticket-card.html item=tool %}{% endfor %}
 </div>
-<p class="home-section__more"><a href="/tools/">All Tools →</a></p>
+<p class="home-section__more"><a href="/tools/">More Tools →</a></p>
 </section>
 
 <section class="home-section">
@@ -59,7 +65,7 @@ Full Path helps community transportation services be successful with technology.
 {% assign featured_projects = site.projects | where_exp: "p", "p.featured_order" | sort: "featured_order" %}
 {% for project in featured_projects %}{% include ticket-card.html item=project %}{% endfor %}
 </div>
-<p class="home-section__more"><a href="/projects/">All Projects →</a></p>
+<p class="home-section__more"><a href="/projects/">More Projects →</a></p>
 </section>
 
 <section class="home-section">

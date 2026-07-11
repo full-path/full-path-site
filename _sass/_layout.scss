@@ -15,7 +15,7 @@ $nav-height: 64px;
   display: flex; align-items: center; gap: 0.6rem;
   text-decoration: none; color: var(--color-text-primary); font-weight: 700; font-size: 1rem;
 }
-.site-nav__logo img { width: 40px; height: 40px; object-fit: contain; }
+.site-nav__logo img { width: 2.5rem; height: 2.5rem; object-fit: contain; }
 .site-nav__logo:hover { text-decoration: none; color: var(--color-brand); }
 .site-nav__links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
 .site-nav__links a:not(.btn) {
@@ -82,7 +82,7 @@ $nav-height: 64px;
   max-width: var(--max-width-page);
   margin: 0 auto;
   padding: 0 1.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-text-secondary);
   line-height: 1.65;
 }
@@ -106,7 +106,7 @@ article hr { border: none; border-top: 1px solid var(--color-border); margin: va
 article code { font-family: 'Courier New', Courier, monospace; font-size: 0.875em; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 3px; padding: 0.1em 0.35em; }
 article pre { background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 6px; padding: 1rem 1.25rem; overflow-x: auto; margin: 1.25rem 0; }
 article pre code { background: none; border: none; padding: 0; font-size: 0.875rem; }
-.align-right { float: right; margin: 0 0 1.25rem 1.75rem; max-width: 280px; }
+.align-right { float: right; margin: 0 0 1.25rem 1.75rem; max-width: 17.5rem; }
 .footnotes { font-size: 0.875rem; color: var(--color-text-secondary); border-top: 1px solid var(--color-border); margin-top: var(--space-4); padding-top: 1rem; }
 sup a { color: var(--color-brand); }
 
