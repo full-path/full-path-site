@@ -51,7 +51,7 @@ $nav-height: 64px;
   width: 100%; max-width: var(--max-width-page); margin: 0 auto;
 }
 .splash-hero__content h1 {
-  font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 300; margin-bottom: 0.75rem; max-width: 66.67%;
+  font-size: 3rem; font-weight: 300; margin-bottom: 0.75rem; max-width: 66.67%;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .splash-hero__excerpt { font-size: 1.15rem; opacity: 0.95; text-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 1.5rem; }
@@ -68,7 +68,7 @@ $nav-height: 64px;
 }
 .page-hero__content { max-width: var(--max-width-page); margin: 0 auto; width: 100%; }
 .page-hero__content h1 {
-  color: #fff; font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: #fff; font-size: 2.25rem;
   text-shadow: 0 2px 6px rgba(0,0,0,0.4); margin: 0;
 }
 

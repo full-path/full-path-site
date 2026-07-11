@@ -6,7 +6,7 @@
     - "Specialized services, such as those aimed at older adults and people with disabilities (FTA 5310)"
     - "Non-emergency medical transportation (Medicaid)"
     - "ADA Paratransit"
-- label: "Those funding, coordinating, and supporting community transportation"
+- label: "Those supporting community transportation"
   icon: /assets/images/support_bus.svg
   color: "#1d4e89"
   children:
