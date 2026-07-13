@@ -333,6 +333,8 @@
 .btn--white { background: #fff; color: var(--color-brand); border-color: #fff; }
 .btn--white:hover { background: var(--color-bg-secondary); border-color: var(--color-bg-secondary); text-decoration: none; }
 .btn--small { padding: 0.35rem 0.85rem; font-size: 0.8rem; }
+.btn--linkedin { background: #0A66C2; color: #fff; border-color: #0A66C2; font-size: 1.2rem; }
+.btn--linkedin:hover { background: #004182; border-color: #004182; color: #fff; text-decoration: none; }
 .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; }
 
 // ── Contact form ─────────────────────────────────────────────────────────────
