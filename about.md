@@ -6,20 +6,24 @@ header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
 title: About Full Path
 permalink: /about/
+description: Full Path Transit Technology is a one-person consulting firm. I'm Kevin Chambers, and I work with a wide range of organizations to help community transit agencies — primarily small urban, rural, and urban specialized providers — be smart and effective with their technology investments.
 ---
 
-<img src="/assets/images/kc_headshot.jpg" alt="Kevin Chambers" class="align-right">
+<a href="https://www.linkedin.com/in/keviniano" class="btn btn--primary" target="_blank" rel="noopener">Find me on LinkedIn</a>
 
-Full Path Transit Technology is a one-person consulting firm. I'm Kevin Chambers, and I work with community transit agencies — primarily small and rural providers, state DOTs, and grant-funded mobility programs — on technology strategy, assessment, and implementation.
+### Stats
+ * Bachelor of Arts in Spanish and Latin American Studies from Oregon State University, magna cum laude
+ * 25+ years supporting small organizations around data and technology
+ * 15+ years focused on supporting community transit to be successful with technology
 
-The guiding philosophy is **appropriate technology**: the right tool for the actual problem, at a scale the organization can sustain. Not the most impressive solution. Not the one with the best sales pitch. The one that will still be working in five years, maintained by the people who depend on it.
+### Tech I've worked with a lot
+   * **Languages:** SQL, Javascript, Ruby, Python, Visual Basic
+   * **Database Tools:** PostgreSQL, MS SQL Server, MS Reporting Services, MySQL, MS Access
+   * **Web:** HTML5, CSS, JavaScript
+   * **Product Platforms:** Google Workspace, Google Cloud, Ruby on Rails
+   * **Transit data standards development:** GTFS-Flex, the Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
 
-A working motto: *use technology, not too much, mostly open.*
-
-## Background
-
-I've been supporting nonprofits and grassroots organizations around data and technology since 2000. From 2010 to 2017, I was the head of technology at [Ride Connection](https://rideconnection.org), a Portland-area nonprofit providing mobility options to older adults and people with disabilities. During that time I led technology strategy, built and deployed four open-source software tools, and managed scheduling systems and call center operations. That work, which showed in stark relief how challenging the technology landscape is for small transportation providers, was a galvanizing experience.
-
-I founded Full Path in 2018 to bring that field experience to a broader set of agencies. Since then, the work has included published frameworks for technology decision-making, assessment tools for technology readiness, and the continued development of [RideSheet](/tools/ridesheet/) — a free, open-source scheduling and coordination system used by seven agencies across four states.
-
-I hold a BA in Spanish and Latin American Studies from Oregon State University, magna cum laude.
+### Memberships
+   * [MobilityData](https://mobilitydata.org/)
+   * [Oregon Transit Association](https://www.oregontransit.com)
+   * Cosignatory to the [Mobility Data Interoperability Principles](https://interoperablemobility.org)
