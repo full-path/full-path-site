@@ -15,11 +15,12 @@ $nav-height: 64px;
   display: flex; align-items: center; gap: 0.6rem;
   text-decoration: none; color: var(--color-text-primary); font-weight: 700; font-size: 1rem;
 }
+.site-nav__logo span { text-transform: uppercase; white-space: nowrap; font-size: 1.5rem; font-family: Raleway, system-ui, sans-serif; font-weight: 800; }
 .site-nav__logo img { width: 2.5rem; height: 2.5rem; object-fit: contain; }
 .site-nav__logo:hover { text-decoration: none; color: var(--color-brand); }
 .site-nav__links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
 .site-nav__links a:not(.btn) {
-  text-decoration: none; font-weight: 700; font-size: 0.85rem;
+  text-decoration: none; font-weight: 700; font-size: 1.2rem;
   text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-primary);
 }
 .site-nav__links a:not(.btn):hover { color: var(--color-brand); }
@@ -135,17 +136,20 @@ sup a { color: var(--color-brand); }
 .site-footer__nav a:hover { color: var(--color-brand); }
 
 // ── Responsive ───────────────────────────────────────────────────────────────
-@media (max-width: 680px) {
+@media (max-width: 900px) {
   .site-nav__links {
     display: none; flex-direction: column; gap: 0;
-    position: absolute; top: $nav-height; left: 0; right: 0;
-    background: var(--color-bg); border-bottom: 2px solid var(--color-border); z-index: 99;
-    padding: 0.5rem 0;
+    position: absolute; top: $nav-height; left: auto; right: 0;
+    background: var(--color-bg); border: 1px solid var(--color-border); border-top: none; z-index: 99;
+    padding: 0.5rem 0; min-width: 12rem;
   }
   .site-nav__links.is-open { display: flex; }
-  .site-nav__links li a { display: block; padding: 0.75rem 1.5rem; }
+  .site-nav__links li a { display: block; padding: 0.75rem 1.5rem; text-align: right; }
   .site-nav__links li:last-child a { margin: 0.5rem 1rem; display: inline-block; }
   .site-nav__toggle { display: flex; }
+}
+
+@media (max-width: 680px) {
   .splash-hero { min-height: 200px; }
   .splash-hero__content h1 { max-width: 100%; }
   .align-right { float: none; max-width: 100%; margin: 0 0 1rem; }

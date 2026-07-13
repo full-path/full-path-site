@@ -16,7 +16,7 @@ permalink: /projects/
   {% endfor %}
 </div>
 
-<div class="project-grid" id="projects-grid">
+<div class="card-grid" id="projects-grid">
 {% for project in site.projects %}
   {% include ticket-card.html item=project %}
 {% endfor %}

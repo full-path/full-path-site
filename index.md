@@ -14,7 +14,7 @@ Full Path helps community transportation services be successful with technology.
 
 <section class="home-section">
 <h2 class="home-section__title">Who We Help</h2>
-<div class="service-grid">
+<div class="card-grid">
 {% for item in site.data.who_we_help %}
 <div class="service-card" style="--service-color: {{ item.color }};">
   <div class="service-card__header">
@@ -52,7 +52,7 @@ Full Path helps community transportation services be successful with technology.
 
 <section class="home-section">
 <h2 class="home-section__title">Featured Tools</h2>
-<div class="project-grid">
+<div class="card-grid">
 {% assign featured_tools = site.tools | where_exp: "t", "t.featured_order" | sort: "featured_order" %}
 {% for tool in featured_tools %}{% include ticket-card.html item=tool %}{% endfor %}
 </div>
@@ -61,7 +61,7 @@ Full Path helps community transportation services be successful with technology.
 
 <section class="home-section">
 <h2 class="home-section__title">Featured Projects</h2>
-<div class="project-grid">
+<div class="card-grid">
 {% assign featured_projects = site.projects | where_exp: "p", "p.featured_order" | sort: "featured_order" %}
 {% for project in featured_projects %}{% include ticket-card.html item=project %}{% endfor %}
 </div>

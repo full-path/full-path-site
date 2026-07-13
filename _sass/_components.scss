@@ -420,6 +420,10 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   max-width: 640px;
   margin-inline: auto;
 }
+.card-grid .ticket-wrap {
+  flex: 0 0 calc(50% - 0.75rem);
+  max-width: none;
+}
 .ticket {
   display: flex;
   flex-direction: column;
@@ -583,8 +587,8 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 .video-embed__title { font-size: 0.9rem; font-weight: 700; margin-top: 0.5rem; }
 .video-embed__date { font-size: 0.8rem; color: var(--color-text-secondary); }
 
-// ── Service grid ─────────────────────────────────────────────────────────────
-.service-grid {
+// ── Card grid ────────────────────────────────────────────────────────────────
+.card-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -721,4 +725,5 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   .video-grid { grid-template-columns: 1fr; }
   .service-card { flex: 1 1 100%; }
   .home-service-link { flex: 1 1 100%; }
+  .card-grid .ticket-wrap { flex: 1 1 100%; }
 }

@@ -17,7 +17,7 @@ description: "The tools listed here are free to use — no software license, no 
   {% endfor %}
 </div>
 
-<div class="project-grid" id="tools-grid">
+<div class="card-grid" id="tools-grid">
 {% for tool in sorted_tools %}
   {% include ticket-card.html item=tool %}
 {% endfor %}
