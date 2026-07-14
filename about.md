@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: about
 header:
   compact: true
   overlay_image: /assets/images/services_hero.jpg
@@ -11,17 +11,22 @@ description: Full Path Transit Technology is a one-person consulting firm. I'm K
 
 <a href="https://www.linkedin.com/in/keviniano" class="btn btn--linkedin" target="_blank" rel="noopener">Find me on LinkedIn</a>
 
-## Stats
- * Bachelor of Arts in Spanish and Latin American Studies from Oregon State University, magna cum laude
- * 25+ years supporting small organizations around data and technology
- * 15+ years focused on supporting community transit to be successful with technology
+## Facts at a Glance
+ * **25+ years** supporting small organizations around data and technology
+ * **15+ years** focused on supporting community transit to be successful with technology
+ * **Grounded in operations:** Led technology at a Portland-area transit nonprofit for 7 years before founding Full Path
+ * **Exceptional communication:** Bilingual in Spanish, with experience in mediation and cross-cultural communication
+ * **Systems thinker:** Skilled in identifying root causes and organizational patterns, not just symptoms
+ * **Shaping the field, not just following it:** Contributor to national transit data standards; published author on transit technology strategy
 
-## Some of the technology I've worked with a lot
+## Tech Skills
    * **Languages:** SQL, Javascript, Ruby, Python, Visual Basic
    * **Database Tools:** PostgreSQL, MS SQL Server, MS Reporting Services, MySQL, MS Access
    * **Web:** HTML5, CSS, JavaScript
    * **Product Platforms:** Google Workspace, Google Cloud, Ruby on Rails
-   * **Transit data standards development:** GTFS-Flex, the Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
+   * **Transit data standards development and implementation:**
+     * GTFS-Flex
+     * Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
 
 ## Trusted Partners
 
