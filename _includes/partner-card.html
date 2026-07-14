@@ -1,0 +1,44 @@
+{% assign partner = include.partner %}
+{% assign drawer_tools    = site.tools    | where_exp: "t", "t.partners contains partner.key" %}
+{% assign drawer_projects = site.projects | where_exp: "p", "p.partners contains partner.key" %}
+{% assign drawer_count    = drawer_tools.size | plus: drawer_projects.size %}
+<div class="partner-card">
+  <div class="partner-card__body">
+    <div class="partner-card__logo">
+      {% if partner.logo %}
+      <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}">
+      {% else %}
+      <div class="partner-card__logo-placeholder">{{ partner.name }}</div>
+      {% endif %}
+    </div>
+    <div class="partner-card__content">
+      <h3 class="partner-card__name">
+        {% if partner.url %}<a href="{{ partner.url }}" target="_blank" rel="noopener">{% endif %}
+        {{- partner.name -}}
+        {% if partner.url %}</a>{% endif %}
+      </h3>
+      {% for paragraph in partner.about %}
+      <p class="partner-card__about">{{ paragraph }}</p>
+      {% endfor %}
+      {% for paragraph in partner.relationship %}
+      <p class="partner-card__relationship">{{ paragraph }}</p>
+      {% endfor %}
+      {% if partner.url %}
+      <div class="partner-card__footer">
+        <a href="{{ partner.url }}" class="btn btn--more" target="_blank" rel="noopener">{{ partner.name }} Website →</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if drawer_count > 0 %}
+  <button class="card-drawer__handle" aria-expanded="false">
+    <span>Related work ({{ drawer_count }})</span>
+    <span class="card-drawer__chevron" aria-hidden="true"></span>
+  </button>
+  <div class="card-drawer">
+    <div class="card-drawer__inner">
+      {% include card-drawer-content.html drawer_tools=drawer_tools drawer_projects=drawer_projects %}
+    </div>
+  </div>
+  {% endif %}
+</div>

@@ -14,15 +14,3 @@ description: "Full Path works with transit agencies of all sizes and the organiz
   {% include service-card.html service=service %}
 {% endfor %}
 </div>
-
-<script>
-(function () {
-  document.querySelectorAll('.service-card__handle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var open = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', open ? 'false' : 'true');
-      this.nextElementSibling.classList.toggle('is-open', !open);
-    });
-  });
-}());
-</script>

@@ -16,12 +16,17 @@ description: Full Path Transit Technology is a one-person consulting firm. I'm K
  * 25+ years supporting small organizations around data and technology
  * 15+ years focused on supporting community transit to be successful with technology
 
-## Tech I've worked with a lot
+## Some of the technology I've worked with a lot
    * **Languages:** SQL, Javascript, Ruby, Python, Visual Basic
    * **Database Tools:** PostgreSQL, MS SQL Server, MS Reporting Services, MySQL, MS Access
    * **Web:** HTML5, CSS, JavaScript
    * **Product Platforms:** Google Workspace, Google Cloud, Ruby on Rails
    * **Transit data standards development:** GTFS-Flex, the Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
+
+## Trusted Partners
+
+{% assign trusted_partners = site.data.partners | where: "trusted_partner", true %}
+{% for partner in trusted_partners %}{% include partner-card.html partner=partner %}{% endfor %}
 
 ## Memberships
    * [MobilityData](https://mobilitydata.org/)

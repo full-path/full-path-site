@@ -1,68 +1,98 @@
-# client: true identifies organizations that appear in the client list on the home page.
-# Add logo: /assets/images/partners/filename.svg (or .png) to show a logo.
+# client: true   — appears in the client logo strip on the home page
+# trusted_partner: true — appears in the Trusted Partners section on /about/
+# about: list of paragraphs describing the company
+# relationship: paragraph describing how Full Path works with them (HTML allowed)
 
 - key: garnet
   name: "Garnet Consulting"
   url: "https://www.garnetconsultingpdx.com/"
-  logo:
-  description: ""
+  logo: /assets/images/garnet-logo.png
+  trusted_partner: true
+  about:
+    - >-
+      Garnet Consulting is a certified DBE, ESB, and women-owned business providing transit
+      technology, operations, and software consulting for rural, small urban, and intercity
+      agencies. Their services span custom software development, technical strategy,
+      procurement support, and expertise in open data standards including GTFS and GTFS-Flex.
+  relationship:
+    - >-
+      Garnet is Full Path's primary software development partner for RideSheet and has teamed
+      with Full Path on numerous other projects, delivering exceptional
+      project management and transit technology expertise to clients.
 
 - key: apgar
   name: "Apgar & Associates"
   url: "https://apgarandassoc.com/"
   logo:
-  description: ""
 
 - key: access-tech
   name: "Access Tech"
   url: "https://www.accesstech.net/"
-  logo:
-  description: ""
+  logo: /assets/images/access-tech-logo.svg
+  trusted_partner: true
+  about:
+    - >-
+      Access Tech is an Oregon-based managed IT services provider that functions as a virtual
+      CIO for its clients, bridging business strategy with technology implementation. They
+      bring deep expertise in security and compliance, IT strategy, cloud infrastructure, and
+      connectivity — with a strong track record serving transit and non-profit organizations.
+    - >-
+      For transit agencies specifically, Access Tech addresses the challenge of supporting
+      distributed onboard technology — cameras, radios, tablets, and other fleet devices —
+      without requiring agencies to hire dedicated IT staff. Their transit work includes help
+      desk and field technician support, device inventory and documentation, vendor
+      management, and procurement assistance. They have documented results for rural Oregon
+      transit clients including significant reductions in repair time and maintenance costs.
+  relationship:
+    - >-
+      Access Tech and Full Path have a long term strategic partnership to address small transit's
+      need for a sustainable approach for maintaining transit technology using managed services,
+      resulting in several agencies in Oregon using Access's services and enjoying increased
+      system reliability.
+    - >-
+      Access Tech also assisted on the
+      <a href="https://n-catt.org/resources/technology-readiness-assessment/">Technology
+      Readiness and Resilience Assessment Tool</a>, published through the National Center for
+      Applied Transit Technology (N-CATT), contributing managed IT expertise to the project's
+      organizational resilience and cybersecurity dimensions.
 
 - key: lara-bjork
   name: "Lara Bjork"
   url:
   logo:
-  description: ""
 
 - key: ncatt
   name: "National Center for Applied Transit Technology (N-CATT)"
   url: "https://n-catt.org/"
   logo:
   client: true
-  description: ""
 
 - key: odot
   name: "Oregon Department of Transportation"
   url:
   logo:
   client: true
-  description: ""
 
 - key: rtap
   name: "National RTAP"
   url: "https://www.nationalrtap.org/"
   logo:
   client: true
-  description: ""
 
 - key: aarp
   name: "AARP Public Policy Institute"
   url: "https://www.aarp.org/pri/departments/ppi/"
   logo:
   client: true
-  description: ""
 
 - key: age-friendly-az
   name: "Age Friendly Arizona / Maricopa Association of Governments"
   url: "https://www.agefriendlyaz.org/"
   logo:
   client: true
-  description: ""
 
 - key: hopelink
   name: "King County Mobility Coalition / Hopelink"
   url: "https://www.hopelink.org/"
   logo:
   client: true
-  description: ""

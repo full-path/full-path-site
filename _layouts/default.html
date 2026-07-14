@@ -27,6 +27,14 @@
       var open = links.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open);
     });
+
+    document.querySelectorAll('.card-drawer__handle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var open = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', open ? 'false' : 'true');
+        this.nextElementSibling.classList.toggle('is-open', !open);
+      });
+    });
   </script>
 </body>
 </html>

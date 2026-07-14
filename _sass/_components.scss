@@ -212,23 +212,6 @@
   margin-top: var(--space-3);
   text-align: right;
 }
-.home-section__more a {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  border: 2px solid var(--color-brand);
-  color: var(--color-brand);
-  background: transparent;
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background 0.15s, color 0.15s;
-}
-.home-section__more a:hover {
-  background: var(--color-brand);
-  color: #fff;
-  text-decoration: none;
-}
 
 .home-services {
   display: flex;
@@ -333,6 +316,8 @@
 .btn--white { background: #fff; color: var(--color-brand); border-color: #fff; }
 .btn--white:hover { background: var(--color-bg-secondary); border-color: var(--color-bg-secondary); text-decoration: none; }
 .btn--small { padding: 0.35rem 0.85rem; font-size: 0.8rem; }
+.btn--more { background: transparent; color: var(--color-brand); border-color: var(--color-brand); font-size: 1rem; }
+.btn--more:hover { background: var(--color-brand); color: #fff; text-decoration: none; }
 .btn--linkedin { background: #0A66C2; color: #fff; border-color: #0A66C2; font-size: 1.2rem; }
 .btn--linkedin:hover { background: #004182; border-color: #004182; color: #fff; text-decoration: none; }
 .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; }
@@ -608,6 +593,7 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   flex-direction: column;
   transition: box-shadow 0.2s;
   scroll-margin-top: 72px;
+  --card-color: var(--service-color, var(--color-brand));
 }
 .service-card:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.10);
@@ -653,7 +639,8 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 .service-card__list li { margin-bottom: 0.35rem; }
 .service-card__list li:last-child { margin-bottom: 0; }
 
-.service-card__handle {
+// ── Card drawer (shared by service-card and partner-card) ────────────────────
+.card-drawer__handle {
   width: 100%;
   padding: 0.45rem 1.75rem;
   background: var(--color-bg-secondary);
@@ -663,17 +650,17 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--service-color, var(--color-brand));
+  color: var(--card-color, var(--color-brand));
   font-family: system-ui, sans-serif;
   transition: background 0.15s;
 }
-.service-card__handle:hover { background: var(--color-border); }
+.card-drawer__handle:hover { background: var(--color-border); }
 
-.service-card__chevron {
+.card-drawer__chevron {
   display: inline-block;
   width: 7px;
   height: 7px;
@@ -682,43 +669,116 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   transform: rotate(45deg) translate(-1px, -1px);
   transition: transform 0.25s ease;
 }
-.service-card__handle[aria-expanded="true"] .service-card__chevron {
+.card-drawer__handle[aria-expanded="true"] .card-drawer__chevron {
   transform: rotate(-135deg) translate(-1px, -1px);
 }
 
-.service-card__drawer {
+.card-drawer {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.25s ease;
 }
-.service-card__drawer.is-open { grid-template-rows: 1fr; }
-.service-card__drawer-inner { overflow: hidden; border-top: 1px solid var(--color-border); }
+.card-drawer.is-open { grid-template-rows: 1fr; }
+.card-drawer__inner { overflow: hidden; border-top: 1px solid var(--color-border); }
 
-.service-card__drawer-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--service-color, var(--color-brand));
+.card-drawer__label {
   padding: 0.6rem 1.75rem 0.2rem;
   margin: 0;
 }
-.service-card__drawer-list {
+.card-drawer__list {
   list-style: none;
   margin: 0;
   padding: 0 1.75rem 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
-.service-card__drawer-list a {
+.card-drawer__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-drawer__item-badge {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 6px;
+  background: var(--color-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card-drawer__item-icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+.card-drawer__list a {
   font-weight: 600;
   color: var(--color-text-secondary);
   text-decoration: none;
 }
-.service-card__drawer-list a:hover { text-decoration: underline; }
+.card-drawer__list a:hover { text-decoration: underline; }
+
+// ── Partner cards ────────────────────────────────────────────────────────────
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.partner-card__body {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  flex: 1;
+}
+.partner-card__logo {
+  flex: 0 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+.partner-card__logo img {
+  max-width: 140px;
+  height: auto;
+}
+.partner-card__logo-placeholder {
+  font-family: Raleway, system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+.partner-card__content { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.partner-card__footer { margin-top: auto; padding-top: var(--space-2); text-align: right; }
+.partner-card__name {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.partner-card__name a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.partner-card__name a:hover { color: var(--color-brand); }
+.partner-card__about {
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+.partner-card__relationship { margin-bottom: 0; }
 
 // ── Responsive ───────────────────────────────────────────────────────────────
 @media (max-width: 680px) {
@@ -728,4 +788,6 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   .service-card { flex: 1 1 100%; }
   .home-service-link { flex: 1 1 100%; }
   .card-grid .ticket-wrap { flex: 1 1 100%; }
+  .partner-card__body { flex-direction: column; gap: 1rem; }
+  .partner-card__logo { flex: none; min-height: auto; }
 }
