@@ -1,19 +1,31 @@
 ---
 layout: default
 ---
+<div class="tool-page-header">
+  <div class="tool-page-header__inner">
+    {% if page.icon %}
+    <img class="tool-page-header__icon" src="{{ page.icon | relative_url }}" alt="">
+    {% endif %}
+    <h1 class="tool-page-header__title">{{ page.title }}</h1>
+  </div>
+</div>
 <div class="page-content">
   <article>
-    {% if page.icon %}
-    <div class="item-icon item-icon--large">
-      <img src="{{ page.icon | relative_url }}" alt="">
-    </div>
-    {% endif %}
-    <h1>{{ page.title }}</h1>
     <dl class="project-meta">
-      {% if page.category %}
+      {% if page.type_label or page.publisher %}
       <div class="project-meta__item">
-        <dt>Category</dt>
-        <dd><span class="tool-category tool-category--{{ page.category | downcase }}">{% include category-icon.html category=page.category %}{{ page.category }}</span></dd>
+        <dt>{{ page.type_label | default: "Publication" }}</dt>
+        {% if page.publisher %}<dd>{{ page.publisher }}</dd>{% endif %}
+      </div>
+      {% endif %}
+      {% if page.categories %}
+      <div class="project-meta__item">
+        <dt>{% if page.categories.size > 1 %}Categories{% else %}Category{% endif %}</dt>
+        <dd style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          {% for cat_name in page.categories %}
+            <span class="tool-category tool-category--{{ cat_name | downcase }}">{% include category-icon.html category=cat_name %}{{ cat_name }}</span>
+          {% endfor %}
+        </dd>
       </div>
       {% endif %}
       {% if page.client %}

@@ -1,6 +1,6 @@
 ---
 title: "One-Call/One-Click Business Plan"
-layout: tool
+layout: project
 description: "Business plan for a regional mobility management center serving King County, Washington, coordinating transportation for seniors and people with disabilities across human services providers."
 permalink: /projects/hopelink-one-call/
 categories: [Strategy, Engagement]

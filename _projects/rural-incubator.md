@@ -1,6 +1,6 @@
 ---
 title: "Technology Support for the Rural Transportation Incubator"
-layout: tool
+layout: project
 description: "Assessment and recommendations for technology infrastructure supporting a rural transportation incubator in Arizona, focusing on mobility management and coordination tools for rural and tribal communities."
 permalink: /projects/rural-incubator/
 year: "2020"
