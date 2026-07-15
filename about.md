@@ -11,11 +11,11 @@ description: Full Path Transit Technology is a one-person consulting firm. I'm K
 
 <a href="https://www.linkedin.com/in/keviniano" class="btn btn--linkedin" target="_blank" rel="noopener">Find me on LinkedIn</a>
 
-## Facts at a Glance
+## At a Glance
  * **25+ years** supporting small organizations around data and technology
  * **15+ years** focused on supporting community transit to be successful with technology
  * **Grounded in operations:** Led technology at a Portland-area transit nonprofit for 7 years before founding Full Path
- * **Exceptional communication:** Bilingual in Spanish, with experience in mediation and cross-cultural communication
+ * **Highly effective communicator:** Bilingual in Spanish, with experience in mediation and cross-cultural communication
  * **Systems thinker:** Skilled in identifying root causes and organizational patterns, not just symptoms
  * **Shaping the field, not just following it:** Contributor to national transit data standards; published author on transit technology strategy
 
@@ -25,8 +25,8 @@ description: Full Path Transit Technology is a one-person consulting firm. I'm K
    * **Web:** HTML5, CSS, JavaScript
    * **Product Platforms:** Google Workspace, Google Cloud, Ruby on Rails
    * **Transit data standards development and implementation:**
-     * GTFS-Flex
      * Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
+     * GTFS-Flex
 
 ## Trusted Partners
 

@@ -1,6 +1,72 @@
 # YouTube videos for the RideSheet page.
-# Add entries as videos are published.
 # Each entry:
 # - id: "YOUTUBE_VIDEO_ID"
 #   title: "Video title"
-#   date: "YYYY-MM-DD"
+#   series: getting-started   # or: university
+#   order: 1                  # optional; sort position within the series
+#   date: "YYYY-MM-DD"        # optional; shown under the title
+#
+# series values:
+#   getting-started — shown in the "Get Started" section (aimed at leads)
+#   university      — shown in the collapsed "RideSheet University" drawer
+#
+# University titles omit the "RideSheet University: " prefix from YouTube —
+# the section heading already provides it.
+
+- id: "s-socNbYUc8"
+  title: "What You Need to Succeed with RideSheet"
+  series: getting-started
+  order: 1
+- id: "epB9zhFQWz0"
+  title: "How to Get RideSheet: Installation Options and Support"
+  series: getting-started
+  order: 2
+- id: "3R0IgyXxicU"
+  title: "Google Workspace for RideSheet: What You Need to Know"
+  series: getting-started
+  order: 3
+- id: "6zriVg6I6KA"
+  title: "Getting Started With RideSheet: Installation Guide"
+  series: getting-started
+  order: 4
+
+- id: "wH86zrsS7t8"
+  title: "System Overview"
+  series: university
+  order: 1
+- id: "2nGyJhd3XHs"
+  title: "Setting up Vehicles, Drivers, and Services"
+  series: university
+  order: 2
+- id: "4rGjXsWlwXk"
+  title: "Working with Addresses"
+  series: university
+  order: 3
+- id: "QR2602qAYYQ"
+  title: "Managing Customers"
+  series: university
+  order: 4
+- id: "hW-eswEvzd0"
+  title: "Creating and Assigning Trips"
+  series: university
+  order: 5
+- id: "zVpKHlw1azY"
+  title: "Understanding Runs"
+  series: university
+  order: 6
+- id: "Y6nn11m4Apo"
+  title: "Reviewing and Archiving Trip Data"
+  series: university
+  order: 7
+- id: "rxuFogvjTdc"
+  title: "Creating and Customizing Driver Manifests"
+  series: university
+  order: 8
+- id: "46rSsmgFd_o"
+  title: "Recovering from Mistakes"
+  series: university
+  order: 9
+- id: "mlhO5Odj61c"
+  title: "Turning Your Data into Reports"
+  series: university
+  order: 10

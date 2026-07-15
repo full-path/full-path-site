@@ -1,15 +1,34 @@
 ---
 layout: default
 ---
-<div class="tool-page-header">
-  <div class="tool-page-header__inner">
-    {% if page.icon %}
-    <img class="tool-page-header__icon" src="{{ page.icon | relative_url }}" alt="">
-    {% endif %}
-    <h1 class="tool-page-header__title">{{ page.title }}</h1>
+<div class="splash-hero splash-hero--tool" style="{% if page.hero.image %}background-image: url('{{ page.hero.image | relative_url }}'); {% endif %}background-position: {{ page.hero.position | default: 'center' }};">
+  <div class="splash-hero__overlay" style="background: {{ page.hero.overlay_filter | default: 'rgba(112, 66, 20, 0.5)' }};">
+    <div class="splash-hero__content">
+      <div class="splash-hero__title-row">
+        {% if page.icon %}<img class="splash-hero__tool-icon" src="{{ page.icon | relative_url }}" alt="">{% endif %}
+        <h1>{% if page.hero.name_image %}<img class="splash-hero__name" src="{{ page.hero.name_image | relative_url }}" alt="{{ page.title }}">{% else %}{{ page.title }}{% endif %}</h1>
+      </div>
+      {% if page.hero.tagline %}<p class="splash-hero__excerpt">{{ page.hero.tagline }}</p>{% endif %}
+      {% if page.hero.cta_url %}
+      <div class="splash-hero__cta">
+        <a href="{{ page.hero.cta_url }}" class="btn btn--white">{{ page.hero.cta_label | default: 'Learn more' }}</a>
+      </div>
+      {% endif %}
+    </div>
   </div>
 </div>
 <div class="page-content">
+  {% if page.highlights %}
+  <ul class="card-grid highlight-grid">
+    {% for highlight in page.highlights %}
+    <li class="highlight-card">
+      <span class="highlight-card__badge"><img src="{{ highlight.icon | relative_url }}" alt=""></span>
+      <h3 class="highlight-card__title">{{ highlight.title }}</h3>
+      <p class="highlight-card__text">{{ highlight.text }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
   <article>
     <dl class="project-meta">
       {% if page.categories %}
@@ -42,7 +61,7 @@ layout: default
         <dd>{% for partner_key in page.partners %}{% assign _partner = site.data.partners | where: "key", partner_key | first %}{% if forloop.first == false %}, {% endif %}{% if _partner %}{% if _partner.url %}<a href="{{ _partner.url }}">{{ _partner.name }}</a>{% else %}{{ _partner.name }}{% endif %}{% else %}{{ partner_key }}{% endif %}{% endfor %}</dd>
       </div>
       {% endif %}
-      {% if page.year and page.published == nil %}
+      {% if page.year %}
       <div class="project-meta__item">
         <dt>Last updated</dt>
         <dd>{{ page.year }}</dd>

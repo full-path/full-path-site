@@ -6,7 +6,7 @@ header:
   compact: true
   overlay_image: /assets/images/services_hero.jpg
   overlay_filter: "rgba(112, 66, 20, 0.5)"
-description: "The tools listed here are free to use — no software license, no subscription, no vendor relationship required. Each was developed with and for small and rural transit agencies."
+description: "The tools listed here are free to use. Each was developed with and for small and rural transit agencies."
 ---
 
 {% assign sorted_tools = site.tools | where_exp: "t", "t.order" | sort: "order" %}

@@ -19,7 +19,7 @@ layout: default
       </div>
       {% endif %}
       {% if page.categories %}
-      <div class="project-meta__item">
+      <div class="project-meta__item project-meta__item--full">
         <dt>{% if page.categories.size > 1 %}Categories{% else %}Category{% endif %}</dt>
         <dd style="display:flex; gap:0.5rem; flex-wrap:wrap;">
           {% for cat_name in page.categories %}

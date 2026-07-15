@@ -1,4 +1,8 @@
 {% assign videos = site.data.ridesheet_videos %}
+{% unless videos %}{% assign videos = "" | split: "" %}{% endunless %}
+{% if include.series %}
+{% assign videos = videos | where: "series", include.series | sort: "order", "last" %}
+{% endif %}
 {% if videos and videos.size > 0 %}
 <div class="video-grid">
   {% for video in videos %}
@@ -8,6 +12,7 @@
         src="https://www.youtube.com/embed/{{ video.id }}"
         title="{{ video.title }}"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        loading="lazy"
         allowfullscreen></iframe>
     </div>
     <p class="video-embed__title">{{ video.title }}</p>
