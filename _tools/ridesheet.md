@@ -14,8 +14,6 @@ hero:
   image: /assets/images/open_road.jpg
   position: "center 70%"
   tagline: "If you're too big for paper but too small for the big software vendors, then RideSheet may be for you."
-  cta_url: "https://docs.ridesheet.org"
-  cta_label: "Get started"
 highlights:
   - icon: /assets/images/small_bus.svg
     title: "Sized for small agencies"
