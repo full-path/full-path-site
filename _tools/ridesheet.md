@@ -13,14 +13,14 @@ hero:
   name_image: /assets/images/ridesheet_name.svg
   image: /assets/images/open_road.jpg
   position: "center 70%"
-  tagline: "If you're too big for paper but too small for the big software vendors, then RideSheet may be for you."
+  tagline: "If you've grown too big for paper but are too small for the big software systems, then RideSheet may be what you've been waiting for."
 highlights:
   - icon: /assets/images/small_bus.svg
     title: "Sized for small agencies"
-    text: "Designed for providers getting off paper — no dedicated IT staff or reliable broadband required."
+    text: "Designed for providers getting off paper. Kept simple, with no dedicated IT staff required."
   - icon: /assets/images/sheets.svg
     title: "Built on Google Sheets"
-    text: "Runs on tools your staff already know. No servers to maintain, no new systems to learn from scratch."
+    text: "Runs on tools your staff already know. No servers to maintain and no new systems to learn from scratch."
   - icon: /assets/images/software-dev.svg
     title: "Open source"
     text: "No license fees and no vendor lock-in. The code is public, and agencies shape where it goes next."
@@ -62,6 +62,7 @@ Since 2024, RideSheet has been one of the technology tools supported by the Nati
 
 <div class="btn-group">
   <a href="https://docs.ridesheet.org" class="btn btn--primary">Go to RideSheet Documentation</a>
+  <a href="#contact-modal" class="btn btn--outline">Want a demonstration? Contact us!</a>
 </div>
 
 {% include video-grid.html series="getting-started" %}
