@@ -6,7 +6,7 @@ header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
 title: About Full Path
 permalink: /about/
-description: Full Path Transit Technology is a one-person consulting firm. I'm Kevin Chambers, and I work with a wide range of organizations to help community transit agencies — primarily small urban, rural, and urban specialized providers — be smart and effective with their technology investments.
+description: Full Path Transit Technology is a one-person consulting firm. I'm Kevin Chambers, and I work with a wide range of organizations to help community transit organizations — primarily rural, small urban, and urban specialized providers — be smart and effective with their technology investments.
 ---
 
 <a href="https://www.linkedin.com/in/keviniano" class="btn btn--linkedin" target="_blank" rel="noopener">Find me on LinkedIn</a>
