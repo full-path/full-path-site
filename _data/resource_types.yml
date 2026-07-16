@@ -1,0 +1,14 @@
+# Maps a resource `type` to the default icon shown when the resource has no
+# thumbnail. Matching is case-insensitive (types here must be lowercase).
+# Icons live in assets/images/resource-types/ — stroke style, #5c4f3d, 24x24 viewBox.
+# A resource whose type has no entry here falls back to a text-only placeholder.
+- type: pdf
+  icon: /assets/images/resource-types/pdf.svg
+- type: video
+  icon: /assets/images/resource-types/video.svg
+- type: webinar
+  icon: /assets/images/resource-types/webinar.svg
+- type: web page
+  icon: /assets/images/resource-types/webpage.svg
+- type: slides
+  icon: /assets/images/resource-types/slides.svg

@@ -1,0 +1,13 @@
+# Shared resources shown in "Related Resources" sections at the bottom of
+# tool, project, and blog post pages.
+#
+# Reference from a page via front matter:  resources: [key-one, key-two]
+# Cards render in the order the page lists them.
+#
+# - key: unique-slug
+#   name: "Resource name"
+#   year: 2026
+#   type: "PDF"              # PDF | Video | Webinar | Web page | Slides ...
+#   url: "https://..."       # where the name and thumbnail link to
+#   thumbnail: /assets/images/resources/slug.png   # optional; type placeholder if absent
+#   description: "One or two sentences."

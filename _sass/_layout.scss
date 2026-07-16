@@ -79,7 +79,9 @@ $nav-height: 64px;
 }
 .page-hero__content { max-width: var(--max-width-page); margin: 0 auto; width: 100%; }
 .page-hero__content h1 {
-  color: #fff; font-size: 2.25rem;
+  color: #fff;
+  // Fluid: ~26px on phones, capped at 36px on desktop
+  font-size: clamp(1.6rem, 1.4vw + 1.25rem, 2.25rem);
   text-shadow: 0 2px 6px rgba(0,0,0,0.4); margin: 0;
 }
 

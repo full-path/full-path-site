@@ -26,5 +26,6 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}</p>
     {% endif %}
     {{ content }}
+    {% include resource-list.html %}
   </article>
 </div>

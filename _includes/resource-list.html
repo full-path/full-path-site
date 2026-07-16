@@ -1,0 +1,33 @@
+{% if page.resources and page.resources.size > 0 %}
+{% assign _all_resources = site.data.resources %}
+{% unless _all_resources %}{% assign _all_resources = "" | split: "" %}{% endunless %}
+<h2>Related Resources</h2>
+<div class="resource-list">
+  {% for res_key in page.resources %}
+  {% assign res = _all_resources | where: "key", res_key | first %}
+  {% if res %}
+  <div class="resource-card">
+    <a href="{{ res.url }}" class="resource-card__thumb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      {% if res.thumbnail %}
+      <img src="{{ res.thumbnail | relative_url }}" alt="">
+      {% else %}
+      {% assign _rtypes = site.data.resource_types %}
+      {% unless _rtypes %}{% assign _rtypes = "" | split: "" %}{% endunless %}
+      {% assign _rtype_key = res.type | downcase %}
+      {% assign _rtype = _rtypes | where: "type", _rtype_key | first %}
+      <span class="resource-card__thumb-placeholder">
+        {% if _rtype %}<img src="{{ _rtype.icon | relative_url }}" alt="" class="resource-card__type-icon">{% endif %}
+        {{ res.type }}
+      </span>
+      {% endif %}
+    </a>
+    <div class="resource-card__content">
+      <h3 class="resource-card__name"><a href="{{ res.url }}" target="_blank" rel="noopener">{{ res.name }}</a></h3>
+      <p class="resource-card__meta"><span class="resource-card__type">{{ res.type }}</span>{% if res.year %} · {{ res.year }}{% endif %}</p>
+      {% if res.description %}<p class="resource-card__desc">{{ res.description }}</p>{% endif %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}

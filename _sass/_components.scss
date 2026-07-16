@@ -209,7 +209,8 @@
   text-wrap: balance;
 }
 .home-section__title {
-  font-size: 2.3rem;
+  // Fluid: ~27px on phones, capped at 37px on desktop
+  font-size: clamp(1.7rem, 1.3vw + 1.35rem, 2.3rem);
   color: var(--color-text-primary);
   text-align: center;
   border-bottom: 2px solid var(--color-brand);
@@ -393,6 +394,8 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   color: #fff;
   margin: 0;
   line-height: 1.2;
+  // Fluid: ~26px on phones, capped at ~38px on desktop (was implicit 2em)
+  font-size: clamp(1.6rem, 1.6vw + 1.2rem, 2.4rem);
 }
 
 // ── Item icon (cards + pages) ────────────────────────────────────────────────
@@ -849,6 +852,88 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
 }
 .partner-card__relationship { margin-bottom: 0; }
 
+// ── Resource cards (Related Resources sections) ─────────────────────────────
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: var(--space-2) 0 var(--space-4);
+}
+.resource-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.resource-card__thumb {
+  flex: 0 0 11rem;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-secondary);
+  min-height: 7rem;
+}
+.resource-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+.resource-card__thumb-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+.resource-card__type-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0.75;
+}
+.resource-card__content {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 1.5rem;
+}
+.resource-card__name {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
+}
+.resource-card__name a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.resource-card__name a:hover { color: var(--color-brand); }
+.resource-card__meta {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+.resource-card__type {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+}
+.resource-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
 // ── Responsive ───────────────────────────────────────────────────────────────
 @media (max-width: 680px) {
   .feature-row--left .feature-row__item { grid-template-columns: 1fr; }
@@ -859,4 +944,6 @@ form button[type="submit"] { margin-top: 1.5rem; font-family: system-ui, sans-se
   .card-grid .ticket-wrap { flex: 1 1 100%; }
   .partner-card__body { flex-direction: column; gap: 1rem; }
   .partner-card__logo { flex: none; min-height: auto; }
+  .resource-card { flex-direction: column; }
+  .resource-card__thumb { flex: none; min-height: 5rem; }
 }
