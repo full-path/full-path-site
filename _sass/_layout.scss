@@ -52,7 +52,9 @@ $nav-height: 64px;
   width: 100%; max-width: var(--max-width-page); margin: 0 auto;
 }
 .splash-hero__content h1 {
-  font-size: 3rem; font-weight: 300; margin-bottom: 0.75rem; max-width: 66.67%;
+  // Fluid: ~36px on phones, capped at 60px on desktop
+  font-size: clamp(2.25rem, 4.5vw + 1rem, 3.75rem);
+  font-weight: 300; margin-bottom: 0.75rem; max-width: 75%;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .splash-hero__excerpt { font-size: 1.15rem; opacity: 0.95; text-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 1.5rem; }
@@ -61,10 +63,10 @@ $nav-height: 64px;
 // Featured-tool variant: brand-color fallback until a hero image is provided
 .splash-hero--tool { min-height: 340px; background-color: var(--color-brand); }
 .splash-hero--tool .splash-hero__content h1 { font-weight: 800; max-width: none; margin: 0; }
-.splash-hero--tool .splash-hero__excerpt { max-width: 40rem; font-size: 1.5rem; }
+.splash-hero--tool .splash-hero__excerpt { max-width: 40rem; font-size: clamp(1.2rem, 1.2vw + 0.75rem, 1.65rem); }
 .splash-hero__title-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
-.splash-hero__tool-icon { width: 7rem; height: 7rem; }
-.splash-hero__name { height: 3rem; width: auto; max-width: 100%; object-fit: contain; }
+.splash-hero__tool-icon { width: clamp(4.5rem, 9vw, 7rem); height: clamp(4.5rem, 9vw, 7rem); }
+.splash-hero__name { height: clamp(2.25rem, 4vw, 3.5rem); width: auto; max-width: 100%; object-fit: contain; }
 
 // ── Page hero (posts with header.image) ──────────────────────────────────────
 .page-hero {
