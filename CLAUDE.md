@@ -54,13 +54,15 @@ Key facts about RideSheet:
 - Supports inter-agency trip coordination via a standardized API (based on TCRP Report 210
   Transactional Data Specification)
 - Open source; Garnet Consulting provides software development support; National Rural
-  Transit Assistance Program (NRTAP) provides strategic financial support
+  Transit Assistance Program (NRTAP) provides strategic financial support (since 2024)
 - Explicitly designed for organizations without dedicated IT staff or reliable broadband
 
+**Known URLs:**
+- RideSheet documentation: https://docs.ridesheet.org
+- YouTube channel (RideSheet + Full Path videos): https://www.youtube.com/@fullpathtransit
+
 **[PLACEHOLDER — Kevin to fill in]:**
-- RideSheet documentation URL: `___________`
 - RideSheet GitHub repository URL: `___________`
-- YouTube channel URL/handle for RideSheet videos: `___________`
 - Systems Thinking eLearning course URL: `___________`
 
 ### A Framework for Making Successful Technology Decisions
@@ -83,7 +85,7 @@ A two-page practical guide (Version 3, December 2021) funded by Oregon DOT. Expl
 to use Requests for Information as a deliberate procurement tool — for gathering market
 intelligence, building vendor relationships, and reducing risk before issuing an RFP.
 Includes a Dos/Don'ts section and a reusable RFI outline.
-File: `assets/downloads/RFIs-as-Tools.pdf`
+File: `assets/downloads/RFIs-as-Tools.pdf` · Page: `/tools/rfis-as-tools/`
 
 ### Selected Other Published Work
 - *RideSheet: Rural Transportation Benefits from New Coordination Technology*, AARP, March 2021
@@ -98,90 +100,96 @@ File: `assets/downloads/RFIs-as-Tools.pdf`
 ## 3. Site Architecture
 
 ### Stack
-- **Generator:** Jekyll
+- **Generator:** Jekyll (kramdown, jekyll-feed)
 - **CSS:** Custom SCSS via Jekyll's native `jekyll-sass-converter`. No Node.js build step.
   File structure: `_sass/_tokens.scss`, `_base.scss`, `_layout.scss`, `_components.scss`
   imported by `assets/css/main.scss`.
-- **CMS:** Decap CMS (formerly Netlify CMS) at `/admin` — browser-based editor for blog posts
 - **Hosting:** GitHub Pages or Netlify (TBD; either works with this stack)
 - **Repo:** https://github.com/keviniano/full-path-site
+- No CMS. Content is edited directly in the repo. (Decap CMS was once planned; it was
+  never set up and is no longer intended.)
 
 ### Page Structure
 ```
-/               Home — hero, company overview, three feature cards, link to projects
-/tools/         Listing of all tools (free, usable now); filterable by category
-/tools/ridesheet/          RideSheet dedicated page
-/tools/framework/          Framework whitepaper dedicated page
-/tools/readiness-assessment/  Assessment Tool dedicated page
-/projects/      Full listing of past client/published work
-/projects/ridesheet-aarp-report/
-/projects/hopelink-one-call/
-/projects/rural-incubator/
-/services/      What Full Path offers
-/about/         Kevin Chambers bio
-/contact/       Contact form (footer nav only — not in header)
+/               Home — hero, intro, Who We Help, services, featured tools/projects,
+                client logos, closing contact band
+/services/      Service categories with drawer cards
+/tools/         Listing of all tools (ticket cards, filterable by category)
+/tools/ridesheet/            RideSheet promo page (featured-tool layout: hero image,
+                             wordmark, highlight cards, videos, training drawer)
+/tools/framework/            Framework whitepaper
+/tools/readiness-assessment/ Assessment Tool
+/tools/rfis-as-tools/        RFI guide (links to the PDF download)
+/projects/      Listing of past client/published work
+/projects/ridesheet-aarp-report/   /projects/hopelink-one-call/   /projects/rural-incubator/
+/about/         Kevin bio, stats, tech skills, trusted partners (Garnet, Access Tech),
+                memberships
 /blog/          Blog archive; no posts on home page
+Contact         A :target-based modal on every page (#contact-modal), opened from the
+                nav/footer and CTA buttons. No standalone contact page in the nav.
 ```
 
 ### Source File Organization
 ```
-tools/
-  ridesheet.md             → /tools/ridesheet/
-  framework.md             → /tools/framework/
-  readiness-assessment.md  → /tools/readiness-assessment/
-tools.md                   → /tools/
-projects/
-  ridesheet-aarp-report.md
-  hopelink-one-call.md
-  rural-incubator.md
-projects.md                → /projects/
+_tools/         Tool pages (Jekyll collection, output: true)
+_projects/      Project pages (Jekyll collection, output: true)
+_posts/         Blog posts (migrated as-is; do not edit without instruction)
+_layouts/       default (root) · splash (hero pages) · about (splash + <article>)
+                tool · tool-featured (RideSheet-style promo) · project · single
+                (posts/legal) · archive (blog listing)
+_includes/      navigation, footer, contact-modal, ticket-card, service-card,
+                partner-card, card-drawer-content, resource-list, video-grid,
+                category-icon
+_data/          see Data Files below
 assets/
-  downloads/               downloadable PDFs and other files for visitors
-  images/
+  downloads/    downloadable PDFs and other files for visitors
+  images/       (resource thumbnails go in assets/images/resources/)
   css/
+tools.md → /tools/    projects.md → /projects/    index.md, services.md, about.md, blog.html
 ```
+
+Layout inheritance: everything extends `default.html`; `about.html` extends `splash.html`.
+Tools/projects reference partners and clients by key; layouts resolve them against
+`_data/partners.yml`.
 
 ### Navigation
 Header nav is driven by `_data/navigation.yml`. Items with `footer_only: true` are
-suppressed from the header but still appear in the footer. Contact is currently footer-only.
+suppressed from the header but still appear in the footer (currently Blog and Contact).
+The Contact item links to `#contact-modal`, not a page.
 
 ### Data Files
 Dynamic content is managed via `_data/` YAML files, not API calls:
 
-**`_data/tools.yml`** — Tools page listing and cards
-```yaml
-- title: "Tool name"
-  description: "One or two sentence description."
-  permalink: "/tools/slug/"   # or direct URL for downloads/external links
-  category: "Guidance"        # Guidance | Software | Assessment
-  cta: "Learn more"           # optional; defaults to "Learn more"
-  newtab: true                # optional; adds target="_blank" to the card button
-```
-
-**`_data/ridesheet_videos.yml`** — YouTube video grid on /tools/ridesheet/
-```yaml
-- id: "YOUTUBE_VIDEO_ID"
-  title: "Video title"
-  date: "YYYY-MM-DD"
-```
-
-**`_data/linkedin_posts.yml`** — Curated LinkedIn activity section
-```yaml
-- title: "Post title or topic"
-  date: "YYYY-MM-DD"
-  url: "https://www.linkedin.com/posts/..."
-  excerpt: "One or two sentence summary."
-```
+- **`categories.yml`** — the five service/tool categories (Strategy, Implementation,
+  Software, Engagement, Interoperability): short/long names, icon, color, description,
+  bullets. Drives the services page, category badges (`--cat-color`), and filters.
+- **`partners.yml`** — partners and clients, keyed. Flags: `client: true` (home page logo
+  list), `trusted_partner: true` (About page partner cards with `about`/`relationship`
+  paragraph arrays).
+- **`who_we_help.yml`** — audience cards on the home page.
+- **`resources.yml`** — shared "Related Resources" entries (key, name, year, type, url,
+  optional thumbnail, description). Pages opt in via front matter
+  `resources: [key-one, key-two]`; works on tools, projects, and posts. Schema is
+  documented in the file's comments.
+- **`resource_types.yml`** — maps resource `type` (lowercase; matched case-insensitively)
+  to a default icon in `assets/images/resource-types/`, shown when a resource has no
+  thumbnail. Unmapped types get a text-only placeholder.
+- **`ridesheet_videos.yml`** — videos on /tools/ridesheet/, with `series:
+  getting-started` (Get Started section) or `series: university` (collapsed drawer),
+  plus optional `order`. Schema in file comments.
+- **`authors.yml`** — post author metadata.
 
 Update these files manually when new content is published. Do not introduce YouTube
 Data API calls or LinkedIn scraping — both create fragile dependencies with no meaningful
-benefit for a site of this scale.
+benefit for a site of this scale. (To fetch YouTube titles one-off, the oEmbed endpoint
+and playlist RSS feeds work without an API key.)
 
 ### LinkedIn Strategy
 LinkedIn does not expose a usable public feed API. The correct approach is:
 1. Write substantive posts on the Jekyll site (canonical record)
 2. Share the link on LinkedIn (distribution)
-3. Maintain `_data/linkedin_posts.yml` for curated LinkedIn-only posts worth surfacing on-site
+3. If LinkedIn-only posts are ever worth surfacing on-site, curate them manually in a
+   data file (none exists yet)
 
 Do not attempt to automate pulling from LinkedIn. If asked to do so, decline and explain why.
 
@@ -198,6 +206,8 @@ excuse to avoid conclusions.
 
 The audience is transit professionals — often non-technical managers, program officers,
 and agency directors — who are smart but time-constrained and skeptical of hype.
+Avoid jargon they'd have to decode (e.g., "enterprise software" → "the big software
+vendors").
 
 **Stylistic markers from existing blog posts:**
 - Willing to call out industry failures directly ("barbarian hordes from Silicon Valley")
@@ -228,10 +238,13 @@ and agency directors — who are smart but time-constrained and skeptical of hyp
 - Keep Liquid templates readable; comment non-obvious logic
 - `_data/` files are the source of truth for dynamic content — don't hardcode content
   that belongs in a data file
+- Liquid gotcha: a `_data/*.yml` file containing only comments parses to `false`, and
+  `where`/`sort` filters crash on it. Guard with
+  `{% unless x %}{% assign x = "" | split: "" %}{% endunless %}` (see resource-list.html,
+  video-grid.html)
 - Do not modify `_posts/` content without explicit instruction; existing posts migrate as-is
-- Decap CMS config lives at `admin/config.yml` — keep it in sync with `_config.yml`
 - Downloadable files go in `assets/downloads/`
-- Tool pages go in `tools/`; project pages go in `projects/`
+- Tool pages go in `_tools/`; project pages go in `_projects/`
 
 ---
 
@@ -246,7 +259,7 @@ state. Not for large backgrounds — too dark and saturated.
 --color-brand:          #b12d00
 --color-brand-dark:     #4a1200
 --color-brand-light:    #d86f3e
---color-accent:         #1a5276  (used for Software category badges)
+--color-accent:         #1a5276
 --color-text-primary:   #1c1208  (warm near-black)
 --color-text-secondary: #5c4f3d  (warm medium gray)
 --color-bg:             #faf8f5  (warm off-white)
@@ -255,23 +268,23 @@ state. Not for large backgrounds — too dark and saturated.
 ```
 
 ### Typography
-- **Body:** `system-ui, sans-serif` — 19px / 1.7 line-height
-- **Headings (h1–h4):** `Raleway, system-ui, sans-serif` — weight 800 — loaded from Google Fonts
+- **Body:** `system-ui, sans-serif` — 1.2rem / 1.7 line-height
+- **Headings (h1–h6):** `Raleway, system-ui, sans-serif` — weight 800 — loaded from Google Fonts
 - **UI/meta (buttons, badges, labels):** `system-ui, sans-serif`
-- Raleway is already loaded globally for the SVG logo; no extra network cost for headings
+- **Display headings are fluid** via `clamp()`: splash hero h1, home intro, home section
+  titles, tool page header, blog post hero. Rule of thumb: clamp earns its keep above
+  ~2rem; content headings (article h2 and below) stay fixed.
 
 ### Spacing scale
-Use multiples of 8px. Key values: 8 16 24 32 48 64 96
+Multiples of 8px via `--space-*` tokens (`--space-1: 0.5rem` … `--space-12: 6rem`).
 
 ### Max content width
-Prose: 68ch
-Page container: min(90vw, 1100px), centered
+Prose: 68ch (`--max-width-prose`)
+Page container: min(90vw, 1100px) (`--max-width-page`), centered
 
-### Tool category badges
-Three defined categories with distinct colors:
-- `Guidance` — brand red tint
-- `Software` — accent blue tint
-- `Assessment` — secondary text tint
-
-Add new categories by adding a `.tool-category--[slug]` rule in `_sass/_components.scss`
-and using the matching category string in `_data/tools.yml`.
+### Category badges and colors
+Categories are defined in `_data/categories.yml`, each with its own `colors.main`.
+Badges and filter buttons take the color via the `--cat-color` / `--filter-color`
+custom properties set inline from the data file — there are no per-category CSS
+classes to maintain. To add a category, add an entry (with icon + color) to
+`categories.yml`.
