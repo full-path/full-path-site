@@ -19,7 +19,7 @@ description: "The tools listed here are free to use. Each was developed with and
 
 <div class="card-grid" id="tools-grid">
 {% for tool in sorted_tools %}
-  {% include ticket-card.html item=tool %}
+  {% include ticket-card.html item=tool default_icon='/assets/images/tool.svg' %}
 {% endfor %}
 </div>
 

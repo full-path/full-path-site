@@ -6,8 +6,9 @@
   data-categories="{{ item.categories | join: ' ' | downcase }}"
   {% if _primary %}style="--stub-color: {{ _primary.colors.main }};"{% endif %}>
   <div class="ticket__header">
-    {% if item.icon %}
-    <img class="ticket__icon" src="{{ item.icon | relative_url }}" alt="">
+    {% assign _icon_src = item.icon | default: include.default_icon %}
+    {% if _icon_src %}
+    <img class="ticket__icon" src="{{ _icon_src | relative_url }}" alt="">
     {% endif %}
     <h2 class="ticket__title">
       {% if item.download_url %}

@@ -18,7 +18,7 @@ permalink: /projects/
 
 <div class="card-grid" id="projects-grid">
 {% for project in site.projects %}
-  {% include ticket-card.html item=project %}
+  {% include ticket-card.html item=project default_icon='/assets/images/project.svg' %}
 {% endfor %}
 </div>
 

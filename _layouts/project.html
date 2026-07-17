@@ -3,27 +3,20 @@ layout: default
 ---
 <div class="tool-page-header">
   <div class="tool-page-header__inner">
-    {% if page.icon %}
-    <img class="tool-page-header__icon" src="{{ page.icon | relative_url }}" alt="">
-    {% endif %}
+    <img class="tool-page-header__icon" src="{{ page.icon | default: '/assets/images/project.svg' | relative_url }}" alt="">
     <h1 class="tool-page-header__title">{{ page.title }}</h1>
   </div>
 </div>
 <div class="page-content">
   <article>
     <dl class="project-meta">
-      {% if page.type_label or page.publisher %}
-      <div class="project-meta__item">
-        <dt>{{ page.type_label | default: "Publication" }}</dt>
-        {% if page.publisher %}<dd>{{ page.publisher }}</dd>{% endif %}
-      </div>
-      {% endif %}
       {% if page.categories %}
       <div class="project-meta__item project-meta__item--full">
         <dt>{% if page.categories.size > 1 %}Categories{% else %}Category{% endif %}</dt>
         <dd style="display:flex; gap:0.5rem; flex-wrap:wrap;">
           {% for cat_name in page.categories %}
-            <span class="tool-category tool-category--{{ cat_name | downcase }}">{% include category-icon.html category=cat_name %}{{ cat_name }}</span>
+            {% assign _cat = site.data.categories | where: "short_name", cat_name | first %}
+            <span class="tool-category"{% if _cat %} style="--cat-color: {{ _cat.colors.main }};"{% endif %}>{% include category-icon.html category=cat_name %}{{ cat_name }}</span>
           {% endfor %}
         </dd>
       </div>

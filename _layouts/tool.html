@@ -3,9 +3,7 @@ layout: default
 ---
 <div class="tool-page-header">
   <div class="tool-page-header__inner">
-    {% if page.icon %}
-    <img class="tool-page-header__icon" src="{{ page.icon | relative_url }}" alt="">
-    {% endif %}
+    <img class="tool-page-header__icon" src="{{ page.icon | default: '/assets/images/tool.svg' | relative_url }}" alt="">
     <h1 class="tool-page-header__title">{{ page.title }}</h1>
   </div>
 </div>

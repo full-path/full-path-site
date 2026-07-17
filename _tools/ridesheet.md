@@ -8,6 +8,7 @@ categories: [Software,Strategy,Engagement,Interoperability,Implementation]
 order: 1
 featured_order: 1
 partners: [rtap,garnet]
+resources: [ridesheet-aarp-report]
 permalink: /tools/ridesheet/
 hero:
   name_image: /assets/images/ridesheet_name.svg

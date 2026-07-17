@@ -10,7 +10,6 @@ featured_order: 2
 icon: /assets/images/framework.svg
 color_theme: "t-red"
 category_icon: "ti-book"
-type_label: "Guidebook"
 client: ncatt
 partners: [lara-bjork]
 ---

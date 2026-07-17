@@ -11,3 +11,19 @@
 #   url: "https://..."       # where the name and thumbnail link to
 #   thumbnail: /assets/images/resources/slug.png   # optional; type placeholder if absent
 #   description: "One or two sentences."
+
+- key: rural-transportation-incubator
+  name: "Technology Support for the Rural Transportation Incubator"
+  year: 2020
+  type: "PDF"
+  url: "/assets/downloads/rural-transportation-incubator.pdf"
+  thumbnail: /assets/images/resources/rural-transportation-incubator.jpg
+  description: "Assessment of technology needs and options for a rural transportation incubator program serving rural and tribal communities in Arizona, prepared for Age Friendly Arizona and MAG."
+
+- key: ridesheet-aarp-report
+  name: "RideSheet: Rural Transportation Benefits from New Coordination Technology"
+  year: 2021
+  type: "PDF"
+  url: "https://www.aarp.org/content/dam/aarp/ppi/2021/03/ridesheet-rural-transportation-benefits-new-coordination-technology.doi.10.26419-2Fppi.00131.001.pdf"
+  thumbnail: /assets/images/resources/ridesheet-aarp-report.jpg
+  description: "AARP Public Policy Institute report documenting RideSheet's early development and its pilot deployment with two rural agencies in Lake County, Oregon."

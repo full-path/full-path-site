@@ -5,7 +5,7 @@ layout: default
   <div class="splash-hero__overlay" style="background: {{ page.hero.overlay_filter | default: 'rgba(112, 66, 20, 0.5)' }};">
     <div class="splash-hero__content">
       <div class="splash-hero__title-row">
-        {% if page.icon %}<img class="splash-hero__tool-icon" src="{{ page.icon | relative_url }}" alt="">{% endif %}
+        <img class="splash-hero__tool-icon" src="{{ page.icon | default: '/assets/images/tool.svg' | relative_url }}" alt="">
         <h1>{% if page.hero.name_image %}<img class="splash-hero__name" src="{{ page.hero.name_image | relative_url }}" alt="{{ page.title }}">{% else %}{{ page.title }}{% endif %}</h1>
       </div>
       {% if page.hero.tagline %}<p class="splash-hero__excerpt">{{ page.hero.tagline }}</p>{% endif %}
