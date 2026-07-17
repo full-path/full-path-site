@@ -5,25 +5,37 @@ layout: default
 <div class="page-hero" style="background-image: url('{{ page.header.image | relative_url }}');">
   <div class="page-hero__overlay">
     <div class="page-hero__content">
-      <div class="page-content-inner">
-        <h1>{{ page.title }}</h1>
-      </div>
+      <h1>{{ page.title }}</h1>
     </div>
+  </div>
+</div>
+{% else %}
+<div class="tool-page-header">
+  <div class="tool-page-header__inner">
+    {% if page.icon %}
+    <img class="tool-page-header__icon" src="{{ page.icon | relative_url }}" alt="">
+    {% endif %}
+    <h1 class="tool-page-header__title">{{ page.title }}</h1>
   </div>
 </div>
 {% endif %}
 <div class="page-content">
   <article{% if page.date %} class="is-post"{% endif %}>
-    {% unless page.header.image %}
-    {% if page.icon %}
-    <div class="item-icon item-icon--large">
-      <img src="{{ page.icon | relative_url }}" alt="">
-    </div>
-    {% endif %}
-    <h1>{{ page.title }}</h1>
-    {% endunless %}
-    {% if page.date %}
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}</p>
+    {% if page.date or page.author %}
+    <dl class="project-meta">
+      {% if page.date %}
+      <div class="project-meta__item">
+        <dt>Published</dt>
+        <dd>{{ page.date | date: "%B %-d, %Y" }}</dd>
+      </div>
+      {% endif %}
+      {% if page.author %}
+      <div class="project-meta__item">
+        <dt>By</dt>
+        <dd>{{ page.author }}</dd>
+      </div>
+      {% endif %}
+    </dl>
     {% endif %}
     {{ content }}
     {% include resource-list.html %}
