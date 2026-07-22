@@ -12,6 +12,70 @@
 #   thumbnail: /assets/images/resources/slug.png   # optional; type placeholder if absent
 #   description: "One or two sentences."
 
+- key: gtfs-eligibilities-capabilities
+  name: "GTFS Extensions for Eligibilities and Capabilities: End-of-Project Webinar"
+  year: 2021
+  type: "Slides"
+  url: "/assets/downloads/gtfs-eligibilities-capabilities.pdf"
+  thumbnail: /assets/images/resources/gtfs-eligibilities-capabilities.jpg
+  description: "Slide deck from the August 2021 end-of-project webinar, covering the motivation for the extensions, the technical proposals, and next steps for adoption."
+
+- key: readiness-assessment
+  name: "Technology Readiness and Resilience Assessment Tool"
+  year: 2024
+  type: "Web page"
+  url: "https://n-catt.org/resources/technology-readiness-assessment/"
+  thumbnail: /assets/images/resources/readiness-assessment.jpg
+  description: "Free online self-assessment published by N-CATT. Rates your agency across five dimensions using a CMMI-based maturity model and produces a profile for prioritizing capacity-building work."
+
+- key: framework-web
+  name: "A Framework for Making Successful Technology Decisions"
+  year: 2025
+  type: "Web page"
+  url: "https://n-catt.org/guidebooks/a-framework-for-making-successful-technology-decisions/"
+  thumbnail: /assets/images/resources/framework-web.jpg
+  description: "The web version of the whitepaper on N-CATT's site, with links to the full document and one-page reference guide."
+
+- key: framework-whitepaper
+  name: "A Framework for Making Successful Technology Decisions"
+  year: 2025
+  type: "PDF"
+  url: "https://n-catt.org/wp-content/uploads/2025/04/2025-Framework-White-Paper-Final.pdf"
+  thumbnail: /assets/images/resources/framework.jpg
+  description: "The full whitepaper, published by N-CATT and co-authored with Lara Bjork. Originally published October 2020; revised April 2025."
+
+- key: framework-one-pager
+  name: "A Framework for Making Successful Technology Decisions: One-Page Reference Guide"
+  year: 2020
+  type: "PDF"
+  url: "https://n-catt.org/wp-content/uploads/2020/12/Framework-one-pager-v1.0.pdf"
+  thumbnail: /assets/images/resources/framework-one-pager.jpg
+  description: "A single-page visual summary of the framework's phases, capacity-building steps, and organizing tools — useful as a quick reference or to share with agency leadership."
+
+- key: rfis-as-tools
+  name: "RFIs as Tools in Transit Technology Procurements"
+  year: 2021
+  type: "PDF"
+  url: "/assets/downloads/RFIs-as-Tools.pdf"
+  thumbnail: /assets/images/resources/rfis-as-tools.jpg
+  description: "A two-page practical guide to using Requests for Information as a deliberate procurement tool — for gathering market intelligence, building vendor relationships, and reducing risk before issuing an RFP."
+
+- key: ncmm-typology-framework
+  name: "Technology for Mobility Management: A Framework for Moving Forward"
+  year: 2020
+  type: "Web page"
+  url: "https://www.ccam-tac.org/technology-for-mobility-management-a-framework-for-moving-forward/"
+  thumbnail: /assets/images/resources/ncmm-typology.png
+  description: "The NCMM typology framework and matrix, published by the National Center for Mobility Management. Includes the full matrix with ratings across six dimensions for each technology type."
+
+- key: ncmm-typology-matrix
+  name: "An Interactive Typology Matrix"
+  year: 2020
+  type: "Web page"
+  url: "https://observablehq.com/@keviniano/a-testing-version-of-a-live-typology-matrix"
+  thumbnail: /assets/images/resources/observable-typology-matrix.png
+  description: "The underlying code for the interactive typology matrix, published as an Observable notebook. The full implementation can be viewed and copied for reuse or adaptation."
+
 - key: rural-transportation-incubator
   name: "Technology Support for the Rural Transportation Incubator"
   year: 2020

@@ -28,12 +28,12 @@ description: Full Path Transit Technology is a one-person consulting firm. I'm K
      * Transactional Data Standard for Demand Responsive Transit (TDS-DRT)
      * GTFS-Flex
 
-## Trusted Partners
-
-{% assign trusted_partners = site.data.partners | where: "trusted_partner", true %}
-{% for partner in trusted_partners %}{% include partner-card.html partner=partner %}{% endfor %}
-
 ## Memberships
    * [MobilityData](https://mobilitydata.org/)
    * [Oregon Transit Association](https://www.oregontransit.com)
    * Cosignatory to the [Mobility Data Interoperability Principles](https://interoperablemobility.org)
+
+## Trusted Partners
+
+{% assign trusted_partners = site.data.partners | where: "trusted_partner", true %}
+{% for partner in trusted_partners %}{% include partner-card.html partner=partner %}{% endfor %}

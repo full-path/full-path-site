@@ -9,6 +9,8 @@ client: ncatt
 partners: [garnet, apgar, access-tech]
 icon: /assets/images/readiness.svg
 year: 2024
+resources: [readiness-assessment]
+resources_title: "The Tool"
 ---
 
 Published by the National Center for Applied Transit Technology (N-CATT), this free online self-assessment tool helps transit agencies understand where they stand on technology readiness — before they commit to a new system or start a procurement. Co-developed with Apgar & Associates, and Access Tech. Updated with Garnet Consulting.
@@ -24,7 +26,3 @@ The tool rates agencies across five dimensions using a CMMI-based maturity model
 ## Why It Exists
 
 Most transit technology failures are predictable. Agencies that rush to procurement without assessing their own readiness end up with systems they can't support, staff who weren't prepared to use them, and contracts they don't know how to manage. This tool gives agencies an honest baseline and a map for what to work on before — not after — they sign a contract.
-
-<div class="btn-group">
-  <a href="https://n-catt.org/resources/technology-readiness-assessment/" class="btn btn--primary" target="_blank" rel="noopener">Take the assessment</a>
-</div>

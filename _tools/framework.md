@@ -12,6 +12,8 @@ color_theme: "t-red"
 category_icon: "ti-book"
 client: ncatt
 partners: [lara-bjork]
+resources: [framework-web, framework-whitepaper, framework-one-pager]
+resources_title: "The Documents"
 ---
 
 Published by the National Center for Applied Transit Technology (N-CATT), this whitepaper offers a structured, capacity-building-first approach to technology decision-making for transit agencies. Co-authored with Lara Bjork, it was originally published in February 2022 and substantially revised in April 2025.
@@ -28,7 +30,3 @@ The framework is grounded in systems thinking and design thinking. It gives agen
 ## Who It's For
 
 Small and rural transit agencies, state DOTs with transit oversight responsibilities, and mobility management programs evaluating new tools or systems. It's written for non-technical managers who need a way to think clearly about technology decisions, not a checklist of features.
-
-<div class="btn-group">
-  <a href="https://n-catt.org/guidebooks/a-framework-for-making-successful-technology-decisions/" class="btn btn--primary" target="_blank" rel="noopener">Read the framework</a>
-</div>

@@ -1,7 +1,7 @@
 {% if page.resources and page.resources.size > 0 %}
 {% assign _all_resources = site.data.resources %}
 {% unless _all_resources %}{% assign _all_resources = "" | split: "" %}{% endunless %}
-<h2>Related Resources</h2>
+<h2>{{ page.resources_title | default: "Related Resources" }}</h2>
 <div class="resource-list">
   {% for res_key in page.resources %}
   {% assign res = _all_resources | where: "key", res_key | first %}

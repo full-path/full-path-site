@@ -69,7 +69,7 @@
 
 - key: odot
   name: "Oregon Department of Transportation"
-  url:
+  url: "https://www.oregon.gov/odot/rptd/pages/index.aspx"
   logo:
   client: true
 
@@ -88,6 +88,12 @@
 - key: age-friendly-az
   name: "Age Friendly Arizona / Maricopa Association of Governments"
   url: "https://www.agefriendlyaz.org/"
+  logo:
+  client: true
+
+- key: ncmm
+  name: "National Center for Mobility Management"
+  url: "https://nationalcenterformobilitymanagement.org/"
   logo:
   client: true
 

@@ -9,6 +9,8 @@ client: odot
 published: "December 2021"
 icon: /assets/images/request.svg
 year: 2021
+resources: [rfis-as-tools]
+resources_title: "The Guide"
 ---
 
 Most agencies treat an RFI as a bureaucratic formality — something you issue because the process says so, not because you expect to learn anything useful. This guide, developed with funding from the Oregon Department of Transportation Public Transportation Division, makes the case that a well-designed RFI is one of the most cost-effective tools available in a technology procurement.
@@ -35,7 +37,3 @@ The guide closes with an outline you can adapt directly: introduction and purpos
 ## Who It's For
 
 Any transit agency preparing a technology procurement, particularly small and rural agencies without dedicated procurement staff. It's two pages — written to be read, not filed.
-
-<div class="btn-group">
-  <a href="/assets/downloads/RFIs-as-Tools.pdf" class="btn btn--primary" target="_blank" rel="noopener">Download the guide</a>
-</div>
