@@ -16,8 +16,7 @@
       {% assign _rtype_key = res.type | downcase %}
       {% assign _rtype = _rtypes | where: "type", _rtype_key | first %}
       <span class="resource-card__thumb-placeholder">
-        {% if _rtype %}<img src="{{ _rtype.icon | relative_url }}" alt="" class="resource-card__type-icon">{% endif %}
-        {{ res.type }}
+        {% if _rtype %}<img src="{{ _rtype.icon | relative_url }}" alt="" class="resource-card__type-icon">{% else %}{{ res.type }}{% endif %}
       </span>
       {% endif %}
     </a>

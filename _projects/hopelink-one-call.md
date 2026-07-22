@@ -1,22 +1,21 @@
 ---
-title: "One-Call/One-Click Business Plan"
+title: "Hopelink Find a Ride"
 layout: project
-description: "Business plan for a regional mobility management center serving King County, Washington, coordinating transportation for seniors and people with disabilities across human services providers."
-permalink: /projects/hopelink-one-call/
-categories: [Strategy, Engagement]
+description: "Long-term support for the King County Mobility Coalition's one-call/one-click program — from the original 2020 business plan through Phase 1 launch and into ongoing Phase 2 expansion across three counties."
+permalink: /projects/hopelink-find-a-ride/
+categories: [Strategy, Engagement, Interoperability]
 type: article
 report_url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
 client: hopelink
-published: "January 2020"
+published: "2020–present"
+published_label: "Engagement"
 year: "2020"
+resources: [findaride-trip-planner, hopelink-one-call-business-plan, find-a-ride-roadmap, find-a-ride-phase1a-evaluation, find-a-ride-phase2-readiness]
+resources_title: "Related Resources"
 ---
 
-Developed for the King County Mobility Coalition through Hopelink in January 2020, this business plan laid out the operational and financial model for a regional one-call/one-click mobility management center serving King County, Washington.
+Full Path's work with Hopelink and the King County Mobility Coalition began in early 2020 with a business plan for a regional one-call/one-click mobility management center. The problem it addressed was familiar: older adults, people with disabilities, and low-income riders in King County had access to a patchwork of transportation options — transit, paratransit, non-emergency medical transport, volunteer driver programs — but no coherent way to find or compare them. A single point of access, where riders or their caregivers could identify options and arrange trips across providers in one step, was the goal. The business plan laid out the governance structure, staffing models, technology requirements, funding strategies, and phased implementation path to get there.
 
-One-call/one-click centers are a coordination strategy for human services transportation: a single point of contact where older adults, people with disabilities, and low-income riders can find, request, and arrange trips across multiple providers — transit, paratransit, non-emergency medical transport, volunteer driver programs, and others. The goal is to reduce fragmentation in a landscape where eligible riders often don't know what services exist or how to access them.
+That plan became the foundation for Find a Ride. A $230,000 grant from the Washington State Department of Transportation followed in May 2021, and Phase 1 implementation began that July. After vendor selection and user testing, the platform launched at the end of 2022 as a multi-modal trip planner and referral platform — accessible by phone, web, and mobile — serving individual riders, caregivers, and social workers scheduling transportation across King County. The solution was built on OpenTripPlanner, an open-source multi-modal trip planning engine, and draws on GTFS-Flex, the open data standard for demand-responsive and specialized transit services. A Phase 1A evaluation completed in December 2023 documented outcomes and set the stage for what came next.
 
-The business plan addressed governance structure, staffing models, technology requirements, funding strategies, and phased implementation. It drew on comparable programs nationally and was grounded in the specific mix of providers, funding streams, and demographics in King County.
-
-<div class="btn-group">
-  <a href="{{ page.report_url }}" class="btn btn--primary" target="_blank" rel="noopener">Read the business plan</a>
-</div>
+Phase 2 is now underway. The work has expanded geographically to cover King, Pierce, and Snohomish Counties, and has shifted its focus from trip planning to the harder coordination problem: aligning the eligibility rules, intake processes, and enrollment verification that differ across providers and jurisdictions. Making it easier for a rider to qualify once and access multiple services — rather than navigating separate eligibility processes for each — is both the technical and policy challenge Phase 2 is designed to solve.

@@ -12,6 +12,20 @@
 #   thumbnail: /assets/images/resources/slug.png   # optional; type placeholder if absent
 #   description: "One or two sentences."
 
+- key: gtfs-eligibilities-repo
+  name: "GTFS-Eligibilities"
+  year: 2021
+  type: "Repository"
+  url: "https://github.com/ODOT-PTS/gtfs-eligibilities"
+  description: "Draft specification for a GTFS extension defining who can use a transit service — covering age constraints, disability categories, veteran status, trip purposes, and eligibility verification."
+
+- key: gtfs-capabilities-repo
+  name: "GTFS-Capabilities"
+  year: 2021
+  type: "Repository"
+  url: "https://github.com/full-path/gtfs-capabilities"
+  description: "Draft specification for a GTFS extension describing what a transit service can provide beyond the ambulatory baseline — service levels, lift and ramp specifications, mobility device space, and driver training."
+
 - key: gtfs-eligibilities-capabilities
   name: "GTFS Extensions for Eligibilities and Capabilities: End-of-Project Webinar"
   year: 2021
@@ -75,6 +89,45 @@
   url: "https://observablehq.com/@keviniano/a-testing-version-of-a-live-typology-matrix"
   thumbnail: /assets/images/resources/observable-typology-matrix.png
   description: "The underlying code for the interactive typology matrix, published as an Observable notebook. The full implementation can be viewed and copied for reuse or adaptation."
+
+- key: findaride-trip-planner
+  name: "Find a Ride Trip Planner"
+  type: "Web page"
+  url: "https://www.findaride.org/tripplanner"
+  thumbnail: /assets/images/resources/find-a-ride.webp
+  description: "The King County Mobility Coalition's one-call/one-click trip planner — a single access point for older adults, people with disabilities, and low-income riders to find and arrange trips across multiple transportation providers in King County."
+
+- key: find-a-ride-roadmap
+  name: "Find a Ride Roadmap"
+  year: 2023
+  type: "PDF"
+  url: "https://irp.cdn-website.com/c86a044e/files/uploaded/Find%20a%20Ride%20Roadmap%20March%202023.pdf"
+  thumbnail: /assets/images/resources/find-a-ride-roadmap.jpg
+  description: "A roadmap for the Find a Ride one-call/one-click program in King County, outlining the path forward for the regional mobility management center."
+
+- key: find-a-ride-phase1a-evaluation
+  name: "Find a Ride Phase 1A Evaluation"
+  year: 2023
+  type: "PDF"
+  url: "https://irp.cdn-website.com/c86a044e/files/uploaded/Find%20a%20Ride%20Phase%201A%20Evaluation%20-%20Final%20December%2026%202023.pdf"
+  thumbnail: /assets/images/resources/find-a-ride-phase1a-evaluation.jpg
+  description: "Evaluation of the Find a Ride Phase 1A implementation, assessing outcomes of the one-call/one-click program in King County."
+
+- key: find-a-ride-phase2-readiness
+  name: "Find a Ride Phase 2 Readiness"
+  year: 2025
+  type: "Web page"
+  url: "https://www.kcmobility.org/find-a-ride-phase-2-readiness"
+  thumbnail: /assets/images/resources/find-a-ride-phase-2-readiness.png
+  description: "Report on Hopelink's initiative to create a coordinated eligibility system for specialized transportation across King, Pierce, and Snohomish Counties — reducing barriers for riders through a unified application and enrollment process."
+
+- key: hopelink-one-call-business-plan
+  name: "One-Call/One-Click Business Plan"
+  year: 2020
+  type: "PDF"
+  url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
+  thumbnail: /assets/images/resources/hopelink-one-call.jpg
+  description: "Business plan for a regional one-call/one-click mobility management center serving King County, Washington — covering governance, staffing, technology requirements, funding strategies, and phased implementation."
 
 - key: rural-transportation-incubator
   name: "Technology Support for the Rural Transportation Incubator"

@@ -12,3 +12,5 @@
   icon: /assets/images/resource-types/webpage.svg
 - type: slides
   icon: /assets/images/resource-types/slides.svg
+- type: repository
+  icon: /assets/images/resource-types/repository.svg

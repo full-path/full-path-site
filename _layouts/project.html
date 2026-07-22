@@ -30,7 +30,7 @@ layout: default
       {% endif %}
       {% if page.published %}
       <div class="project-meta__item">
-        <dt>Published</dt>
+        <dt>{{ page.published_label | default: "Published" }}</dt>
         <dd>{{ page.published }}{% if page.revised %} · Revised {{ page.revised }}{% endif %}</dd>
       </div>
       {% endif %}
