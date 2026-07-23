@@ -7,10 +7,11 @@ categories: [Strategy, Engagement, Interoperability]
 type: article
 report_url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
 client: hopelink
+featured_order: 1
 published: "2020–present"
 published_label: "Engagement"
-year: "2020"
-resources: [findaride-trip-planner, hopelink-one-call-business-plan, find-a-ride-roadmap, find-a-ride-phase1a-evaluation, find-a-ride-phase2-readiness]
+year: "2020–present"
+resources: [kcmobility-ococ, findaride-trip-planner, hopelink-one-call-business-plan, find-a-ride-roadmap, find-a-ride-phase1a-evaluation, find-a-ride-phase2-readiness]
 resources_title: "Related Resources"
 ---
 

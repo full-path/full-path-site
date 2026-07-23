@@ -90,6 +90,13 @@
   thumbnail: /assets/images/resources/observable-typology-matrix.png
   description: "The underlying code for the interactive typology matrix, published as an Observable notebook. The full implementation can be viewed and copied for reuse or adaptation."
 
+- key: kcmobility-ococ
+  name: "Find a Ride (One-Call/One-Click)"
+  type: "Web page"
+  url: "https://www.kcmobility.org/ococ"
+  thumbnail: /assets/images/resources/hopelink-find-a-ride-program.png
+  description: "The King County Mobility Coalition's program page for Find a Ride, the regional one-call/one-click system serving older adults, people with disabilities, and caregivers across King, Pierce, and Snohomish Counties."
+
 - key: findaride-trip-planner
   name: "Find a Ride Trip Planner"
   type: "Web page"
