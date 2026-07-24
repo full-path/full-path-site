@@ -98,7 +98,13 @@
   client: true
 
 - key: hopelink
-  name: "Hopelink / King County Mobility Coalition"
+  name: "Hopelink"
+  url: "https://www.hopelink.org/"
+  logo:
+  client: true
+
+- key: kcmc
+  name: "King County Mobility Coalition"
   url: "https://www.kcmobility.org/"
   logo:
   client: true
