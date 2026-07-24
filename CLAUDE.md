@@ -121,7 +121,7 @@ File: `assets/downloads/RFIs-as-Tools.pdf` · Page: `/tools/rfis-as-tools/`
 /tools/readiness-assessment/ Assessment Tool
 /tools/rfis-as-tools/        RFI guide (links to the PDF download)
 /projects/      Listing of past client/published work
-/projects/ridesheet-aarp-report/   /projects/hopelink-one-call/   /projects/rural-incubator/
+/projects/ridesheet-aarp-report/   /projects/find-a-ride/   /projects/rural-incubator/
 /about/         Kevin bio, stats, tech skills, trusted partners (Garnet, Access Tech),
                 memberships
 /blog/          Blog archive; no posts on home page

@@ -1,11 +1,9 @@
 ---
-title: "Hopelink Find a Ride"
+title: "Find a Ride"
 layout: project
-description: "Long-term support for the King County Mobility Coalition's one-call/one-click program — from the original 2020 business plan through Phase 1 launch and into ongoing Phase 2 expansion across three counties."
-permalink: /projects/hopelink-find-a-ride/
+description: "Long-term support for the King County Mobility Coalition's one-call/one-click program — from the original 2020 business plan through Phase 1 launch and into ongoing Phase 2 expansion."
+permalink: /projects/find-a-ride/
 categories: [Strategy, Engagement, Interoperability]
-type: article
-report_url: "https://irp-cdn.multiscreensite.com/c86a044e/files/uploaded/KCMC%20One-Call_One-Click%20Business%20Plan%20-%20FINAL_6H7oY39qTdyGyaFD9IgL.pdf"
 client: [hopelink, kcmc]
 featured_order: 1
 published: "2020–present"
