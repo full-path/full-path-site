@@ -1,32 +1,37 @@
-{% if page.resources and page.resources.size > 0 %}
+{% comment %}
+  Renders "Related Resources" sections. Two front matter modes:
+
+  Flat (single heading), most pages:
+    resources: [key-one, key-two]
+    resources_title: "Related Resources"   # optional
+
+  Grouped (multiple headings), for pages that want resources split into
+  sections, e.g. hopelink-one-call.md:
+    resource_groups:
+      - title: "Find a Ride on the Web"
+        keys: [key-one, key-two]
+      - title: "Project Materials Authored by Full Path"
+        keys: [key-three, key-four]
+{% endcomment %}
 {% assign _all_resources = site.data.resources %}
 {% unless _all_resources %}{% assign _all_resources = "" | split: "" %}{% endunless %}
+
+{% if page.resource_groups and page.resource_groups.size > 0 %}
+{% for group in page.resource_groups %}
+<h2>{{ group.title }}</h2>
+<div class="resource-list">
+  {% for res_key in group.keys %}
+  {% assign res = _all_resources | where: "key", res_key | first %}
+  {% if res %}{% include resource-card.html res=res %}{% endif %}
+  {% endfor %}
+</div>
+{% endfor %}
+{% elsif page.resources and page.resources.size > 0 %}
 <h2>{{ page.resources_title | default: "Related Resources" }}</h2>
 <div class="resource-list">
   {% for res_key in page.resources %}
   {% assign res = _all_resources | where: "key", res_key | first %}
-  {% if res %}
-  <div class="resource-card">
-    <a href="{{ res.url }}" class="resource-card__thumb" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-      {% if res.thumbnail %}
-      <img src="{{ res.thumbnail | relative_url }}" alt="">
-      {% else %}
-      {% assign _rtypes = site.data.resource_types %}
-      {% unless _rtypes %}{% assign _rtypes = "" | split: "" %}{% endunless %}
-      {% assign _rtype_key = res.type | downcase %}
-      {% assign _rtype = _rtypes | where: "type", _rtype_key | first %}
-      <span class="resource-card__thumb-placeholder">
-        {% if _rtype %}<img src="{{ _rtype.icon | relative_url }}" alt="" class="resource-card__type-icon">{% else %}{{ res.type }}{% endif %}
-      </span>
-      {% endif %}
-    </a>
-    <div class="resource-card__content">
-      <h3 class="resource-card__name"><a href="{{ res.url }}" target="_blank" rel="noopener">{{ res.name }}</a></h3>
-      <p class="resource-card__meta"><span class="resource-card__type">{{ res.type }}</span>{% if res.year %} · {{ res.year }}{% endif %}</p>
-      {% if res.description %}<p class="resource-card__desc">{{ res.description }}</p>{% endif %}
-    </div>
-  </div>
-  {% endif %}
+  {% if res %}{% include resource-card.html res=res %}{% endif %}
   {% endfor %}
 </div>
 {% endif %}
