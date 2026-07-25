@@ -1,6 +1,7 @@
 ---
 title: "Find a Ride"
 layout: project
+icon: /assets/images/resources/find-a-ride-white.webp
 description: "Long-term support for the King County Mobility Coalition's one-call/one-click program — from the original 2020 business plan through Phase 1 launch and into ongoing Phase 2 expansion."
 permalink: /projects/find-a-ride/
 categories: [Strategy, Engagement, Interoperability]
@@ -20,6 +21,6 @@ Full Path's work with Hopelink and the King County Mobility Coalition began in e
 
 That plan became the foundation for Find a Ride. A grant from the Washington State Department of Transportation followed in May 2021, and Phase 1 implementation began that July. Full Path supported the project with analysis of the state of transit data standards and vendor landscape and with development of the RFP's technical requirements. 
 
-After vendor selection and user testing, the platform launched at the end of 2022 as a multi-modal trip planner and referral platform — accessible by phone, web, and mobile — serving individual riders, caregivers, and social workers scheduling transportation across King County. The solution was built on OpenTripPlanner, an open-source multi-modal trip planning engine, and draws on GTFS-Flex, the open data standard for demand-responsive and specialized transit services. One of Full Path's contributions in this period was the Phase 1A evaluation, completed in December 2023, which documented outcomes and helped set the stage for Phase 2.
+After vendor selection and user testing, the platform soft-launched at the end of 2022 as a multi-modal trip planner and referral platform — accessible by phone, web, and mobile — serving individual riders, caregivers, and social workers scheduling transportation across King County. The solution was built on OpenTripPlanner, an open-source multi-modal trip planning engine, and draws on GTFS-Flex, the open data standard for demand-responsive and specialized transit services. One of Full Path's contributions in this period was the Phase 1A evaluation, completed in December 2023, which documented outcomes and helped set the stage for Phase 2.
 
 Phase 2 is now underway in 2026 with funding from an FTA Innovative Coordinated Access and Mobility (ICAM) Grant. It focuses on streamlining the process riders need to go through before getting their first ride with an eligibility-based service by addressing the rules, intake processes, and enrollment verification steps that differ across providers and jurisdictions. The aim is to make it easier for a rider to apply once and access multiple services, rather than navigating separate eligibility processes for each. Full Path is providing support with subject matter expertise in the form of system architecture design, vendor landscape analysis, and targetted project management.
