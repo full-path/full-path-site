@@ -1,17 +1,20 @@
 ---
-title: "GTFS Extensions for Eligibilities and Capabilities"
+title: "GTFS Eligibilities and Capabilities"
 layout: project
 description: "Development of two draft GTFS extensions to make specialized transit services — paratransit, older adult transportation, and other non-general-public services — visible and comparable in the same data ecosystem as fixed-route transit."
+icon: /assets/images/person-with-cane.svg
 permalink: /projects/gtfs-eligibilities-capabilities/
 year: "2021"
 categories: [Interoperability,Engagement]
 client: odot
-published: "August 2021"
+published: "2021"
 resources: [gtfs-eligibilities-repo, gtfs-capabilities-repo, gtfs-eligibilities-capabilities]
 ---
 
-Specialized transit — paratransit, older adult transportation, volunteer driver programs, Medicaid transportation — is largely invisible to the data ecosystem that has grown up around GTFS. That ecosystem includes trip planners, feed aggregators, and planning tools used by millions of riders and dozens of agencies. But because GTFS was built to describe fixed-route services available to the general public, it has few ways to represent the eligibility constraints, service levels, vehicle capabilities, or booking requirements that define how specialized services actually work. A rider who needs a wheelchair lift and door-to-door assistance can't compare their options in Google Maps or any other trip planning tool — not because the data doesn't exist, but because there's no standard format for it. This project, funded through the Federal Transit Administration's Mobility for All Pilot Program and administered through ODOT's Public Transportation Division, set out to change that.
+Since 2005, General Transit Feed Specification (GTFS) has been a focal point around which a rich data ecosystem for transit has developed, including trip planners and planning tools used by millions of riders and hundreds of transit agencies worldwide. As its use has exploded over the years, so has the need for the specification to expand beyond the scenarios it was originally designed to describe: fixed-route services available to the general public.
 
-Full Path served as both lead technical consultant on the project and facilitator of the stakeholder engagement effort, developing two draft extensions to GTFS. GTFS-eligibilities defines who can use a service — handling age constraints, disability categories, veteran status, allowed trip purposes, and how and where eligibility is verified. GTFS-capabilities describes what a service can provide beyond the ambulatory baseline: service levels (curb-to-curb through hand-to-hand), lift and ramp specifications, mobility device space dimensions, and driver training. A third conceptual contribution — the Uniform Resource Name (URN) — gave both extensions a mechanism for creating globally unique, human-readable identifiers for eligibility types, trip purposes, and compliance standards, enabling coordination across providers and jurisdictions without requiring a central registry. The result was a set of draft proposals grounded in the actual complexity of how specialized transit operates.
+In 2020, the Oregon Department of Transportation received funding through the Federal Transit Administration’s Mobility for All Pilot Program to develop a proposal to describe in the GTFS format the attributes of specialized transit, where who can ride is limited and the level of service provided is expanded.
 
-The extensions built directly on prior work in GTFS-Flex and related proposals, extending the data model to cover the full trip lifecycle for riders who have been effectively excluded from it. Making specialized transit legible in the same formats and tools as fixed-route transit is a prerequisite for meaningful trip planning, regional coordination, and policy analysis for the populations these services exist to serve.
+Full Path served as both lead technical consultant on the project and facilitator of the stakeholder engagement effort, developing two closely related draft extensions to GTFS. GTFS-eligibilities describes who can use a service — handling age constraints, disability categories, veteran status, allowed trip purposes, and how and where eligibility is verified. GTFS-capabilities describes what a service can provide beyond the ambulatory baseline: service levels (curb-to-curb through hand-to-hand), lift and ramp specifications, mobility device space dimensions, and driver training. The proposal introduces the Uniform Resource Name (URN) as a scalable way to give both extensions a mechanism for creating globally unique, human-readable identifiers for eligibility types, trip purposes, and compliance standards, enabling coordination across providers and jurisdictions without requiring a central registry.
+
+The final result was a set of draft proposals grounded in the reality of specialized transit and the wide variety of local conditions it operates in.
