@@ -6,6 +6,8 @@ header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
 title: About Full Path
 permalink: /about/
+resources: [tr-news-transit-technology-for-everyone, tr-news-rural-technology]
+resources_title: "Other Published Work"
 ---
 <div class="about-intro" markdown="1">
 
@@ -43,3 +45,5 @@ I'm Kevin Chambers, and I work with a wide range of organizations to help commun
 
 {% assign trusted_partners = site.data.partners | where: "trusted_partner", true %}
 {% for partner in trusted_partners %}{% include partner-card.html partner=partner %}{% endfor %}
+
+{% include resource-list.html %}

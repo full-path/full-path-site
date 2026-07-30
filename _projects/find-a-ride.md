@@ -4,7 +4,7 @@ layout: project
 icon: /assets/images/resources/find-a-ride-white.webp
 description: "Long-term support for the King County Mobility Coalition's one-call/one-click program — from the original 2020 business plan through Phase 1 launch and into ongoing Phase 2 expansion."
 permalink: /projects/find-a-ride/
-categories: [Strategy, Engagement, Interoperability]
+categories: [Strategy, Engagement, Interoperability, Implementation]
 client: [hopelink, kcmc]
 featured_order: 1
 published: "2020–present"

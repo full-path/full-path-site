@@ -12,6 +12,29 @@
 #   thumbnail: /assets/images/resources/slug.png   # optional; type placeholder if absent
 #   description: "One or two sentences."
 
+- key: systems-thinking-course
+  name: "Thinking Strategically About Transit Technology"
+  type: "Web page"
+  url: "https://www.ccam-tac.org/strategy/"
+  thumbnail: /assets/images/resources/ccam-tac-logo.png
+  description: "The free, self-paced, 8-module e-learning course itself, hosted by the CCAM Technical Assistance Center. Includes a certificate of completion."
+
+- key: mn-transit-technology-plan
+  name: "Greater Minnesota Public Transit Technology Plan"
+  year: 2021
+  type: "PDF"
+  url: "/assets/downloads/mn-transit-technology-plan.pdf"
+  thumbnail: /assets/images/resources/mn-transit-technology-plan.jpg
+  description: "MnDOT's statewide technology plan for Greater Minnesota's transit agencies, including goals and strategies, organizational supports for technology, and technology assessment and growth planning guidance."
+
+- key: mn-transit-technology-plan-references
+  name: "Greater Minnesota Public Transit Technology Plan: References"
+  year: 2021
+  type: "PDF"
+  url: "/assets/downloads/mn-transit-technology-plan-references.pdf"
+  thumbnail: /assets/images/resources/mn-transit-technology-plan-references.jpg
+  description: "Supplemental reference materials for the plan, including peer agency and industry expert interview findings and transit agency survey results."
+
 - key: gtfs-eligibilities-repo
   name: "GTFS-Eligibilities"
   year: 2021
@@ -143,6 +166,20 @@
   url: "/assets/downloads/rural-transportation-incubator.pdf"
   thumbnail: /assets/images/resources/rural-transportation-incubator.jpg
   description: "Assessment of technology needs and options for a rural transportation incubator program serving rural and tribal communities in Arizona, prepared for Age Friendly Arizona and MAG."
+
+- key: tr-news-transit-technology-for-everyone
+  name: "Transit Technology for Everyone"
+  year: 2023
+  type: "Web page"
+  url: "https://www.nationalacademies.org/read/28213/chapter/7"
+  description: "TR News article (July–August 2023) on designing and implementing transit technology to serve all users — including people with disabilities — ensuring equitable access to transportation systems."
+
+- key: tr-news-rural-technology
+  name: "Ready to Roll: Technology for Rural Transportation"
+  year: 2023
+  type: "Web page"
+  url: "https://www.nationalacademies.org/read/28212/chapter/8"
+  description: "TR News article (September–December 2023) examining technological solutions and innovations for rural transportation — how emerging technologies can address the unique challenges rural communities face."
 
 - key: ridesheet-aarp-report
   name: "RideSheet: Rural Transportation Benefits from New Coordination Technology"

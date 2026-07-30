@@ -13,7 +13,10 @@ description: "The tools listed here are free to use. Each was developed with and
 <div class="tool-filters" id="tools-filters" data-grid="tools-grid" role="group" aria-label="Filter by category">
   <button class="tool-filter is-active" data-filter="all">All</button>
   {% for cat in site.data.categories %}
+    {% assign _cat_matches = sorted_tools | where_exp: "t", "t.categories contains cat.short_name" %}
+    {% if _cat_matches.size > 0 %}
     <button class="tool-filter" data-filter="{{ cat.short_name | downcase }}" style="--filter-color: {{ cat.colors.main }};">{% include category-icon.html category=cat.short_name %}{{ cat.short_name }}</button>
+    {% endif %}
   {% endfor %}
 </div>
 

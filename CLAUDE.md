@@ -60,10 +60,11 @@ Key facts about RideSheet:
 **Known URLs:**
 - RideSheet documentation: https://docs.ridesheet.org
 - YouTube channel (RideSheet + Full Path videos): https://www.youtube.com/@fullpathtransit
+- Systems Thinking eLearning course ("Thinking Strategically About Transit Technology",
+  8-module course developed for the CCAM Technical Assistance Center): https://www.ccam-tac.org/strategy/
 
 **[PLACEHOLDER — Kevin to fill in]:**
 - RideSheet GitHub repository URL: `___________`
-- Systems Thinking eLearning course URL: `___________`
 
 ### A Framework for Making Successful Technology Decisions
 A practical whitepaper published by the National Center for Applied Transit Technology

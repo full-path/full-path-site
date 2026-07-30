@@ -10,7 +10,7 @@ type: article
 report_url: "/assets/downloads/rural-transportation-incubator.pdf"
 client: age-friendly-az
 published: "2020"
-icon: /assets/images/desert-road.svg
+icon: /assets/images/arizona.svg
 resources: [rural-transportation-incubator]
 ---
 

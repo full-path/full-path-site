@@ -21,28 +21,27 @@ layout: default
         </dd>
       </div>
       {% endif %}
+      {% if page.published %}
+      <div class="project-meta__item">
+        <dt>Published</dt>
+        <dd>{{ page.published }}{% if page.revised %} · Revised {{ page.revised }}{% endif %}</dd>
+      </div>
+      {% elsif page.year %}
+      <div class="project-meta__item">
+        <dt>Last updated</dt>
+        <dd>{{ page.year }}</dd>
+      </div>
+      {% endif %}
       {% if page.client %}
       <div class="project-meta__item">
         <dt>{% assign _client_count = 0 %}{% for client_key in page.client %}{% assign _client_count = _client_count | plus: 1 %}{% endfor %}{% if _client_count > 1 %}Clients{% else %}Client{% endif %}</dt>
         <dd>{% for client_key in page.client %}{% assign _client = site.data.partners | where: "key", client_key | first %}{% if forloop.first == false %}, {% endif %}{% if _client %}{% if _client.url %}<a href="{{ _client.url }}">{{ _client.name }}</a>{% else %}{{ _client.name }}{% endif %}{% else %}{{ client_key }}{% endif %}{% endfor %}</dd>
       </div>
       {% endif %}
-      {% if page.published %}
-      <div class="project-meta__item">
-        <dt>Published</dt>
-        <dd>{{ page.published }}{% if page.revised %} · Revised {{ page.revised }}{% endif %}</dd>
-      </div>
-      {% endif %}
       {% if page.partners %}
       <div class="project-meta__item">
         <dt>With</dt>
         <dd>{% for partner_key in page.partners %}{% assign _partner = site.data.partners | where: "key", partner_key | first %}{% if forloop.first == false %}, {% endif %}{% if _partner %}{% if _partner.url %}<a href="{{ _partner.url }}">{{ _partner.name }}</a>{% else %}{{ _partner.name }}{% endif %}{% else %}{{ partner_key }}{% endif %}{% endfor %}</dd>
-      </div>
-      {% endif %}
-      {% if page.year and page.published == nil %}
-      <div class="project-meta__item">
-        <dt>Last updated</dt>
-        <dd>{{ page.year }}</dd>
       </div>
       {% endif %}
     </dl>

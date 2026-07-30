@@ -61,6 +61,11 @@
   url:
   logo:
 
+- key: trillium
+  name: "Trillium Solutions"
+  url: "https://trilliumtransit.com/"
+  logo:
+
 - key: ncatt
   name: "National Center for Applied Transit Technology (N-CATT)"
   url: "https://n-catt.org/"
@@ -106,5 +111,23 @@
 - key: kcmc
   name: "King County Mobility Coalition"
   url: "https://www.kcmobility.org/"
+  logo:
+  client: true
+
+- key: mndot
+  name: "Minnesota Department of Transportation"
+  url: "https://www.dot.state.mn.us/"
+  logo:
+  client: true
+
+- key: careoregon
+  name: "CareOregon"
+  url: "https://www.careoregon.org/"
+  logo:
+  client: true
+
+- key: ccam-tac
+  name: "CCAM Technical Assistance Center"
+  url: "https://www.ccam-tac.org/"
   logo:
   client: true

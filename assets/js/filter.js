@@ -11,7 +11,8 @@
         this.classList.add('is-active');
         cards.forEach(function (card) {
           var cats = (card.dataset.categories || '').split(' ');
-          card.hidden = filter !== 'all' && !cats.includes(filter);
+          var hide = filter !== 'all' && !cats.includes(filter);
+          card.closest('.ticket-wrap').hidden = hide;
         });
       });
     });
