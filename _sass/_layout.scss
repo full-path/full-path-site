@@ -59,6 +59,12 @@ $nav-height: 64px;
 }
 .splash-hero__excerpt { font-size: 1.15rem; opacity: 0.95; text-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 1.5rem; }
 .splash-hero__cta { margin-top: 1.25rem; }
+// The overlay centers .splash-hero__content as a block, so leading/trailing
+// margins inside it count toward that block's height and shift the visible text
+// off center. The h1 in particular inherits margin-top: var(--space-8) from the
+// base heading rules. Strip the outer margins; interior spacing is unaffected.
+.splash-hero__content > :first-child { margin-top: 0; }
+.splash-hero__content > :last-child { margin-bottom: 0; }
 
 // Featured-tool variant: brand-color fallback until a hero image is provided
 .splash-hero--tool { min-height: 340px; background-color: var(--color-brand); }
