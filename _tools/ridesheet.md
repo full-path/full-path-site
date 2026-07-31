@@ -25,6 +25,12 @@ highlights:
   - icon: /assets/images/software-dev.svg
     title: "Open source"
     text: "No license fees and no vendor lock-in. The code is public, and agencies shape where it goes next."
+  - icon: /assets/images/support_bus.svg
+    title: "Supports state oversight"
+    text: "Standardized data and reporting help state DOTs get consistent, comparable information from small agencies — without asking them to adopt systems they can't sustain."
+  - icon: /assets/images/storytelling.svg
+    title: "Tells the story of your service"
+    text: "Turn trip and service data into simple visuals that boards, funders, and riders can readily understand — coverage, availability, and impact, not just spreadsheets."
 ---
 
 RideSheet is a free, open-source scheduling and trip coordination system for small and rural demand-responsive transportation providers — the agencies that typically have no dedicated IT staff and no budget for expensive proprietary software.
