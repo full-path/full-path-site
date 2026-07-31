@@ -5,7 +5,7 @@ description: "A free online self-assessment that rates your agency's technology 
 permalink: /tools/readiness-assessment/
 categories: [Strategy]
 order: 3
-client: ncatt
+client: [ncatt]
 partners: [garnet, apgar, access-tech]
 icon: /assets/images/readiness.svg
 year: 2024

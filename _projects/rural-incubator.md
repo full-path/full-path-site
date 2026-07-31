@@ -4,11 +4,9 @@ layout: project
 description: "Assessment and recommendations for technology infrastructure supporting a rural transportation incubator in Arizona, focusing on mobility management and coordination tools for rural and tribal communities."
 permalink: /projects/rural-incubator/
 year: "2020"
-featured_order: 2
 categories: [Strategy, Engagement]
 type: article
-report_url: "/assets/downloads/rural-transportation-incubator.pdf"
-client: age-friendly-az
+client: [age-friendly-az]
 published: "2020"
 icon: /assets/images/arizona.svg
 resources: [rural-transportation-incubator]

@@ -5,8 +5,9 @@ description: "A statewide plan addressing the organizational capacity gap behind
 permalink: /projects/mn-transit-technology-plan/
 categories: [Strategy, Engagement]
 icon: /assets/images/minnesota.svg
-client: mndot
-published: "June 2021"
+client: [mndot]
+partners: [transitplus, cdm-smith, carroll-franck]
+published: "2021"
 year: "2021"
 resources: [mn-transit-technology-plan, mn-transit-technology-plan-references]
 ---

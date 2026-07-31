@@ -1,0 +1,4 @@
+{% if page.related and page.related.size > 0 %}
+<h2>Related</h2>
+{% include page-links.html slugs=page.related %}
+{% endif %}

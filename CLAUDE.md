@@ -185,6 +185,38 @@ Data API calls or LinkedIn scraping — both create fragile dependencies with no
 benefit for a site of this scale. (To fetch YouTube titles one-off, the oEmbed endpoint
 and playlist RSS feeds work without an API key.)
 
+### Relationships Between Tools, Projects, Resources, and Partners
+Tool and project pages connect to each other and to shared data through four
+mechanisms. Each has a specific job — don't blur them together:
+
+- **Resources** — reuse a `_data/resources.yml` key across multiple pages when they
+  genuinely reference the same underlying document, tool, or webpage (e.g.
+  `ncmm-typology-framework` is used by three tool pages that all meaningfully discuss
+  the NCMM typology). This is expected and correct: one entry, one name/description/
+  thumbnail, reused everywhere it applies. Before adding a new resource entry, check
+  for an existing one with the same URL to avoid two near-duplicate cards describing
+  the same thing. Once something is registered as a resource, don't also add a second,
+  bespoke front-matter field pointing at the same URL (e.g. a one-off `report_url:`) —
+  reference the resource key everywhere instead.
+- **Partners/clients** — always write `client:` and `partners:` as YAML arrays, even
+  for a single value (`client: [odot]`, not `client: odot`); both layouts iterate
+  these as lists regardless, so the array form is the one true shape. If a partner's
+  `about`/`relationship` blurb in `partners.yml` would link to something that also has
+  its own Full Path tool or project page, link to the internal page rather than the
+  partner's external one.
+- **Prose links** — link from a tool/project's body content to another internal
+  tool/project page when the connection is actually being discussed in that sentence.
+  Always use `{{ '/tools/slug/' | relative_url }}` (or `/projects/slug/`), never a bare
+  path. Prose links explain *why* two pages relate; they don't need to be reciprocal
+  and aren't the primary way a relationship should be discoverable — that's `related:`.
+- **`related:` front matter** — the structural, always-visible way to connect two
+  tool/project pages, e.g. `related: [ncmm-technology-typology, systems-thinking-course]`
+  (values are the target page's filename slug). Rendered by `_includes/related-pages.html`
+  as a plain "Related" list near the bottom of the page, independent of whether the
+  connection is also mentioned in prose. Add it in both directions when two pages have
+  a substantive, standalone connection a reader would want to explore — not
+  automatically just because two pages happen to share a resource or partner key.
+
 ### LinkedIn Strategy
 LinkedIn does not expose a usable public feed API. The correct approach is:
 1. Write substantive posts on the Jekyll site (canonical record)

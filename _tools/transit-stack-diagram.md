@@ -6,13 +6,15 @@ permalink: /tools/transit-stack-diagram/
 icon: /assets/images/stack-diagram.svg
 categories: [Strategy,Interoperability]
 order: 7
+featured_order: 2
 year: 2023
-client: odot
+client: [odot]
 resource_groups:
   - title: "The Diagrams"
     keys: [transit-stack-diagram-template, sample-transit-stack-diagram]
   - title: "Related Resources"
     keys: [ncmm-typology-framework]
+related: [ncmm-technology-typology, systems-thinking-course, odot-technology-assessments]
 ---
 
 Most agencies can name their scheduling software and their farebox. Fewer can say, in one place, everything they run — the radios, the cameras, the GPS units, the spreadsheet somebody built in 2014 that the monthly report still depends on — and fewer still can say how any of it connects. That knowledge usually lives in two or three people's heads, in pieces, and it leaves when they do.

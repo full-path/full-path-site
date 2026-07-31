@@ -7,9 +7,10 @@ icon: /assets/images/typology.svg
 categories: [Strategy,Software]
 order: 5
 year: 2020
-client: ncmm
+client: [ncmm]
 resources: [ncmm-typology-framework, ncmm-typology-matrix]
 resources_title: "The Tool"
+related: [transit-stack-diagram]
 ---
 
 The National Center for Mobility Management developed this typology for mobility managers who find themselves responsible for technology decisions without much background in transit technology — people sometimes called "accidental techies." It gives them a common language and a structured way to compare the many types of technology available to public transportation providers, without requiring deep technical expertise to use. Rather than evaluating specific products or vendors, it categorizes technology by type and rates each category across six dimensions that reflect the full lifecycle of a technology decision.

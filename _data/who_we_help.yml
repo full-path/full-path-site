@@ -6,6 +6,7 @@
     - "Specialized services, such as those aimed at older adults and people with disabilities (FTA 5310)"
     - "Non-emergency medical transportation (Medicaid)"
     - "ADA Paratransit"
+  related: [ridesheet, readiness-assessment, framework]
 - label: "Those supporting community transportation"
   icon: /assets/images/support_bus.svg
   color: "#1d4e89"
@@ -13,6 +14,7 @@
     - "State departments of transportation"
     - "Regional governments"
     - "FTA-funded technical assistance centers"
+  related: [odot-technology-assessments, mn-transit-technology-plan, rural-incubator]
 - label: "Other organizations working with community transportation"
   icon: /assets/images/adjacent_bus.svg
   color: "#6b2d6b"
@@ -20,3 +22,4 @@
     - "Healthcare"
     - "Social services"
     - "Information and referral"
+  related: [careoregon-nemt-technology, find-a-ride]

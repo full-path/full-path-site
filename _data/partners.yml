@@ -51,7 +51,7 @@
       system reliability.
     - >-
       Access Tech also assisted on the
-      <a href="https://n-catt.org/resources/technology-readiness-assessment/">Technology
+      <a href="/tools/readiness-assessment/">Technology
       Readiness and Resilience Assessment Tool</a>, published through the National Center for
       Applied Transit Technology (N-CATT), contributing managed IT expertise to the project's
       organizational resilience and cybersecurity dimensions.
@@ -131,3 +131,18 @@
   url: "https://www.ccam-tac.org/"
   logo:
   client: true
+
+- key: transitplus
+  name: "TransitPlus"
+  url:
+  logo:
+
+- key: cdm-smith
+  name: "CDM Smith"
+  url: "https://www.cdmsmith.com/"
+  logo:
+
+- key: carroll-franck
+  name: "Carroll, Franck and Associates"
+  url: "https://carrollfranck.com/"
+  logo:

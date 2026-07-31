@@ -16,6 +16,18 @@ Full Path helps community transportation services be successful with technology.
 <h2 class="home-section__title">Who We Help</h2>
 <div class="card-grid">
 {% for item in site.data.who_we_help %}
+{% assign drawer_tools = "" | split: "" %}
+{% assign drawer_projects = "" | split: "" %}
+{% for slug in item.related %}
+  {% assign _related_tool = site.tools | where: "slug", slug | first %}
+  {% if _related_tool %}
+    {% assign drawer_tools = drawer_tools | push: _related_tool %}
+  {% else %}
+    {% assign _related_project = site.projects | where: "slug", slug | first %}
+    {% if _related_project %}{% assign drawer_projects = drawer_projects | push: _related_project %}{% endif %}
+  {% endif %}
+{% endfor %}
+{% assign drawer_count = drawer_tools.size | plus: drawer_projects.size %}
 <div class="service-card" style="--service-color: {{ item.color }};">
   <div class="service-card__header">
     {% if item.icon %}
@@ -32,6 +44,17 @@ Full Path helps community transportation services be successful with technology.
     </ul>
     {% endif %}
   </div>
+  {% if drawer_count > 0 %}
+  <button class="card-drawer__handle" aria-expanded="false">
+    <span>Examples</span>
+    <span class="card-drawer__chevron" aria-hidden="true"></span>
+  </button>
+  <div class="card-drawer">
+    <div class="card-drawer__inner">
+      {% include card-drawer-content.html drawer_tools=drawer_tools drawer_projects=drawer_projects %}
+    </div>
+  </div>
+  {% endif %}
 </div>
 {% endfor %}
 </div>
@@ -57,15 +80,6 @@ Full Path helps community transportation services be successful with technology.
 {% for tool in featured_tools %}{% include ticket-card.html item=tool default_icon='/assets/images/tool.svg' %}{% endfor %}
 </div>
 <p class="home-section__more"><a href="/tools/" class="btn btn--more">More Tools →</a></p>
-</section>
-
-<section class="home-section">
-<h2 class="home-section__title">Featured Projects</h2>
-<div class="card-grid">
-{% assign featured_projects = site.projects | where_exp: "p", "p.featured_order" | sort: "featured_order" %}
-{% for project in featured_projects %}{% include ticket-card.html item=project default_icon='/assets/images/project.svg' %}{% endfor %}
-</div>
-<p class="home-section__more"><a href="/projects/" class="btn btn--more">More Projects →</a></p>
 </section>
 
 <section class="home-section">

@@ -1,0 +1,9 @@
+{% if include.slugs and include.slugs.size > 0 %}
+<ul>
+  {% for slug in include.slugs %}
+    {% assign _match = site.tools | where: "slug", slug | first %}
+    {% unless _match %}{% assign _match = site.projects | where: "slug", slug | first %}{% endunless %}
+    {% if _match %}<li><a href="{{ _match.url | relative_url }}">{{ _match.title }}</a></li>{% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

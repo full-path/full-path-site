@@ -5,9 +5,10 @@ description: "A two-phase technology assessment for CareOregon's Ride to Care pr
 permalink: /projects/careoregon-nemt-technology/
 categories: [Strategy, Engagement]
 icon: /assets/images/assessment.svg
-client: careoregon
+client: [careoregon]
 partners: [garnet]
-published: "October–November 2023"
+published: "2023"
+published_label: "Year"
 year: "2023"
 ---
 

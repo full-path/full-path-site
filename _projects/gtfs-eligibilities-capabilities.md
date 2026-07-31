@@ -6,7 +6,7 @@ icon: /assets/images/person-with-cane.svg
 permalink: /projects/gtfs-eligibilities-capabilities/
 year: "2021"
 categories: [Interoperability,Engagement]
-client: odot
+client: [odot]
 published: "2021"
 resources: [gtfs-eligibilities-repo, gtfs-capabilities-repo, gtfs-eligibilities-capabilities]
 ---

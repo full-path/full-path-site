@@ -5,10 +5,11 @@ description: "A multi-year program of individual technology assessments for smal
 permalink: /projects/odot-technology-assessments/
 categories: [Strategy, Engagement]
 icon: /assets/images/oregon.svg
-client: odot
+client: [odot]
 partners: [trillium]
 published: "2019–2023"
 year: "2023"
+related: [transit-stack-diagram, rfis-as-tools]
 ---
 
 Starting in 2019, the Oregon Department of Transportation contracted with Full Path, working alongside Trillium Solutions, to assess the technology in use at small and rural transit agencies across the state. As Oregon increased its investment in small and rural transit service, agencies faced a widening array of technology options — scheduling and dispatch software, in-vehicle hardware, rider-facing tools, data systems — with little agency-level capacity to evaluate them. The program's purpose was to give individual agencies a clear, agency-specific look at their technology and its fit with their operations, while giving ODOT a growing, statewide picture of what small and rural agencies actually needed.

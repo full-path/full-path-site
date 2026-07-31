@@ -10,6 +10,7 @@ year: 2024
 client: [ncmm, ccam-tac]
 resources: [systems-thinking-course, rfis-as-tools, ncmm-typology-framework]
 resources_title: "The Course"
+related: [transit-stack-diagram]
 ---
 
 Most people who end up responsible for transit technology arrive with experience using consumer software, not with any background in how technology functions inside an organization. There's no certification path that teaches this, so it's common to overestimate what a piece of software can do on its own and underestimate the organizational work — training, documentation, stakeholder buy-in — that determines whether it actually succeeds. This course was originally developed for the National Center for Mobility Management, and moved to the CCAM Technical Assistance Center after NCMM shuttered. It teaches transit agency staff to close that gap using systems thinking: a way of looking at an organization's technology as a set of interconnected parts, rather than a series of standalone purchases.

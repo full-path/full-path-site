@@ -6,7 +6,6 @@ description: "Long-term support for the King County Mobility Coalition's one-cal
 permalink: /projects/find-a-ride/
 categories: [Strategy, Engagement, Interoperability, Implementation]
 client: [hopelink, kcmc]
-featured_order: 1
 published: "2020–present"
 published_label: "Years"
 year: "2020–present"

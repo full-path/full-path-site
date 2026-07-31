@@ -5,12 +5,13 @@ description: "Requests for Information are underrated tools. This two-page guide
 permalink: /tools/rfis-as-tools/
 categories: [Strategy]
 order: 4
-client: odot
-published: "December 2021"
+client: [odot]
+published: "2021"
 icon: /assets/images/request.svg
 year: 2021
 resources: [rfis-as-tools]
 resources_title: "The Guide"
+related: [odot-technology-assessments]
 ---
 
 Most agencies treat an RFI as a bureaucratic formality — something you issue because the process says so, not because you expect to learn anything useful. This guide, developed with funding from the Oregon Department of Transportation Public Transportation Division, makes the case that a well-designed RFI is one of the most cost-effective tools available in a technology procurement.

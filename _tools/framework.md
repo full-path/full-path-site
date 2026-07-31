@@ -6,11 +6,10 @@ permalink: /tools/framework/
 year: "2025"
 categories: [Strategy,Engagement]
 order: 2
-featured_order: 2
 icon: /assets/images/framework.svg
 color_theme: "t-red"
 category_icon: "ti-book"
-client: ncatt
+client: [ncatt]
 partners: [lara-bjork]
 resources: [framework-web, framework-whitepaper, framework-one-pager]
 resources_title: "The Documents"
