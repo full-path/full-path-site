@@ -12,7 +12,7 @@ resource_groups:
   - title: "The Diagrams"
     keys: [transit-stack-diagram-template, sample-transit-stack-diagram]
   - title: "Related Resources"
-    keys: [trillium-transit-stack-diagram, ncmm-typology-framework]
+    keys: [ncmm-typology-framework]
 ---
 
 Most agencies can name their scheduling software and their farebox. Fewer can say, in one place, everything they run — the radios, the cameras, the GPS units, the spreadsheet somebody built in 2014 that the monthly report still depends on — and fewer still can say how any of it connects. That knowledge usually lives in two or three people's heads, in pieces, and it leaves when they do.
@@ -28,6 +28,8 @@ That last distinction is what makes the exercise worth doing. Drawing the arrows
 ## Where It Came From
 
 The idea is Trillium Solutions', from a [2016 post](https://trilliumtransit.com/2016/10/10/transit-stack-diagram/) presenting transit technology as a modular stack and pointing out where standard interfaces between the layers existed and where they didn't. Full Path adapted it from an industry-level diagram into an agency-level one and refined it over several years of [technology assessments for small and rural agencies across Oregon]({{ '/projects/odot-technology-assessments/' | relative_url }}), where drawing the stack early in a site visit turned out to be one of the fastest ways to get a shared picture of an agency's technology in front of everyone in the room. The organizing categories come from the [NCMM technology typology]({{ '/tools/ncmm-technology-typology/' | relative_url }}).
+
+The diagram is also taught in [Thinking Strategically About Transit Technology]({{ '/tools/systems-thinking-course/' | relative_url }}), the free e-learning course, where one of the early modules walks through building a stack for a fictional agency and then hands the exercise to you. If you'd rather be talked through it than work from a blank template, start there.
 
 ## How to Use It
 

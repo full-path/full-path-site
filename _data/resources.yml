@@ -33,13 +33,6 @@
   thumbnail: /assets/images/resources/sample-transit-stack-diagram.png
   description: "A worked example for a fictional agency, showing how the connections between systems get drawn — including the manual data entry, custom exports, and missing links that the diagram is meant to expose."
 
-- key: trillium-transit-stack-diagram
-  name: "Transit Stack Diagram"
-  year: 2016
-  type: "Web page"
-  url: "https://trilliumtransit.com/2016/10/10/transit-stack-diagram/"
-  description: "Trillium Solutions' original post presenting transit technology as a modular stack, and identifying where standard interfaces between the layers exist and where they don't."
-
 - key: mn-transit-technology-plan
   name: "Greater Minnesota Public Transit Technology Plan"
   year: 2021
