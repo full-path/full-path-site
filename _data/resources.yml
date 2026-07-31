@@ -19,6 +19,27 @@
   thumbnail: /assets/images/resources/ccam-tac-logo.png
   description: "The free, self-paced, 8-module e-learning course itself, hosted by the CCAM Technical Assistance Center. Includes a certificate of completion."
 
+- key: transit-stack-diagram-template
+  name: "Transit Stack Diagram Template"
+  type: "Google Drawing"
+  url: "https://docs.google.com/drawings/d/1exlUrQ9_QH8sbdDETUoKzvMAscYdzSG10JkcAVlKIe4/edit"
+  thumbnail: /assets/images/resources/transit-stack-diagram-template.png
+  description: "The blank template, pre-loaded with common transit technology systems grouped into five categories and a legend for marking ownership, status, and connection quality. Make a copy and edit it to match your agency."
+
+- key: sample-transit-stack-diagram
+  name: "Sample Transit Stack Diagram"
+  type: "Google Drawing"
+  url: "https://docs.google.com/drawings/d/1i6IF764RWX2rcxxZzpuK4Uwv8EiPc6qp_8v71laKKSg/edit"
+  thumbnail: /assets/images/resources/sample-transit-stack-diagram.png
+  description: "A worked example for a fictional agency, showing how the connections between systems get drawn — including the manual data entry, custom exports, and missing links that the diagram is meant to expose."
+
+- key: trillium-transit-stack-diagram
+  name: "Transit Stack Diagram"
+  year: 2016
+  type: "Web page"
+  url: "https://trilliumtransit.com/2016/10/10/transit-stack-diagram/"
+  description: "Trillium Solutions' original post presenting transit technology as a modular stack, and identifying where standard interfaces between the layers exist and where they don't."
+
 - key: mn-transit-technology-plan
   name: "Greater Minnesota Public Transit Technology Plan"
   year: 2021
