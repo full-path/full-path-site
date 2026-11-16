@@ -101,7 +101,7 @@ Full Path helps community transportation services be successful with technology.
 </section>
 
 <section class="home-contact-band">
-<p class="home-contact-band__lead">Interested in working with us? We'd love to hear from you!</p>
+<p class="home-contact-band__lead">Dealing with a technology challenge? Let's talk it through.</p>
 <a href="#contact-modal" class="btn btn--primary"><img src="{{ '/assets/images/message.svg' | relative_url }}" alt="" class="btn__icon">Get in touch</a>
 </section>
 
