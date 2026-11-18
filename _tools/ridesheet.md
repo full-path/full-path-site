@@ -1,7 +1,7 @@
 ---
 title: "RideSheet"
 layout: tool-featured
-description: "Free, open-source scheduling, dispatching, and trip coordination for small and rural demand-responsive transportation providers. Built on Google Sheets."
+description: "Free, open-source scheduling and dispatching software for small dial-a-ride, paratransit, and demand-responsive providers. Built on Google Sheets."
 icon: /assets/images/ridesheet-van.svg
 year: 2026
 categories: [Software,Strategy,Engagement,Interoperability,Implementation]

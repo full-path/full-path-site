@@ -5,6 +5,7 @@ header:
   overlay_image: /assets/images/services_hero.jpg
   overlay_filter: "rgba(112, 66, 20, 0.5)"
 title: About Full Path
+seo_description: "Full Path is Kevin Chambers, a Portland-area transit technology consultant helping small and rural public transit and community transportation providers."
 permalink: /about/
 resources: [tr-news-transit-technology-for-everyone, tr-news-rural-technology]
 resources_title: "Other Published Work"

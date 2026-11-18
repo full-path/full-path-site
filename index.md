@@ -1,5 +1,7 @@
 ---
 title: "Full Path Transit Technology"
+seo_title: "Full Path | Transit Technology Consulting for Small and Rural Agencies"
+seo_description: "Technology consulting for small and rural public transit agencies — bus systems, dial-a-ride, paratransit, and non-emergency medical transportation (NEMT)."
 layout: splash
 header:
   overlay_filter: "rgba(112, 66, 20, 0.5)"
@@ -9,7 +11,7 @@ excerpt: "Technology strategy and tools for community transit — without the hy
 ---
 
 <section class="home-section home-intro">
-Full Path helps community transportation services be successful with technology.
+Full Path helps small and rural transit agencies — bus systems, dial-a-ride services, and other community transportation providers — be successful with technology.
 </section>
 
 <section class="home-section">

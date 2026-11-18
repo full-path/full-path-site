@@ -5,7 +5,7 @@ header:
   compact: true
   overlay_image: /assets/images/services_hero.jpg
   overlay_filter: "rgba(112, 66, 20, 0.5)"
-description: "A sampling of Full Path's project work with transit agencies, state DOTs, and mobility management programs."
+description: "A sampling of Full Path's project work with public transit agencies, state DOTs, and mobility management programs."
 permalink: /projects/
 ---
 

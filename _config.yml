@@ -19,7 +19,7 @@ logo_path: /assets/images/full_path_logo.svg
 logo_alt: "Full Path Logo Image"
 email: info@fullpath.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Site dedicated to transit and transportation technology, with focus on community transit, demand-response transportation, human services transportation, and mobility as healthcare.
+  Technology strategy and tools for small and rural public transit agencies, community transportation providers, and the state DOTs that support them.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fullpath.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  keviniano
