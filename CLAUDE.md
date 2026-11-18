@@ -257,8 +257,19 @@ vendors").
   enthusiasm for any particular technology
 
 ### Terminology
-- "Community transit" or "community transportation" — not "public transit" generically
-- "Demand-responsive transportation" — not "on-demand transit" (which has rideshare connotations)
+- "Community transit" or "community transportation" — Full Path's own term and the
+  default in prose. Pair it with familiar terms readers and search engines recognize —
+  "public transit," "bus systems," "dial-a-ride," "paratransit," "non-emergency medical
+  transportation (NEMT)" — especially in titles, meta descriptions, and page intros.
+  Use these as a bridge to "community transit," not a replacement, and only where
+  they're accurate (don't say "bus" on pages about NEMT or information and referral).
+- "Demand-responsive transportation" — not "on-demand transit" (which has rideshare
+  connotations). "Dial-a-ride" and "paratransit" are fine alongside it where accurate;
+  they're what people actually search for.
+- SEO head tags: use `seo_title` / `seo_description` front matter to override the
+  `<title>` and meta description without rendering a visible description band (the
+  splash layout shows `description` on the page). Keep meta descriptions ≤160 characters;
+  longer ones get truncated.
 - "Small and rural agencies" — primary client descriptor
 - "Open-source" — Full Path consistently advocates for and builds open-source tools
 - "Appropriate technology" — core philosophical term; use it when relevant, don't overuse it
