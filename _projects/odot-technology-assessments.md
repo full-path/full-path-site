@@ -1,7 +1,8 @@
 ---
-title: "Oregon Transit Technology Assessments"
+title: "Oregon Public Transit Technology Assessments"
 layout: project
-description: "A multi-year program of individual technology assessments for small and rural transit agencies across Oregon, funded by ODOT to guide agency-level technology decisions and inform statewide support strategy."
+description: "A multi-year program of individual technology assessments for small and rural public transit agencies across Oregon — bus systems, dial-a-ride, and tribal and regional providers — funded by ODOT to guide agency-level technology decisions and inform statewide support strategy."
+seo_description: "Technology assessments for 20+ small and rural public transit agencies across Oregon — bus systems, dial-a-ride, and tribal providers — funded by ODOT."
 permalink: /projects/odot-technology-assessments/
 categories: [Strategy, Engagement]
 icon: /assets/images/oregon.svg
