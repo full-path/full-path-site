@@ -14,7 +14,7 @@ resources_title: "Other Published Work"
 
 ## Full Path Transit Technology is a one-person consulting firm.
 
-I'm Kevin Chambers, and I work with a wide range of organizations to help community transit organizations — primarily rural, small urban, and urban specialized providers — be smart and effective with their technology investments.
+I'm Kevin Chambers, and I work with a wide range of organizations to help public transit and community transportation agencies — primarily rural and small-city bus systems, dial-a-ride services, and specialized providers for older adults and people with disabilities — be smart and effective with their technology investments.
 
 <a href="https://www.linkedin.com/in/keviniano" class="btn btn--linkedin" target="_blank" rel="noopener">Find me on LinkedIn</a>
 

@@ -2,8 +2,8 @@
   icon: /assets/images/small_bus.svg
   color: "#2e6b50"
   children:
-    - "Rural and small urban transit (FTA 5311)"
-    - "Specialized services, such as those aimed at older adults and people with disabilities (FTA 5310)"
+    - "Rural and small urban public transit, including fixed-route bus and dial-a-ride (FTA 5311)"
+    - "Specialized services for older adults and people with disabilities, such as senior shuttles and volunteer driver programs (FTA 5310)"
     - "Non-emergency medical transportation (Medicaid)"
     - "ADA Paratransit"
   related: [ridesheet, readiness-assessment, framework]
