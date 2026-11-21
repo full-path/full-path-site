@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "Selected Work"
 layout: splash
 header:
   compact: true
